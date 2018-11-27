@@ -1,5 +1,6 @@
 package com.twojeremys.vampiric;
 
+import com.twojeremys.vampiric.init.ModRecipes;
 import com.twojeremys.vampiric.proxy.CommonProxy;
 import com.twojeremys.vampiric.util.Reference;
 
@@ -29,7 +30,7 @@ public class Main {
     @EventHandler
     public static void init(FMLInitializationEvent event)
     {
-
+        ModRecipes.init();
     }
 
     @EventHandler
