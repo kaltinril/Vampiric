@@ -1,10 +1,10 @@
 [{
   "modid": "vampiric",
   "name": "Vampires among us",
-  "description": "Spawns vamprir lairs, items to kill vampires.",
+  "description": "Spawns vampire lairs, items to kill vampires.",
   "version": "1.0",
   "mcversion": "1.12.2",
-  "logoFile": "assets/vampiric/textures/logo.png",
+  "logoFile": "assets/vampiric/textures/items/silver_ingot.png",
   "url": "http://www.twojeremys.com/",
   "updateJSON": "http://www.twojeremys.com/versions.json",
   "authorList": ["Kaltinril"],
