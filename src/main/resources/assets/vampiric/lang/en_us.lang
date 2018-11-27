@@ -1,1 +1,5 @@
+//Items
 item.silver_ingot.name=Silver Ingot
+
+//Blocks
+tile.silver_block.name=Block of Silver
