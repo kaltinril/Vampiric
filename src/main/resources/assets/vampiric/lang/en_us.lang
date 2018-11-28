@@ -7,3 +7,6 @@ tile.silver_ore.name=Silver Ore
 
 // Food
 item.garlic.name=Garlic
+
+// Plants
+tile.garlic.name=Garlic
