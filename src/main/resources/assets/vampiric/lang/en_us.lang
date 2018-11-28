@@ -1,6 +1,9 @@
-//Items
+// Items
 item.silver_ingot.name=Silver Ingot
 
-//Blocks
+// Blocks
 tile.silver_block.name=Block of Silver
 tile.silver_ore.name=Silver Ore
+
+// Food
+item.garlic.name=Garlic
