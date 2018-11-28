@@ -20,7 +20,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.IPlantable;
 
-
+// https://www.youtube.com/watch?v=Wt1TduQBlzw
 public class GarlicPlant extends ItemFood implements IHasModel, IPlantable {
 
     public GarlicPlant(String name, int amount, float saturation, boolean isAnimalFood){
