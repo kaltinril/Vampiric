@@ -13,6 +13,7 @@ public class ModItems {
 
     // Items
     public static final Item SILVER_INGOT = new ItemBase("silver_ingot");
+    public static final Item GARLIC_PASTE = new ItemBase("garlic_paste");
 
     // Food
     // https://minecraft.gamepedia.com/Hunger

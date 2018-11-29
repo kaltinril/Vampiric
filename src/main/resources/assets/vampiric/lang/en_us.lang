@@ -1,5 +1,6 @@
 // Items
 item.silver_ingot.name=Silver Ingot
+item.garlic_paste.name=Garlic Paste
 
 // Blocks
 tile.silver_block.name=Block of Silver

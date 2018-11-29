@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+
+  "ingredients":
+  [
+    {"item": "vampiric:garlic"},
+    {"item": "vampiric:garlic"},
+    {"item": "vampiric:garlic"},
+    {"item": "vampiric:garlic"},
+    {"item": "minecraft:water_bucket"}
+  ],
+
+  "result":
+  {
+    "item": "vampiric:garlic_paste",
+    "count": 1
+  }
+}
