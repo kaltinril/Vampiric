@@ -23,7 +23,7 @@ public class ToolStake extends ItemSword implements IHasModel {
         super(material);
         setUnlocalizedName(name);
         setRegistryName(name);
-        setCreativeTab(CreativeTabs.MATERIALS);
+        setCreativeTab(CreativeTabs.TOOLS);
 
 
         // Add this item to the list of items in minecraft
@@ -45,5 +45,5 @@ public class ToolStake extends ItemSword implements IHasModel {
     }
 
     //TODO: Make sure that we only work when attacking a bat.
-    
+
 }

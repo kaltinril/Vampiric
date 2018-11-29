@@ -28,5 +28,5 @@ public class ModItems {
     public static final Item GARLIC = new GarlicPlant("garlic", 1, 0.6f, false);
 
     // Tools
-    public static final ItemSword OAK_STAKE = new ToolStake("oak_stake", MATERIAL_STAKE);
+    public static final ItemSword WOODEN_STAKE = new ToolStake("wooden_stake", MATERIAL_STAKE);
 }
