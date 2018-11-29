@@ -11,3 +11,6 @@ item.garlic.name=Garlic
 
 // Plants
 tile.garlic.name=Garlic
+
+// Tools and Weapons
+item.oak_stake.name=Oak Stake
