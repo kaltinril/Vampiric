@@ -1,5 +1,6 @@
 package com.twojeremys.vampiric.potions;
 
+import com.twojeremys.vampiric.init.ModPotions;
 import com.twojeremys.vampiric.util.Reference;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.ResourceLocation;
@@ -13,6 +14,7 @@ public class PotionGarlic extends Potion {
         setPotionName("effect.garlic_essence");
         setRegistryName(new ResourceLocation(Reference.MOD_ID + ":" + "garlic_essence"));
 
+        ModPotions.POTIONS.add(this);
     }
 
 }

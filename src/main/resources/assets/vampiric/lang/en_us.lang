@@ -15,3 +15,9 @@ tile.garlic.name=Garlic
 // Tools and Weapons
 item.wooden_stake.name=Wooden Stake
 item.garlic_arrow.name=Garlic Arrow
+
+// Potions
+effect.garlic_essence=Garlic
+potion.effect.garlic_essence=Essence of Garlic Potion
+splash_potion.effect.garlic_essence=Essence of Garlic Splash Potion
+lingering_potion.effect.garlic_essence=Lingering Essence of Garlic
