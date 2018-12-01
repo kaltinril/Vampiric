@@ -23,7 +23,7 @@ public class ToolStake extends ItemSword implements IHasModel {
         super(material);
         setUnlocalizedName(name);
         setRegistryName(name);
-        setCreativeTab(CreativeTabs.TOOLS);
+        setCreativeTab(CreativeTabs.COMBAT);
 
 
         // Add this item to the list of items in minecraft
