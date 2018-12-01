@@ -2,9 +2,12 @@ package com.twojeremys.vampiric.util.handlers;
 
 import com.twojeremys.vampiric.init.ModBlocks;
 import com.twojeremys.vampiric.init.ModItems;
+import com.twojeremys.vampiric.init.ModPotions;
 import com.twojeremys.vampiric.util.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionType;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -35,6 +38,20 @@ public class RegistryHandler {
             if (block instanceof IHasModel){
                 ((IHasModel)block).registerModels();
             }
+        }
+    }
+
+    @SubscribeEvent
+    public static void registerPotions(RegistryEvent.Register<Potion> event) {
+        for(Potion potion : ModPotions.POTIONS){
+            event.getRegistry().register(potion);
+        }
+    }
+
+    @SubscribeEvent
+    public static void registerPotionTypes(RegistryEvent.Register<PotionType> event) {
+        for(PotionType potionType : ModPotions.POTION_TYPES){
+            event.getRegistry().register(potionType);
         }
     }
 
