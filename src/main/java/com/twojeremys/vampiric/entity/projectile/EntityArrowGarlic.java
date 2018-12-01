@@ -1,18 +1,16 @@
 package com.twojeremys.vampiric.entity.projectile;
 
 import com.twojeremys.vampiric.init.ModItems;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IProjectile;
 import net.minecraft.entity.projectile.EntityTippedArrow;
 import net.minecraft.init.MobEffects;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemPotion;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+
 import net.minecraftforge.fml.common.registry.IThrowableEntity;
 
 public class EntityArrowGarlic extends EntityTippedArrow implements IProjectile, IThrowableEntity {

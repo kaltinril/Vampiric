@@ -4,6 +4,7 @@ import com.twojeremys.vampiric.Main;
 import com.twojeremys.vampiric.entity.projectile.EntityArrowGarlic;
 import com.twojeremys.vampiric.init.ModItems;
 import com.twojeremys.vampiric.util.IHasModel;
+
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.item.ItemArrow;
@@ -24,8 +25,6 @@ public class ItemArrowGarlic extends ItemArrow implements IHasModel {
     @Override
     public EntityArrow createArrow(World worldIn, ItemStack stack, EntityLivingBase shooter) {
         EntityArrowGarlic entityArrow = new EntityArrowGarlic(worldIn, shooter);
-
-        // set an arrow type here? or make damage dynamic?
         entityArrow.setDamage(0); // On critical still has a chance to do damage apparently
 
         return entityArrow;
