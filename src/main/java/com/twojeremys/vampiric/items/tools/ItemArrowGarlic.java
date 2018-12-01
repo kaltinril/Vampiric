@@ -26,7 +26,7 @@ public class ItemArrowGarlic extends ItemArrow implements IHasModel {
         EntityArrowGarlic entityArrow = new EntityArrowGarlic(worldIn, shooter);
 
         // set an arrow type here? or make damage dynamic?
-        entityArrow.setDamage(3);
+        entityArrow.setDamage(0); // On critical still has a chance to do damage apparently
 
         return entityArrow;
     }
