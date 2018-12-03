@@ -16,5 +16,9 @@ public class ModPotions {
 
     public static final Potion GARLIC_ESSENCE = new PotionGarlic();
 
-    public static final PotionType POTION_GARLIC_ESSENCE = new PotionTypeGarlic("garlic_essence", new PotionEffect(GARLIC_ESSENCE));
+    public static final PotionType POTION_GARLIC_ESSENCE =
+            new PotionTypeGarlic("garlic_essence",
+                    new PotionEffect(GARLIC_ESSENCE,
+                            30*20, // N * 20 = N seconds.  Oddly some time goes missing
+                            0)); // 0 = Level 1, 1 = level 2, etc
 }
