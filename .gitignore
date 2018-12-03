@@ -40,3 +40,6 @@ gradle-app.setting
 # Minecraft and forge specific
 /run/
 /out/
+
+# Intellij Idea
+.idea/
