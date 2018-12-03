@@ -4,6 +4,7 @@ import com.twojeremys.vampiric.items.ItemBase;
 import com.twojeremys.vampiric.items.food.GarlicPlant;
 import com.twojeremys.vampiric.items.tools.ItemArrowGarlic;
 import com.twojeremys.vampiric.items.tools.ToolStake;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArrow;
@@ -22,7 +23,7 @@ public class ModItems {
 
     // Items
     public static final Item SILVER_INGOT = new ItemBase("silver_ingot");
-    public static final Item GARLIC_PASTE = new ItemBase("garlic_paste");
+    public static final Item GARLIC_PASTE = new ItemBase("garlic_paste").setCreativeTab(CreativeTabs.FOOD);
 
     // Food
     // https://minecraft.gamepedia.com/Hunger
