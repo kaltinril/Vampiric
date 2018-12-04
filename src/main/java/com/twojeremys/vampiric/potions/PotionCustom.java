@@ -14,33 +14,42 @@ import net.minecraft.util.ResourceLocation;
 
 import javax.annotation.Nullable;
 
-public class PotionGarlic extends Potion {
-    static final int potionColorBrown = 13542519;   // just to make the code more readable
-    static final boolean badEffect = true;         // just to make the code more readable
+public class PotionCustom extends Potion {
 
-    public PotionGarlic(){
-        super(badEffect, potionColorBrown);
-        setPotionName("effect.garlic_essence");
-        setRegistryName(new ResourceLocation(Reference.MOD_ID + ":" + "garlic_essence"));
-        setEffectiveness(0.25D);
-        setIconIndex(6, 0);
+    private float effectAmount;
+
+    public PotionCustom(String name, boolean isBadEffect, int color, int iconIndexX, int iconIndexY, double effectiveness, float effectAmount){
+        super(isBadEffect, color);
+
+        setPotionName("effect." + name);
+        setRegistryName(new ResourceLocation(Reference.MOD_ID + ":" + name));
+        setEffectiveness(effectiveness);
+        setIconIndex(iconIndexX, iconIndexY);
+
+        this.effectAmount = effectAmount;
 
         ModPotions.POTIONS.add(this);
     }
 
     @Override
     public void performEffect(EntityLivingBase entityLivingBaseIn, int amplifier) {
-        // TODO: Add that it must be a vampire to have any impact
-        //if (entityLivingBaseIn.getClass() == EntityCreeper.class){
-        if (entityLivingBaseIn.isCreatureType(EnumCreatureType.MONSTER, true)) {
-            if (entityLivingBaseIn.getHealth() > 1.0F) {
-                entityLivingBaseIn.attackEntityFrom(DamageSource.MAGIC, 1.0F);
+        if (this == ModPotions.GARLIC_ESSENCE){
+            // TODO: Add that it must be a vampire to have any impact
+            //if (entityLivingBaseIn.getClass() == EntityCreeper.class){
+            if (entityLivingBaseIn.isCreatureType(EnumCreatureType.MONSTER, true)) {
+                // if the entity has a least 1 health left.
+                if (entityLivingBaseIn.getHealth() > effectAmount) {
+                    entityLivingBaseIn.attackEntityFrom(DamageSource.MAGIC, effectAmount);
+                }
             }
-        }
-        else
-        {
-            // Remove it if it's not the correct monster
-            entityLivingBaseIn.removePotionEffect(this);
+            else
+            {
+                // Remove it if it's not the correct monster
+                entityLivingBaseIn.removePotionEffect(this);
+            }
+        // TODO: Add more elseif statements for each new potion
+        }else {
+            super.performEffect(entityLivingBaseIn, amplifier);
         }
     }
 

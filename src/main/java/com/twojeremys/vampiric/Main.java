@@ -1,5 +1,6 @@
 package com.twojeremys.vampiric;
 
+import com.twojeremys.vampiric.init.ModPotions;
 import com.twojeremys.vampiric.init.ModRecipes;
 import com.twojeremys.vampiric.proxy.CommonProxy;
 import com.twojeremys.vampiric.util.Reference;
@@ -27,6 +28,7 @@ public class Main {
     public static void PreInit(FMLPreInitializationEvent event)
     {
         GameRegistry.registerWorldGenerator(new ModWorldGen(), 13);
+        ModPotions.registerPotions();
     }
 
     @EventHandler
