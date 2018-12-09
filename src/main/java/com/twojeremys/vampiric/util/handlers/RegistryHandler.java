@@ -33,7 +33,7 @@ public class RegistryHandler {
             }
         }
 
-        //OreDictionary.registerOre("cutter", new ItemStack(ModItems.CUTTER, 1, OreDictionary.WILDCARD_VALUE));
+        OreDictionary.registerOre("cutter", new ItemStack(ModItems.CUTTER, 1, OreDictionary.WILDCARD_VALUE));
 
         for(Block block : ModBlocks.BLOCKS){
             if (block instanceof IHasModel){

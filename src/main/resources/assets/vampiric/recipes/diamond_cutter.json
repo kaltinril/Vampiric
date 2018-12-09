@@ -1,17 +1,16 @@
 {
-  "type": "minecraft:crafting_shapeless",
-
-  "ingredients":
-  [
-    {"item": "minecraft:diamond_block"},
-    {"item": "minecraft:planks",
-      "data": 32767
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:gold_block"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "cutter"
     }
   ],
-
-  "result":
-  {
+  "result": {
     "item": "minecraft:diamond",
-    "count": 9
+    "count": 5
   }
 }
