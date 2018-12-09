@@ -35,7 +35,7 @@ public class ModItems {
 
     public static final ItemSword SILVER_SWORD = new ToolSword("silver_sword", MATERIAL_SILVER);
 
-    */
+    /*
     public static final ItemSpade SILVER_SHOVEL = new ToolSpade("silver_sword", MATERIAL_SILVER);
     public static final ItemPickaxe SILVER_PICKAXE = new ToolPickaxe("silver_sword", MATERIAL_SILVER);
     public static final ItemAxe SILVER_AXE = new ToolAxe("silver_sword", MATERIAL_SILVER);
