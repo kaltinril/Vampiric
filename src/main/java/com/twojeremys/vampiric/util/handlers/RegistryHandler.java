@@ -18,6 +18,7 @@ public class RegistryHandler {
     @SubscribeEvent
     public static void onItemRegister(RegistryEvent.Register<Item> event){
         event.getRegistry().registerAll(ModItems.ITEMS.toArray(new Item[0]));
+        System.out.println("onItemRegister");
     }
 
     @SubscribeEvent
@@ -27,6 +28,7 @@ public class RegistryHandler {
 
     @SubscribeEvent
     public static void onModelRegister(ModelRegistryEvent event){
+        System.out.println("onModelRegister");
         for(Item item : ModItems.ITEMS){
             if (item instanceof IHasModel){
                 ((IHasModel)item).registerModels();
@@ -34,6 +36,8 @@ public class RegistryHandler {
         }
 
         OreDictionary.registerOre("cutter", new ItemStack(ModItems.CUTTER, 1, OreDictionary.WILDCARD_VALUE));
+
+        System.out.println(OreDictionary.getOres("cutter"));
 
         for(Block block : ModBlocks.BLOCKS){
             if (block instanceof IHasModel){
