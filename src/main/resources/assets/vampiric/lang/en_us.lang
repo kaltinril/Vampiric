@@ -22,3 +22,6 @@ effect.garlic_essence=Garlic Essence
 potion.effect.garlic_essence=Potion of Garlic Essence
 splash_potion.effect.garlic_essence=Splash Potion of Garlic Essence
 lingering_potion.effect.garlic_essence=Lingering Potion of Garlic Essence
+
+// Ite
+item.cutter.name=Cutter

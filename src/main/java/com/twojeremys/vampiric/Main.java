@@ -1,11 +1,13 @@
 package com.twojeremys.vampiric;
 
+import com.twojeremys.vampiric.init.ModItems;
 import com.twojeremys.vampiric.init.ModPotions;
 import com.twojeremys.vampiric.init.ModRecipes;
 import com.twojeremys.vampiric.proxy.CommonProxy;
 import com.twojeremys.vampiric.util.Reference;
 
 import com.twojeremys.vampiric.world.ModWorldGen;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -14,6 +16,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
 public class Main {
@@ -29,6 +32,7 @@ public class Main {
     {
         GameRegistry.registerWorldGenerator(new ModWorldGen(), 13);
         ModPotions.registerPotions();
+
     }
 
     @EventHandler

@@ -1,6 +1,7 @@
 package com.twojeremys.vampiric.init;
 
 import com.twojeremys.vampiric.items.ItemBase;
+import com.twojeremys.vampiric.items.ItemCutter;
 import com.twojeremys.vampiric.items.food.GarlicPlant;
 import com.twojeremys.vampiric.items.tools.ItemArrowGarlic;
 import com.twojeremys.vampiric.items.tools.ToolStake;
@@ -32,4 +33,9 @@ public class ModItems {
     // Tools
     public static final ItemSword WOODEN_STAKE = new ToolStake("wooden_stake", MATERIAL_STAKE);
     public static final ItemArrow GARLIC_ARROW = new ItemArrowGarlic("garlic_arrow");
+
+    // Test
+    public static final Item CUTTER = new ItemCutter();
+
+
 }
