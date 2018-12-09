@@ -1,0 +1,27 @@
+// Items
+item.silver_ingot.name=Gümüş Külçe
+item.garlic_paste.name=Sarımsak Ezmesi
+
+// Blocks
+tile.silver_block.name=Gümüş Blok
+tile.silver_ore.name=Gümüş Cevheri
+
+// Food
+item.garlic.name=Sarımsak
+
+// Plants
+tile.garlic.name=Sarımsak
+
+// Tools and Weapons
+item.wooden_stake.name=Ahşap Kazık
+item.garlic_arrow.name=Sarımsak Ok
+tipped_arrow.effect.garlic_essence=Sarımsak Esanslı Ok
+
+// Potions
+effect.garlic_essence=Sarımsak Esansı
+potion.effect.garlic_essence=Sarımsak Esanslı İksir
+splash_potion.effect.garlic_essence=Sıçramalı Sarımsak Esanslı İksir
+lingering_potion.effect.garlic_essence=Kalıcı Sarımsak Esanslı İksir
+
+// Ite
+item.cutter.name=Kesici
