@@ -5,6 +5,7 @@ item.garlic_paste.name=Garlic Paste
 // Blocks
 tile.silver_block.name=Block of Silver
 tile.silver_ore.name=Silver Ore
+tile.coffin_chest.name=Coffin
 
 // Food
 item.garlic.name=Garlic
@@ -33,3 +34,6 @@ effect.garlic_essence=Garlic Essence
 potion.effect.garlic_essence=Potion of Garlic Essence
 splash_potion.effect.garlic_essence=Splash Potion of Garlic Essence
 lingering_potion.effect.garlic_essence=Lingering Potion of Garlic Essence
+
+// Containers
+container.coffin_chest=Coffin

@@ -6,6 +6,8 @@ import com.twojeremys.vampiric.proxy.CommonProxy;
 import com.twojeremys.vampiric.util.Reference;
 
 import com.twojeremys.vampiric.util.compat.OreDictionaryCompat;
+import com.twojeremys.vampiric.util.handlers.GuiHandler;
+import com.twojeremys.vampiric.util.handlers.RegistryHandler;
 import com.twojeremys.vampiric.world.ModWorldGen;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -14,6 +16,7 @@ import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
@@ -37,6 +40,7 @@ public class Main {
     {
         OreDictionaryCompat.registerOres();
         ModRecipes.init();
+        RegistryHandler.initRegistries();
     }
 
     @EventHandler

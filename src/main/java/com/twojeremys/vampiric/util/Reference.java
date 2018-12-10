@@ -8,4 +8,6 @@ public class Reference {
     public static final String CLIENT_PROXY_CLASS = "com.twojeremys.vampiric.proxy.ClientProxy";
     public static final String COMMON_PROXY_CLASS = "com.twojeremys.vampiric.proxy.CommonProxy";
 
+    public static final int GUI_COFFIN_CHEST = 1;
+
 }
