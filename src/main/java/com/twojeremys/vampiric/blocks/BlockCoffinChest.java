@@ -20,7 +20,9 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
@@ -93,6 +95,12 @@ public class BlockCoffinChest extends BlockContainer implements IHasModel {
     @Override
     public boolean isOpaqueCube(IBlockState state) {
         return false;
+    }
+
+    // This makes it so the bounding box for the item is 2 blocks wide
+    @Override
+    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
+        return new AxisAlignedBB(0.0D, 0.0D, 0.0D, 2.0D, 1.0D, 1.0D);
     }
 
     @Override
