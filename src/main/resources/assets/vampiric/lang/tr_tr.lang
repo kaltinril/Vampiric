@@ -22,6 +22,12 @@ item.silver_axe.name=Gümüş Balta
 item.silver_hoe.name=Gümüş çapa
 item.silver_shovel.name=Gümüş Kürek
 
+// Armor
+item.silver_helmet.name=Gümüş Kask
+item.silver_chestplate.name=Gümüş Göğüs
+item.silver_leggings.name=Gümüş Tayt
+item.silver_boots.name=Gümüş Çizme
+
 // Potions
 effect.garlic_essence=Sarımsak Esansı
 potion.effect.garlic_essence=Sarımsak Esanslı İksir

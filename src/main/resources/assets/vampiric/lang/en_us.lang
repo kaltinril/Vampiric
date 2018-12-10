@@ -22,6 +22,12 @@ item.silver_axe.name=Silver Axe
 item.silver_hoe.name=Silver Hoe
 item.silver_shovel.name=Silver Shovel
 
+// Armor
+item.silver_helmet.name=Silver Helmet
+item.silver_chestplate.name=Silver Chestplate
+item.silver_leggings.name=Silver Leggings
+item.silver_boots.name=Silver Boots
+
 // Potions
 effect.garlic_essence=Garlic Essence
 potion.effect.garlic_essence=Potion of Garlic Essence
