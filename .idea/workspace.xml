@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d34f1614-ee8d-479a-86a6-f2cadd919f62" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/items/armor/ArmorBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_boots.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_chestplate.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_helmet.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_leggings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/models/armor/silver_layer_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/models/armor/silver_layer_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/init/ModItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/init/ModItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/lang/en_us.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/lang/en_us.lang" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/lang/tr_tr.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/lang/tr_tr.lang" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_boots.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_chestplate.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_helmet.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_leggings.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -70,11 +63,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/lang/tr_tr.lang">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="442">
+              <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_helmet.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_chestplate.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_leggings.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_boots.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -118,10 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/items/food/GarlicPlant.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/garlic_paste.json" />
-        <option value="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/garlic_paste.json" />
-        <option value="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_ingot.json" />
         <option value="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/oak_stake.json" />
         <option value="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/oak_stake.json" />
         <option value="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/wooden_stake.json" />
@@ -169,6 +194,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/init/ModRecipes.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/init/ModItems.java" />
         <option value="$PROJECT_DIR$/src/main/resources/assets/vampiric/lang/tr_tr.lang" />
+        <option value="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_helmet.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_chestplate.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_leggings.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_boots.json" />
       </list>
     </option>
   </component>
@@ -523,7 +552,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544411848857" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544412030475" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -535,9 +564,9 @@
       <recent name="com.twojeremys.vampiric.blocks" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc\src\main\resources\assets\vampiric\recipes" />
       <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc\src\main\resources\assets\vampiric\models\item" />
       <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc\src\main\resources\assets\vampiric\textures\models\armor" />
-      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc\src\main\resources\assets\vampiric\recipes" />
       <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc\src\main\resources\assets\vampiric\textures\items" />
       <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc\src\main\resources\assets\vampiric\textures\entity\projectile" />
     </key>
@@ -707,22 +736,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/items/silver_leggings.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/items/silver_pickaxe.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/items/silver_shovel.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2784/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2784-sources.jar!/net/minecraft/item/ItemSpade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-391">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2784/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2784-sources.jar!/net/minecraft/item/ItemSword.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1059,8 +1072,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/lang/tr_tr.lang">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="442">
+          <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_helmet.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_chestplate.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_leggings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_boots.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
         </state>
       </provider>
     </entry>

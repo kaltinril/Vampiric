@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "pattern":
+  [
+    "SSS",
+    "S S",
+    "   "
+  ],
+
+  "key": {
+    "S": {
+      "item": "vampiric:silver_ingot"
+    }
+  },
+  "result": {
+    "item": "vampiric:silver_helmet",
+    "count": 1
+  }
+}
