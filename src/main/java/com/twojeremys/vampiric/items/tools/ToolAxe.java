@@ -4,12 +4,13 @@ import com.twojeremys.vampiric.Main;
 import com.twojeremys.vampiric.init.ModItems;
 import com.twojeremys.vampiric.util.IHasModel;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemSword;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemAxe;
 
-public class ToolSword extends ItemSword implements IHasModel {
+public class ToolAxe extends ItemAxe implements IHasModel {
 
-    public ToolSword(String name, ToolMaterial material){
-        super(material);
+    public ToolAxe(String name, Item.ToolMaterial material, float damage, float speed){
+        super(material, damage, speed);
         setUnlocalizedName(name);
         setRegistryName(name);
         setCreativeTab(CreativeTabs.TOOLS);

@@ -2,9 +2,7 @@ package com.twojeremys.vampiric.init;
 
 import com.twojeremys.vampiric.items.ItemBase;
 import com.twojeremys.vampiric.items.food.GarlicPlant;
-import com.twojeremys.vampiric.items.tools.ItemArrowGarlic;
-import com.twojeremys.vampiric.items.tools.ToolStake;
-import com.twojeremys.vampiric.items.tools.ToolSword;
+import com.twojeremys.vampiric.items.tools.*;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.*;
 import net.minecraft.item.Item.ToolMaterial;
@@ -29,18 +27,16 @@ public class ModItems {
     // https://minecraft.gamepedia.com/Hunger
     public static final Item GARLIC = new GarlicPlant("garlic", 1, 0.6f, false);
 
-    // Tools
+    // Tools - Generic
     public static final ItemSword WOODEN_STAKE = new ToolStake("wooden_stake", MATERIAL_STAKE);
     public static final ItemArrow GARLIC_ARROW = new ItemArrowGarlic("garlic_arrow");
 
+    // Tools - Silver
     public static final ItemSword SILVER_SWORD = new ToolSword("silver_sword", MATERIAL_SILVER);
-
-    /*
-    public static final ItemSpade SILVER_SHOVEL = new ToolSpade("silver_sword", MATERIAL_SILVER);
-    public static final ItemPickaxe SILVER_PICKAXE = new ToolPickaxe("silver_sword", MATERIAL_SILVER);
-    public static final ItemAxe SILVER_AXE = new ToolAxe("silver_sword", MATERIAL_SILVER);
-    public static final ItemHoe SILVER_HOE = new ToolHoe("silver_sword", MATERIAL_SILVER);
-    */
+    public static final ItemSpade SILVER_SHOVEL = new ToolSpade("silver_shovel", MATERIAL_SILVER);
+    public static final ItemPickaxe SILVER_PICKAXE = new ToolPickaxe("silver_pickaxe", MATERIAL_SILVER);
+    public static final ItemAxe SILVER_AXE = new ToolAxe("silver_axe", MATERIAL_SILVER, 6.5f, -3.0f);
+    public static final ItemHoe SILVER_HOE = new ToolHoe("silver_hoe", MATERIAL_SILVER);
 
 
 }

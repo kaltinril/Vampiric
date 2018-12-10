@@ -16,6 +16,11 @@ tile.garlic.name=Sarımsak
 item.wooden_stake.name=Ahşap Kazık
 item.garlic_arrow.name=Sarımsak Ok
 tipped_arrow.effect.garlic_essence=Sarımsak Esanslı Ok
+item.silver_sword.name=Gümüş Kılıç
+item.silver_pickaxe.name=Gümüş Kazma
+item.silver_axe.name=Gümüş Balta
+item.silver_hoe.name=Gümüş çapa
+item.silver_shovel.name=Gümüş Kürek
 
 // Potions
 effect.garlic_essence=Sarımsak Esansı

@@ -4,11 +4,11 @@ import com.twojeremys.vampiric.Main;
 import com.twojeremys.vampiric.init.ModItems;
 import com.twojeremys.vampiric.util.IHasModel;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemSword;
+import net.minecraft.item.ItemHoe;
 
-public class ToolSword extends ItemSword implements IHasModel {
+public class ToolHoe extends ItemHoe implements IHasModel {
 
-    public ToolSword(String name, ToolMaterial material){
+    public ToolHoe(String name, ToolMaterial material){
         super(material);
         setUnlocalizedName(name);
         setRegistryName(name);
