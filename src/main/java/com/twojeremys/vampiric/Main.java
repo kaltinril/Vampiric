@@ -5,6 +5,7 @@ import com.twojeremys.vampiric.init.ModRecipes;
 import com.twojeremys.vampiric.proxy.CommonProxy;
 import com.twojeremys.vampiric.util.Reference;
 
+import com.twojeremys.vampiric.util.compat.OreDictionaryCompat;
 import com.twojeremys.vampiric.world.ModWorldGen;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -34,6 +35,7 @@ public class Main {
     @EventHandler
     public static void init(FMLInitializationEvent event)
     {
+        OreDictionaryCompat.registerOres();
         ModRecipes.init();
     }
 
