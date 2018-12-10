@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d34f1614-ee8d-479a-86a6-f2cadd919f62" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/animation/ModelCoffinChest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/container/RenderCoffinChest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/blocks/coffin_chest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/items/coffin_chest.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/init/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/init/ModBlocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/proxy/ClientProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/proxy/ClientProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/proxy/CommonProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/proxy/CommonProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/util/handlers/RegistryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/util/handlers/RegistryHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/animation/ModelCoffinChest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/animation/ModelCoffinChest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/blocks/coffin_chest.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/blocks/coffin_chest.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -59,11 +52,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/animation/ModelCoffinChest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+            <state relative-caret-position="212">
+              <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/client/model/ModelRenderer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="349">
+              <caret line="157" column="29" selection-start-line="157" selection-start-column="29" selection-end-line="157" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -71,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/container/RenderCoffinChest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="36" lean-forward="true" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+            <state relative-caret-position="229">
+              <caret line="43" column="83" selection-start-line="43" selection-start-column="83" selection-end-line="43" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,7 +95,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/util/handlers/RegistryHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -107,7 +109,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/proxy/ClientProxy.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -165,6 +167,7 @@
       <find>transfer</find>
       <find>copper</find>
       <find>sound</find>
+      <find>rotateAngleZ</find>
     </findStrings>
     <replaceStrings>
       <replace>garlic_plant</replace>
@@ -221,12 +224,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/container/ContainerCoffinChest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/gui/GuiCoffinChest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/tileentity/TileEntityCoffinChest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/animation/ModelCoffinChest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/proxy/ClientProxy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/proxy/CommonProxy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/util/handlers/RegistryHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/init/ModBlocks.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/container/RenderCoffinChest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/animation/ModelCoffinChest.java" />
       </list>
     </option>
   </component>
@@ -324,6 +327,30 @@
               <item name="vampiric" type="462c0819:PsiDirectoryNode" />
               <item name="blocks" type="462c0819:PsiDirectoryNode" />
               <item name="animation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vampirc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="twojeremys" type="462c0819:PsiDirectoryNode" />
+              <item name="vampiric" type="462c0819:PsiDirectoryNode" />
+              <item name="blocks" type="462c0819:PsiDirectoryNode" />
+              <item name="container" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vampirc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="twojeremys" type="462c0819:PsiDirectoryNode" />
+              <item name="vampiric" type="462c0819:PsiDirectoryNode" />
+              <item name="blocks" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
@@ -448,7 +475,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544431842573" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544434266732" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -658,8 +685,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17963752" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17963752" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -668,7 +696,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33152762" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33152762" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -694,13 +722,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_chestplate.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_leggings.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1018,19 +1039,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/container/ContainerCoffinChest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2015#2016#0" expanded="true" />
-            <element signature="e#3094#3095#0" expanded="true" />
-            <element signature="e#3136#3137#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/init/ModItems.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="439">
@@ -1065,23 +1073,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/animation/ModelCoffinChest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/container/RenderCoffinChest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="36" lean-forward="true" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/init/ModBlocks.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1092,7 +1083,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/util/handlers/RegistryHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1107,6 +1098,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/container/ContainerCoffinChest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1946#1947#0" expanded="true" />
+            <element signature="e#2015#2016#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/container/RenderCoffinChest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="43" column="83" selection-start-line="43" selection-start-column="83" selection-end-line="43" selection-end-column="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/client/model/ModelRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="157" column="29" selection-start-line="157" selection-start-column="29" selection-end-line="157" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/animation/ModelCoffinChest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
         </state>
       </provider>
     </entry>

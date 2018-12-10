@@ -1,6 +1,9 @@
 package com.twojeremys.vampiric.init;
 
-import com.twojeremys.vampiric.blocks.*;
+import com.twojeremys.vampiric.blocks.BlockCoffinChest;
+import com.twojeremys.vampiric.blocks.BlockGarlicPlant;
+import com.twojeremys.vampiric.blocks.SilverBlock;
+import com.twojeremys.vampiric.blocks.SilverOre;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
