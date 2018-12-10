@@ -1,6 +1,8 @@
 package com.twojeremys.vampiric.util.handlers;
 
 import com.twojeremys.vampiric.Main;
+import com.twojeremys.vampiric.blocks.container.RenderCoffinChest;
+import com.twojeremys.vampiric.blocks.tileentity.TileEntityCoffinChest;
 import com.twojeremys.vampiric.init.ModBlocks;
 import com.twojeremys.vampiric.init.ModItems;
 import com.twojeremys.vampiric.util.IHasModel;
@@ -8,6 +10,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
@@ -25,10 +28,15 @@ public class RegistryHandler {
         event.getRegistry().registerAll(ModBlocks.BLOCKS.toArray(new Block[0]));
 
         TileEntityHandler.registerTileEntities();
+
+        // Bind the mode and the render together
+        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCoffinChest.class, new RenderCoffinChest());
     }
 
     @SubscribeEvent
     public static void onModelRegister(ModelRegistryEvent event){
+        Main.proxy.registerModel(Item.getItemFromBlock(ModBlocks.COFFIN_CHEST), 0);
+
         for(Item item : ModItems.ITEMS){
             if (item instanceof IHasModel){
                 ((IHasModel)item).registerModels();

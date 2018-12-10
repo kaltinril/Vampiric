@@ -20,5 +20,5 @@ public class ModBlocks {
     public static final Block GARLIC_PLANT = new BlockGarlicPlant("garlic_plant");
 
     // Chests (Containers)
-    public static final Block COFFIN_CHEST = new BlockCoffinChest("coffin_chest.json");
+    public static final Block COFFIN_CHEST = new BlockCoffinChest("coffin_chest");
 }
