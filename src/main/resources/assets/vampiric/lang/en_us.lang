@@ -16,6 +16,11 @@ tile.garlic.name=Garlic
 item.wooden_stake.name=Wooden Stake
 item.garlic_arrow.name=Garlic Arrow
 tipped_arrow.effect.garlic_essence=Arrow of Garlic Essence
+item.silver_sword.name=Silver Sword
+item.silver_pickaxe.name=Silver Pickaxe
+item.silver_axe.name=Silver Axe
+item.silver_hoe.name=Silver Hoe
+item.silver_shovel.name=Silver Shovel
 
 // Potions
 effect.garlic_essence=Garlic Essence
