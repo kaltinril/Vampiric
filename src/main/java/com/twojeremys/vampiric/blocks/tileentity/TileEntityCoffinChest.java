@@ -22,6 +22,17 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
     public float lidAngle;
     public float prevLidAngle;
 
+    public TileEntityCoffinChest adjacentPart;
+    public boolean isFirst = true;
+
+    public TileEntityCoffinChest getAdjacentPart(){
+        return adjacentPart;
+    }
+
+    public void setAdjacentPart(TileEntityCoffinChest tileEntityCoffinChest){
+        this.adjacentPart = tileEntityCoffinChest;
+    }
+
     @Override
     public int getSizeInventory(){
         return 4;
