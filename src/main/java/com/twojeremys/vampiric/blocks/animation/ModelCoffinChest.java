@@ -17,7 +17,7 @@ public class ModelCoffinChest extends ModelBase {
 
     public ModelCoffinChest() {
         this.textureWidth = 128;
-        this.textureHeight = 64;
+        this.textureHeight = 128;
 
         // Handles
         this.handle1 = new ModelRenderer(this, 0, 0);

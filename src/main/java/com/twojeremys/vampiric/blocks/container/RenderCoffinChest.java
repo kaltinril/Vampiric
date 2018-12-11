@@ -1,8 +1,10 @@
 package com.twojeremys.vampiric.blocks.container;
 
+import com.twojeremys.vampiric.blocks.BlockCoffinChest;
 import com.twojeremys.vampiric.blocks.animation.ModelCoffinChest;
 import com.twojeremys.vampiric.blocks.tileentity.TileEntityCoffinChest;
 import com.twojeremys.vampiric.util.Reference;
+import net.minecraft.block.Block;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.util.ResourceLocation;
@@ -17,6 +19,7 @@ public class RenderCoffinChest extends TileEntitySpecialRenderer<TileEntityCoffi
     @Override
     public void render(TileEntityCoffinChest te, double x, double y, double z, float partialTicks, int destroyStage, float alpha)
     {
+
         GlStateManager.enableDepth();
         GlStateManager.depthFunc(515);
         GlStateManager.depthMask(true);
@@ -39,6 +42,24 @@ public class RenderCoffinChest extends TileEntitySpecialRenderer<TileEntityCoffi
         GlStateManager.translate((float)x, (float)y + 1.0F, (float)z + 1.0F);
         GlStateManager.scale(1.0F, -1.0F, -1.0F);
         GlStateManager.translate(0.5F, 0.5F, 0.5F);
+
+        Block block = te.getBlockType();
+        int i = te.getBlockMetadata();
+
+        // Set J to 0 for default NORTH
+        int j = 0; // NORTH
+
+
+        if (i == 2) // SOUTH
+            j = 180;
+
+        if (i == 4) // EAST
+            j = 90;
+
+        if (i == 5) // WEST
+            j = -90;
+
+        GlStateManager.rotate((float)j, 0.0F, 1.0F, 0.0F);
         GlStateManager.translate(-0.5F, -0.5F, -0.5F);
 
         float f = te.prevLidAngle + (te.lidAngle - te.prevLidAngle) * partialTicks;

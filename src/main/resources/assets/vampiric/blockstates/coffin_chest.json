@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "facing=up": { "model": "vampiric:coffin_chest" },
+    "facing=east": { "model": "vampiric:coffin_chest" },
+    "facing=south": { "model": "vampiric:coffin_chest", "y": 90 },
+    "facing=west": { "model": "vampiric:coffin_chest", "y": 180 },
+    "facing=north": { "model": "vampiric:coffin_chest", "y": 270 }
+  }
+}
