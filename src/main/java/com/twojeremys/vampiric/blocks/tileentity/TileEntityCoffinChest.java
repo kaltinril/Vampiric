@@ -8,12 +8,15 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityLockableLoot;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.BlockPos;
 
 public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITickable {
     private NonNullList<ItemStack> chestContents = NonNullList.<ItemStack>withSize(4, ItemStack.EMPTY);
@@ -46,9 +49,12 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
 
     @Override
     public boolean isEmpty() {
-        for(ItemStack stack: this.chestContents){
-            if(!stack.isEmpty()) return false;
-        }
+        if (this.isFirst) {
+            for (ItemStack stack : this.chestContents) {
+                if (!stack.isEmpty()) return false;
+            }
+        }else
+            return this.getAdjacentPart().isEmpty();
 
         return true;
     }
@@ -61,28 +67,60 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
     @Override
     public void readFromNBT(NBTTagCompound compound)
     {
+        //if (this.isFirst) {
         super.readFromNBT(compound);
         this.chestContents = NonNullList.<ItemStack>withSize(this.getSizeInventory(), ItemStack.EMPTY);
 
-        if(!this.checkLootAndRead(compound)) ItemStackHelper.loadAllItems(compound, chestContents);
-        if(compound.hasKey("CustomName", 8)) this.customName = compound.getString("CustomName");
+        if (!this.checkLootAndRead(compound)) ItemStackHelper.loadAllItems(compound, chestContents);
+
+        this.isFirst = compound.getBoolean("IsFirst");
+
+        if (compound.hasKey("AdjacentX")) {
+            BlockPos pos = new BlockPos(
+                    compound.getInteger("AdjacentX"),
+                    compound.getInteger("AdjacentY"),
+                    compound.getInteger("AdjacentZ"));
+    }
+
+        TileEntityCoffinChest otherCoffinTile = (TileEntityCoffinChest)this.getWorld().getTileEntity(pos);
+        if (otherCoffinTile != null)
+            this.setAdjacentPart(otherCoffinTile);
+
+        if (compound.hasKey("CustomName", 8)) this.customName = compound.getString("CustomName");
+        //}else
+            //this.getAdjacentPart().readFromNBT(compound);
     }
 
     @Override
     public NBTTagCompound writeToNBT(NBTTagCompound compound)
     {
-        super.writeToNBT(compound);
+        //if (this.isFirst) {
+            super.writeToNBT(compound);
 
-        if(!this.checkLootAndWrite(compound)) ItemStackHelper.saveAllItems(compound, chestContents);
-        if(compound.hasKey("CustomName", 8)) compound.setString("CustomName", this.customName);
+            if(!this.checkLootAndWrite(compound)) ItemStackHelper.saveAllItems(compound, chestContents);
 
-        return compound;
+        compound.setBoolean("IsFirst", (boolean)this.isFirst);
+
+        if (this.getAdjacentPart() != null) {
+            compound.setInteger("AdjacentX", (Integer) this.getAdjacentPart().getPos().getX());
+            compound.setInteger("AdjacentY", (Integer) this.getAdjacentPart().getPos().getY());
+            compound.setInteger("AdjacentZ", (Integer) this.getAdjacentPart().getPos().getZ());
+        }
+
+            if(compound.hasKey("CustomName", 8)) compound.setString("CustomName", this.customName);
+
+            return compound;
+        //}else
+            //return this.getAdjacentPart().writeToNBT(compound);
     }
 
     @Override
     public Container createContainer(InventoryPlayer playerInventory, EntityPlayer playerIn)
     {
-        return new ContainerCoffinChest(playerInventory, this, playerIn);
+        if (this.isFirst)
+            return new ContainerCoffinChest(playerInventory, this, playerIn);
+        else
+            return new ContainerCoffinChest(playerInventory, this.getAdjacentPart(), playerIn);
     }
 
     @Override
@@ -94,12 +132,21 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
     @Override
     protected NonNullList<ItemStack> getItems()
     {
-        return this.chestContents;
+        if (this.isFirst)
+            return this.chestContents;
+        else
+            return this.getAdjacentPart().chestContents;
     }
 
     @Override
     public void update()
     {
+        // Only run the other objects code
+        if (!this.isFirst){
+            this.getAdjacentPart().update();
+            return;
+        }
+
         if (!this.world.isRemote && this.numPlayersUsing != 0 && (this.ticksSinceSync + pos.getX() + pos.getY() + pos.getZ()) % 200 == 0)
         {
             this.numPlayersUsing = 0;
@@ -164,16 +211,22 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
     @Override
     public void openInventory(EntityPlayer player)
     {
-        ++this.numPlayersUsing;
-        this.world.addBlockEvent(pos, this.getBlockType(), 1, this.numPlayersUsing);
-        this.world.notifyNeighborsOfStateChange(pos, this.getBlockType(), false);
+        if (this.isFirst) {
+            ++this.numPlayersUsing;
+            this.world.addBlockEvent(pos, this.getBlockType(), 1, this.numPlayersUsing);
+            this.world.notifyNeighborsOfStateChange(pos, this.getBlockType(), false);
+        }else
+            this.getAdjacentPart().openInventory(player);
     }
 
     @Override
     public void closeInventory(EntityPlayer player)
     {
-        --this.numPlayersUsing;
-        this.world.addBlockEvent(pos, this.getBlockType(), 1, this.numPlayersUsing);
-        this.world.notifyNeighborsOfStateChange(pos, this.getBlockType(), false);
+        if (this.isFirst) {
+            --this.numPlayersUsing;
+            this.world.addBlockEvent(pos, this.getBlockType(), 1, this.numPlayersUsing);
+            this.world.notifyNeighborsOfStateChange(pos, this.getBlockType(), false);
+        }else
+            this.getAdjacentPart().closeInventory(player);
     }
 }
