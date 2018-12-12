@@ -30,6 +30,7 @@ public class Main {
     @EventHandler
     public static void PreInit(FMLPreInitializationEvent event)
     {
+        OreDictionary.registerOre("cutter", new ItemStack(ModItems.CUTTER, 1, OreDictionary.WILDCARD_VALUE));
         GameRegistry.registerWorldGenerator(new ModWorldGen(), 13);
         ModPotions.registerPotions();
 

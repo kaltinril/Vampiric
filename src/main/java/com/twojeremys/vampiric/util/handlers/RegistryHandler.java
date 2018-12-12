@@ -19,6 +19,7 @@ public class RegistryHandler {
     public static void onItemRegister(RegistryEvent.Register<Item> event){
         event.getRegistry().registerAll(ModItems.ITEMS.toArray(new Item[0]));
         System.out.println("onItemRegister");
+
     }
 
     @SubscribeEvent
@@ -35,7 +36,7 @@ public class RegistryHandler {
             }
         }
 
-        OreDictionary.registerOre("cutter", new ItemStack(ModItems.CUTTER, 1, OreDictionary.WILDCARD_VALUE));
+
 
         System.out.println(OreDictionary.getOres("cutter"));
 
