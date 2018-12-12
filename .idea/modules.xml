@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Vampirc.iml" filepath="$PROJECT_DIR$/.idea/Vampirc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.twojeremys.vampiric.Vampirc.api.iml" filepath="$PROJECT_DIR$/.idea/modules/com.twojeremys.vampiric.Vampirc.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.twojeremys.vampiric.Vampirc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.twojeremys.vampiric.Vampirc.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.twojeremys.vampiric.Vampirc.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.twojeremys.vampiric.Vampirc.test.iml" />
     </modules>
   </component>
 </project>
