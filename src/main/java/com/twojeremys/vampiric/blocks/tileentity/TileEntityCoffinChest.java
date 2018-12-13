@@ -10,6 +10,8 @@ import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.network.NetworkManager;
+import net.minecraft.network.play.server.SPacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityLockableLoot;
 import net.minecraft.util.ITickable;
@@ -18,6 +20,7 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import org.lwjgl.Sys;
 
 public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITickable {
     private NonNullList<ItemStack> chestContents = NonNullList.<ItemStack>withSize(4, ItemStack.EMPTY);
@@ -38,6 +41,7 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
 
     public void setAdjacentPart(TileEntityCoffinChest tileEntityCoffinChest){
         this.adjacentPart = tileEntityCoffinChest;
+        this.markDirty();
     }
 
     @Override
@@ -71,13 +75,18 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
     @Override
     public void readFromNBT(NBTTagCompound compound)
     {
+        System.out.println("readFromNBT");
+        if (world != null) System.out.println("World is remove? " + world.isRemote);
+        System.out.println(compound);
         //if (this.isFirst) {
+
         super.readFromNBT(compound);
         this.chestContents = NonNullList.<ItemStack>withSize(this.getSizeInventory(), ItemStack.EMPTY);
 
         if (!this.checkLootAndRead(compound)) ItemStackHelper.loadAllItems(compound, chestContents);
 
-        this.isFirst = compound.getBoolean("IsFirst");
+        if (compound.hasKey("IsFirst"))
+            this.isFirst = compound.getBoolean("IsFirst");
 
         if (compound.hasKey("AdjacentX")) {
             BlockPos pos = new BlockPos(
@@ -87,6 +96,9 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
             this.adjacentX = pos.getX();
             this.adjacentY = pos.getY();
             this.adjacentZ = pos.getZ();
+
+            System.out.println("Key found!");
+
             /*TileEntity otherCoffinTile = this.getWorld().getTileEntity(pos);
             if (otherCoffinTile != null) {
                 this.setAdjacentPart((TileEntityCoffinChest)otherCoffinTile);
@@ -94,17 +106,25 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
         }
 
 
+        System.out.println(adjacentX + " : " + adjacentY + " : " + adjacentZ);
+
 
         if (compound.hasKey("CustomName", 8)) this.customName = compound.getString("CustomName");
         //}else
             //this.getAdjacentPart().readFromNBT(compound);
+
+        this.markDirty();
     }
 
     @Override
     public NBTTagCompound writeToNBT(NBTTagCompound compound)
     {
+        System.out.println("writeToNBT");
+        System.out.println("World is remove? " + world.isRemote);
+        System.out.println(compound);
+
         //if (this.isFirst) {
-            super.writeToNBT(compound);
+
 
             if(!this.checkLootAndWrite(compound)) ItemStackHelper.saveAllItems(compound, chestContents);
 
@@ -114,13 +134,35 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
             compound.setInteger("AdjacentX", (Integer) this.getAdjacentPart().getPos().getX());
             compound.setInteger("AdjacentY", (Integer) this.getAdjacentPart().getPos().getY());
             compound.setInteger("AdjacentZ", (Integer) this.getAdjacentPart().getPos().getZ());
+
+
+            System.out.println(this.getAdjacentPart().getPos().getX() + " : " + this.getAdjacentPart().getPos().getY() + " : " + this.getAdjacentPart().getPos().getZ());
         }
 
             if(compound.hasKey("CustomName", 8)) compound.setString("CustomName", this.customName);
 
-            return compound;
+            return super.writeToNBT(compound);
         //}else
             //return this.getAdjacentPart().writeToNBT(compound);
+    }
+
+
+    @Override
+    public SPacketUpdateTileEntity getUpdatePacket() {
+        return new SPacketUpdateTileEntity(getPos(), getBlockMetadata(), writeToNBT(new NBTTagCompound()));
+    }
+
+    @Override
+    public NBTTagCompound getUpdateTag() {
+        super.getUpdateTag();
+
+        return writeToNBT(new NBTTagCompound());
+    }
+
+
+    @Override
+    public void onDataPacket(NetworkManager net, SPacketUpdateTileEntity pkt) {
+        readFromNBT(pkt.getNbtCompound());
     }
 
     @Override
@@ -155,6 +197,7 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
                 TileEntity otherCoffinTile = this.getWorld().getTileEntity(pos);
                 if (otherCoffinTile != null) {
                     this.setAdjacentPart((TileEntityCoffinChest)otherCoffinTile);
+                    this.markDirty();
                 }
             }
         }
@@ -239,7 +282,7 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
         if (this.isFirst) {
             ++this.numPlayersUsing;
             this.world.addBlockEvent(pos, this.getBlockType(), 1, this.numPlayersUsing);
-            //this.world.notifyNeighborsOfStateChange(pos, this.getBlockType(), false);
+            this.world.notifyNeighborsOfStateChange(pos, this.getBlockType(), false);
         }else
             if (this.getAdjacentPart() != null) this.getAdjacentPart().openInventory(player);
     }
