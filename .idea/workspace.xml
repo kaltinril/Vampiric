@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list comment="" default="true" id="d34f1614-ee8d-479a-86a6-f2cadd919f62" name="Default Changelist">
-      <change afterDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/tileentity/TileEntityCoffinChest.java" beforeDir="false" beforePath="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/tileentity/TileEntityCoffinChest.java" />
+    <list default="true" id="d34f1614-ee8d-479a-86a6-f2cadd919f62" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/BlockCoffinChest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/BlockCoffinChest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/tileentity/TileEntityCoffinChest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/tileentity/TileEntityCoffinChest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -42,6 +45,11 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="forgegradle" type="c8890929:TasksNode$1" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Vampirc" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -51,95 +59,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file current-in-tab="false" pinned="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/container/RenderCoffinChest.java">
-          <provider editor-type-id="text-editor" selected="true">
-            <state relative-caret-position="340">
-              <caret column="5" line="20" selection-end-column="5" selection-end-line="20" selection-start-column="5" selection-start-line="20" />
-              <folding>
-                <element expanded="true" signature="imports" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file current-in-tab="false" pinned="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/client/renderer/tileentity/TileEntityChestRenderer.java">
-          <provider editor-type-id="text-editor" selected="true">
-            <state relative-caret-position="301">
-              <caret column="12" line="56" selection-end-column="12" selection-end-line="56" selection-start-column="12" selection-start-line="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file current-in-tab="false" pinned="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/tileentity/TileEntityChest.java">
-          <provider editor-type-id="text-editor" selected="true">
-            <state relative-caret-position="170">
-              <caret column="26" line="31" selection-end-column="26" selection-end-line="31" selection-start-column="11" selection-start-line="31" />
-              <folding>
-                <element expanded="true" signature="e#4313#4351#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file current-in-tab="true" pinned="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/tileentity/TileEntityCoffinChest.java">
-          <provider editor-type-id="text-editor" selected="true">
-            <state relative-caret-position="170">
-              <caret line="101" selection-end-line="101" selection-start-line="101" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2694">
+              <caret line="233" column="13" selection-start-line="233" selection-start-column="13" selection-end-line="233" selection-end-column="13" />
               <folding>
-                <element expanded="true" signature="imports" />
-                <element expanded="true" signature="e#849#860#0" />
-                <element expanded="true" signature="e#1118#1119#0" />
-                <element expanded="true" signature="e#1152#1153#0" />
-                <element expanded="true" signature="e#1342#1343#0" />
-                <element expanded="true" signature="e#1366#1367#0" />
-                <element expanded="true" signature="e#1427#1428#0" />
-                <element expanded="true" signature="e#1452#1453#0" />
-                <element expanded="true" signature="e#2020#2021#0" />
-                <element expanded="true" signature="e#1637#1648#0" />
-                <element expanded="true" signature="e#4387#4388#0" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file current-in-tab="false" pinned="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/block/BlockChest.java">
-          <provider editor-type-id="text-editor" selected="true">
-            <state relative-caret-position="159">
-              <caret column="21" line="428" selection-end-column="21" selection-end-line="428" selection-start-column="16" selection-start-line="428" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file current-in-tab="false" pinned="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/BlockCoffinChest.java">
-          <provider editor-type-id="text-editor" selected="true">
-            <state relative-caret-position="411">
-              <caret column="53" line="87" selection-end-column="53" selection-end-line="87" selection-start-column="53" selection-start-line="87" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="157" column="10" selection-start-line="157" selection-start-column="10" selection-end-line="157" selection-end-column="10" />
               <folding>
-                <element expanded="true" signature="imports" />
-                <element expanded="true" signature="e#7368#7369#0" />
-                <element expanded="true" signature="e#7512#7513#0" />
-                <element expanded="true" signature="e#7692#7693#0" />
-                <element expanded="true" signature="e#7871#7872#0" />
-                <element expanded="true" signature="e#8052#8053#0" />
-                <element expanded="true" signature="e#9020#9021#0" />
-                <element expanded="true" signature="e#9162#9163#0" />
-                <element expanded="true" signature="e#15259#15260#0" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#7679#7680#0" expanded="true" />
+                <element signature="e#7823#7824#0" expanded="true" />
+                <element signature="e#8003#8004#0" expanded="true" />
+                <element signature="e#8182#8183#0" expanded="true" />
+                <element signature="e#8363#8364#0" expanded="true" />
+                <element signature="e#9331#9332#0" expanded="true" />
+                <element signature="e#9473#9474#0" expanded="true" />
+                <element signature="e#14367#14368#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file current-in-tab="false" pinned="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/block/BlockContainer.java">
-          <provider editor-type-id="text-editor" selected="true">
-            <state relative-caret-position="102">
-              <caret column="26" line="55" selection-end-column="26" selection-end-line="55" selection-start-column="16" selection-start-line="55" />
             </state>
           </provider>
         </entry>
@@ -156,8 +103,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getStateFromMe</find>
-      <find>setDefaultState</find>
       <find>getActual</find>
       <find>getActualState</find>
       <find>uvlock</find>
@@ -186,6 +131,8 @@
       <find>onBLock</find>
       <find>break</find>
       <find>close</find>
+      <find>TileEntityCoffinChest</find>
+      <find>createNewTileEntity</find>
     </findStrings>
     <replaceStrings>
       <replace>garlic_plant</replace>
@@ -244,10 +191,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/container/ContainerCoffinChest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/assets/vampiric/blockstates/coffin_chest.json" />
         <option value="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/coffin_chest.json" />
-        <option value="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/animation/ModelCoffinChest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/container/RenderCoffinChest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/BlockCoffinChest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/animation/ModelCoffinChest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/tileentity/TileEntityCoffinChest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/BlockCoffinChest.java" />
       </list>
     </option>
   </component>
@@ -269,17 +216,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="Vampirc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -400,115 +336,6 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="twojeremys" type="462c0819:PsiDirectoryNode" />
               <item name="vampiric" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vampirc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vampirc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vampirc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="vampiric" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vampirc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="vampiric" type="462c0819:PsiDirectoryNode" />
-              <item name="blockstates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vampirc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="vampiric" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vampirc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="vampiric" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="block" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vampirc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="vampiric" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="item" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vampirc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="vampiric" type="462c0819:PsiDirectoryNode" />
-              <item name="textures" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vampirc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="vampiric" type="462c0819:PsiDirectoryNode" />
-              <item name="textures" type="462c0819:PsiDirectoryNode" />
-              <item name="blocks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vampirc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="vampiric" type="462c0819:PsiDirectoryNode" />
-              <item name="textures" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vampirc" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="vampiric" type="462c0819:PsiDirectoryNode" />
-              <item name="textures" type="462c0819:PsiDirectoryNode" />
               <item name="items" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -516,11 +343,61 @@
               <item name="Vampirc" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="twojeremys" type="462c0819:PsiDirectoryNode" />
+              <item name="vampiric" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vampirc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="twojeremys" type="462c0819:PsiDirectoryNode" />
+              <item name="vampiric" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="compat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vampirc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="twojeremys" type="462c0819:PsiDirectoryNode" />
+              <item name="vampiric" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="handlers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vampirc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="twojeremys" type="462c0819:PsiDirectoryNode" />
+              <item name="vampiric" type="462c0819:PsiDirectoryNode" />
+              <item name="world" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vampirc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vampirc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="vampiric" type="462c0819:PsiDirectoryNode" />
-              <item name="textures" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
@@ -530,60 +407,31 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="vampiric" type="462c0819:PsiDirectoryNode" />
-              <item name="textures" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="armor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="forgeSrc-1.12.2-14.23.5.2796.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="forgeSrc-1.12.2-14.23.5.2796.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="Vampirc" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="forgeSrc-1.12.2-14.23.5.2796.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="minecraft" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="forgeSrc-1.12.2-14.23.5.2796.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="minecraft" type="462c0819:PsiDirectoryNode" />
+              <item name="vampiric" type="462c0819:PsiDirectoryNode" />
               <item name="blockstates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="forgeSrc-1.12.2-14.23.5.2796.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="net" type="462c0819:PsiDirectoryNode" />
             </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
             <path>
-              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="forgeSrc-1.12.2-14.23.5.2796.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="net" type="462c0819:PsiDirectoryNode" />
-              <item name="minecraft" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vampirc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="forgeSrc-1.12.2-14.23.5.2796.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="net" type="462c0819:PsiDirectoryNode" />
-              <item name="minecraft" type="462c0819:PsiDirectoryNode" />
-              <item name="block" type="462c0819:PsiDirectoryNode" />
+              <item name="Vampirc" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="com" type="2674bda8:ScopeViewTreeModel$GroupNode" />
             </path>
           </expand>
           <select />
@@ -593,7 +441,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544523738487" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544610254177" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -601,8 +449,11 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc\src\main\resources" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.twojeremys.vampiric.blocks.gui" />
+      <recent name="com.twojeremys.vampiric.blocks.tileentity" />
+      <recent name="com.twojeremys.vampiric.blocks.container" />
+      <recent name="com.twojeremys.vampiric.blocks" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc\src\main\resources\assets\vampiric\models\block" />
@@ -614,11 +465,8 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.twojeremys.vampiric.items.tools" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.twojeremys.vampiric.blocks.gui" />
-      <recent name="com.twojeremys.vampiric.blocks.tileentity" />
-      <recent name="com.twojeremys.vampiric.blocks.container" />
-      <recent name="com.twojeremys.vampiric.blocks" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -814,7 +662,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist comment="" id="d34f1614-ee8d-479a-86a6-f2cadd919f62" name="Default Changelist" />
+      <changelist id="d34f1614-ee8d-479a-86a6-f2cadd919f62" name="Default Changelist" comment="" />
       <created>1543284498684</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -832,9 +680,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame extended-state="6" height="1056" width="1936" x="-8" y="-8" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19509594" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20362474" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -843,8 +692,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3347779" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3954496" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3347779" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3954496" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
@@ -869,33 +718,69 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/BlockCoffinChest.java</url>
-          <line>330</line>
+          <line>306</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/BlockCoffinChest.java</url>
-          <line>91</line>
+          <line>89</line>
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/BlockCoffinChest.java</url>
-          <line>88</line>
+          <line>86</line>
           <properties />
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/tileentity/TileEntityCoffinChest.java</url>
-          <line>101</line>
+          <line>89</line>
           <properties />
-          <option name="timeStamp" value="26" />
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/tileentity/TileEntityCoffinChest.java</url>
-          <line>75</line>
+          <line>156</line>
           <properties />
-          <option name="timeStamp" value="27" />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/tileentity/TileEntityCoffinChest.java</url>
+          <line>241</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/tileentity/TileEntityCoffinChest.java</url>
+          <line>243</line>
+          <properties />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/tileentity/TileEntityCoffinChest.java</url>
+          <line>77</line>
+          <properties />
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/tileentity/TileEntityCoffinChest.java</url>
+          <line>237</line>
+          <properties />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/BlockCoffinChest.java</url>
+          <line>135</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/BlockCoffinChest.java</url>
+          <line>163</line>
+          <properties />
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -905,410 +790,405 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/lang/en_us.lang">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="238">
-          <caret line="14" selection-end-line="14" selection-start-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/gui/GuiCoffinChest.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="476">
-          <caret column="89" line="28" selection-end-column="89" selection-end-line="28" selection-start-column="89" selection-start-line="28" />
-          <folding>
-            <element expanded="true" signature="imports" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/util/handlers/GuiHandler.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="238">
-          <caret line="14" selection-end-line="14" selection-start-line="14" />
-          <folding>
-            <element expanded="true" signature="imports" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/init/SoundEvents.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="68">
-          <caret column="13" line="5" selection-end-column="13" selection-end-line="5" selection-start-column="13" selection-start-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/init/ModItems.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="439">
-          <caret column="128" line="53" selection-end-column="128" selection-end-line="53" selection-start-column="128" selection-start-line="53" />
-          <folding>
-            <element expanded="true" signature="imports" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/util/IHasModel.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="34">
-          <caret column="17" line="2" selection-end-column="17" selection-end-line="2" selection-start-column="17" selection-start-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/gui/coffin_chest.png">
-      <provider editor-type-id="images" selected="true" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/client/model/ModelRenderer.java">
-      <provider editor-type-id="text-editor" selected="true" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/init/ModBlocks.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="391">
-          <caret line="23" selection-end-line="23" selection-start-line="23" />
-          <folding>
-            <element expanded="true" signature="imports" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/util/handlers/RegistryHandler.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="340">
-          <caret column="5" line="33" selection-end-column="5" selection-end-line="33" selection-start-column="5" selection-start-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/proxy/CommonProxy.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="68">
-          <caret column="26" line="4" selection-end-column="26" selection-end-line="4" selection-start-column="26" selection-start-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/proxy/ClientProxy.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="170">
-          <caret column="13" line="12" selection-end-column="13" selection-end-line="12" selection-start-column="13" selection-start-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/items/ItemBase.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="68">
-          <caret column="13" line="8" selection-end-column="13" selection-end-line="8" selection-start-column="13" selection-start-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/client/model/ModelBase.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="-595">
-          <caret column="22" line="12" selection-end-column="22" selection-end-line="12" selection-start-column="22" selection-start-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/inventory/Container.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="-493">
-          <caret column="22" line="21" selection-end-column="22" selection-end-line="21" selection-start-column="22" selection-start-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/block/state/IBlockState.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="68">
-          <caret column="17" line="7" selection-end-column="17" selection-end-line="7" selection-start-column="17" selection-start-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/coffin_chest.json">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="102">
-          <caret column="1" line="6" selection-end-column="1" selection-end-line="6" selection-start-column="1" selection-start-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/silver_block.json">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="17">
-          <caret column="13" line="1" selection-end-column="27" selection-end-line="1" selection-start-column="13" selection-start-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796.jar!/assets/minecraft/models/block/oak_fence_side.json">
-      <provider editor-type-id="text-editor" selected="true">
-        <state>
-          <caret selection-end-column="1" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796.jar!/assets/minecraft/models/block/oak_fence_post.json">
-      <provider editor-type-id="text-editor" selected="true">
-        <state>
-          <caret selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796.jar!/assets/minecraft/blockstates/oak_log.json">
-      <provider editor-type-id="text-editor" selected="true" />
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/lang/Override.java">
-      <provider editor-type-id="text-editor" selected="true">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
-          <caret column="18" line="50" selection-end-column="18" selection-end-line="50" selection-start-column="18" selection-start-line="50" />
+          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/client/renderer/block/model/ModelBlock.java">
-      <provider editor-type-id="text-editor" selected="true">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4046">
-          <caret column="13" line="30" selection-end-column="13" selection-end-line="30" selection-start-column="13" selection-start-line="30" />
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/client/model/ModelChest.java">
-      <provider editor-type-id="text-editor" selected="true">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret column="11" line="15" selection-end-column="11" selection-end-line="15" selection-start-column="11" selection-start-line="15" />
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/client/model/ModelLargeChest.java">
-      <provider editor-type-id="text-editor" selected="true">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret column="11" line="8" selection-end-column="11" selection-end-line="8" selection-start-column="11" selection-start-line="8" />
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/client/renderer/block/model/BakedQuad.java">
-      <provider editor-type-id="text-editor" selected="true">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-417">
-          <caret column="13" line="8" selection-end-column="13" selection-end-line="8" selection-start-column="13" selection-start-line="8" />
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/util/math/Vec3i.java">
-      <provider editor-type-id="text-editor" selected="true">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
-          <caret line="80" selection-end-line="80" selection-start-line="80" />
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
           <folding>
-            <element expanded="true" signature="e#1911#1912#0" />
+            <element signature="e#1911#1912#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/util/math/AxisAlignedBB.java">
-      <provider editor-type-id="text-editor" selected="true">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
-          <caret line="338" selection-end-line="338" selection-start-line="338" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/container/ContainerCoffinChest.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="-1041">
-          <caret column="45" line="14" selection-end-column="45" selection-end-line="14" selection-start-column="45" selection-start-line="14" />
-          <folding>
-            <element expanded="true" signature="imports" />
-            <element expanded="true" signature="e#1946#1947#0" />
-            <element expanded="true" signature="e#2015#2016#0" />
-          </folding>
+          <caret line="338" selection-start-line="338" selection-end-line="338" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/client/model/ModelBed.java">
-      <provider editor-type-id="text-editor" selected="true">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret column="13" line="6" selection-end-column="13" selection-end-line="6" selection-start-column="13" selection-start-line="6" />
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/block/state/BlockStateContainer.java">
-      <provider editor-type-id="text-editor" selected="true">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="457" selection-end-line="457" selection-start-line="457" />
+          <caret line="457" selection-start-line="457" selection-end-line="457" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/blocks/coffin_chest.png">
-      <provider editor-type-id="images" selected="true" />
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/tileentity/TileEntityBed.java">
-      <provider editor-type-id="text-editor" selected="true">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret column="13" line="11" selection-end-column="13" selection-end-line="11" selection-start-column="13" selection-start-line="11" />
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/block/BlockHorizontal.java">
-      <provider editor-type-id="text-editor" selected="true">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret column="50" line="7" selection-end-column="50" selection-end-line="7" selection-start-column="50" selection-start-line="7" />
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/block/BlockBed.java">
-      <provider editor-type-id="text-editor" selected="true">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="215" selection-end-line="215" selection-start-line="215" />
+          <caret line="215" selection-start-line="215" selection-end-line="215" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/tileentity/TileEntityChest.java">
-      <provider editor-type-id="text-editor" selected="true">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret column="26" line="31" selection-end-column="26" selection-end-line="31" selection-start-column="11" selection-start-line="31" />
+          <caret line="31" column="26" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="26" />
           <folding>
-            <element expanded="true" signature="e#4313#4351#0" />
+            <element signature="e#4313#4351#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/blockstates/coffin_chest.json">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="136">
-          <caret column="1" line="8" selection-end-column="1" selection-end-line="8" selection-start-column="1" selection-start-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/coffin_chest.json">
-      <provider editor-type-id="text-editor" selected="true">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret column="1" line="5" selection-end-column="1" selection-end-line="5" selection-start-column="1" selection-start-line="5" />
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/util/EnumFacing.java">
-      <provider editor-type-id="text-editor" selected="true">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-136">
-          <caret column="12" line="15" selection-end-column="12" selection-end-line="15" selection-start-column="12" selection-start-line="15" />
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/block/BlockChest.java">
-      <provider editor-type-id="text-editor" selected="true">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
-          <caret column="21" line="428" selection-end-column="21" selection-end-line="428" selection-start-column="16" selection-start-line="428" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/tileentity/TileEntity.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="-1352">
-          <caret column="22" line="23" selection-end-column="22" selection-end-line="23" selection-start-column="22" selection-start-line="23" />
+          <caret line="428" column="21" selection-start-line="428" selection-start-column="16" selection-end-line="428" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/tileentity/TileEntityLockable.java">
-      <provider editor-type-id="text-editor" selected="true">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret column="55" line="9" selection-end-column="55" selection-end-line="9" selection-start-column="55" selection-start-line="9" />
+          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/tileentity/TileEntityLockableLoot.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="68">
-          <caret column="59" lean-forward="true" line="15" selection-end-column="59" selection-end-line="15" selection-start-column="59" selection-start-line="15" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/client/renderer/tileentity/TileEntityChestRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/world/World.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="58">
-          <caret column="30" line="2679" selection-end-column="30" selection-end-line="2679" selection-start-column="19" selection-start-line="2679" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/block/BlockContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="55" column="26" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraftforge/common/chunkio/ChunkIOProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/world/chunk/storage/AnvilChunkLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="558" selection-start-line="558" selection-end-line="558" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/tileentity/TileEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="214" selection-start-line="214" selection-end-line="214" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraftforge/fml/common/network/NetworkRegistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="252" selection-start-line="252" selection-end-line="252" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraftforge/fml/common/network/internal/FMLNetworkHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/entity/player/EntityPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="2809" selection-start-line="2809" selection-end-line="2809" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/server/management/PlayerInteractionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="482" selection-start-line="482" selection-end-line="482" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/network/NetHandlerPlayServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="780" selection-start-line="780" selection-end-line="780" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/network/play/client/CPacketPlayerTryUseItemOnBlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
           <folding>
-            <element expanded="true" signature="e#17728#17729#0" />
-            <element expanded="true" signature="e#17807#17808#0" />
+            <element signature="e#2186#2187#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/network/PacketThreadUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#864#865#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/util/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/server/integrated/IntegratedServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="223" selection-start-line="223" selection-end-line="223" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/server/MinecraftServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="588" selection-start-line="588" selection-end-line="588" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/item/ItemBlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="206" selection-start-line="206" selection-end-line="206" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/block/Block.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="-2883">
-          <caret column="16" line="671" selection-end-column="16" selection-end-line="671" selection-start-column="16" selection-start-line="671" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="1516" selection-start-line="1516" selection-end-line="1516" />
           <folding>
-            <element expanded="true" signature="e#6379#6380#0" />
-            <element expanded="true" signature="e#6416#6417#0" />
-            <element expanded="true" signature="e#8448#8449#0" />
-            <element expanded="true" signature="e#8476#8477#0" />
-            <element expanded="true" signature="e#12276#12277#0" />
-            <element expanded="true" signature="e#12303#12304#0" />
-            <element expanded="true" signature="e#35931#35932#0" />
-            <element expanded="true" signature="e#35976#35977#0" />
+            <element signature="e#6379#6380#0" expanded="true" />
+            <element signature="e#6416#6417#0" expanded="true" />
+            <element signature="e#8448#8449#0" expanded="true" />
+            <element signature="e#8476#8477#0" expanded="true" />
+            <element signature="e#12276#12277#0" expanded="true" />
+            <element signature="e#12303#12304#0" expanded="true" />
+            <element signature="e#35931#35932#0" expanded="true" />
+            <element signature="e#35976#35977#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/BlockCoffinChest.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="411">
-          <caret column="53" line="87" selection-end-column="53" selection-end-line="87" selection-start-column="53" selection-start-line="87" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/world/chunk/Chunk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="681" selection-start-line="681" selection-end-line="681" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/world/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="409" selection-start-line="409" selection-end-line="409" />
           <folding>
-            <element expanded="true" signature="imports" />
-            <element expanded="true" signature="e#7368#7369#0" />
-            <element expanded="true" signature="e#7512#7513#0" />
-            <element expanded="true" signature="e#7692#7693#0" />
-            <element expanded="true" signature="e#7871#7872#0" />
-            <element expanded="true" signature="e#8052#8053#0" />
-            <element expanded="true" signature="e#9020#9021#0" />
-            <element expanded="true" signature="e#9162#9163#0" />
-            <element expanded="true" signature="e#15259#15260#0" />
+            <element signature="e#17728#17729#0" expanded="true" />
+            <element signature="e#17807#17808#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/util/compat/OreDictionaryCompat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/util/handlers/GuiHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/util/handlers/TileEntityHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/util/Reference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/assets/vampiric/blockstates/coffin_chest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/init/ModBlocks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="37" lean-forward="true" selection-start-column="37" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/gui/GuiCoffinChest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/container/RenderCoffinChest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/container/ContainerCoffinChest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="53" lean-forward="true" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1946#1947#0" expanded="true" />
+            <element signature="e#2015#2016#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/animation/ModelCoffinChest.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state>
-          <caret column="49" selection-end-column="49" selection-start-column="49" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-91">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
-            <element expanded="true" signature="imports" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/container/RenderCoffinChest.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="340">
-          <caret column="5" line="20" selection-end-column="5" selection-end-line="20" selection-start-column="5" selection-start-line="20" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/tileentity/TileEntityLockableLoot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="171" column="16" selection-start-line="171" selection-start-column="16" selection-end-line="171" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/BlockCoffinChest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="157" column="10" selection-start-line="157" selection-start-column="10" selection-end-line="157" selection-end-column="10" />
           <folding>
-            <element expanded="true" signature="imports" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#7679#7680#0" expanded="true" />
+            <element signature="e#7823#7824#0" expanded="true" />
+            <element signature="e#8003#8004#0" expanded="true" />
+            <element signature="e#8182#8183#0" expanded="true" />
+            <element signature="e#8363#8364#0" expanded="true" />
+            <element signature="e#9331#9332#0" expanded="true" />
+            <element signature="e#9473#9474#0" expanded="true" />
+            <element signature="e#14367#14368#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/client/renderer/tileentity/TileEntityChestRenderer.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="301">
-          <caret column="12" line="56" selection-end-column="12" selection-end-line="56" selection-start-column="12" selection-start-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.12.2-14.23.5.2796/snapshot/20171003/forgeSrc-1.12.2-14.23.5.2796-sources.jar!/net/minecraft/block/BlockContainer.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="102">
-          <caret column="26" line="55" selection-end-column="26" selection-end-line="55" selection-start-column="16" selection-start-line="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/twojeremys/vampiric/blocks/tileentity/TileEntityCoffinChest.java">
-      <provider editor-type-id="text-editor" selected="true">
-        <state relative-caret-position="170">
-          <caret line="101" selection-end-line="101" selection-start-line="101" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2694">
+          <caret line="233" column="13" selection-start-line="233" selection-start-column="13" selection-end-line="233" selection-end-column="13" />
           <folding>
-            <element expanded="true" signature="imports" />
-            <element expanded="true" signature="e#849#860#0" />
-            <element expanded="true" signature="e#1118#1119#0" />
-            <element expanded="true" signature="e#1152#1153#0" />
-            <element expanded="true" signature="e#1342#1343#0" />
-            <element expanded="true" signature="e#1366#1367#0" />
-            <element expanded="true" signature="e#1427#1428#0" />
-            <element expanded="true" signature="e#1452#1453#0" />
-            <element expanded="true" signature="e#2020#2021#0" />
-            <element expanded="true" signature="e#1637#1648#0" />
-            <element expanded="true" signature="e#4387#4388#0" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

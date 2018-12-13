@@ -23,8 +23,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityChest;
-import net.minecraft.tileentity.TileEntityNote;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -102,56 +100,62 @@ public class BlockCoffinChest extends BlockContainer implements IHasModel {
     @Override
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
 
-        // Set this blocks direction to face, picking the opposite of the player direction
-        EnumFacing enumfacing = EnumFacing.getHorizontal(MathHelper.floor((double)(placer.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3).getOpposite();
-        state = state.withProperty(FACING, enumfacing);
-        worldIn.setBlockState(pos, state, 3);
+        //if (!worldIn.isRemote) {
+            // Set this blocks direction to face, picking the opposite of the player direction
+            EnumFacing enumfacing = EnumFacing.getHorizontal(MathHelper.floor((double) (placer.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3).getOpposite();
+            state = state.withProperty(FACING, enumfacing);
+            worldIn.setBlockState(pos, state, 3);
 
-        // Pick the direction to place the other block
-        // Pick "to the right" based on the facing direction
-        BlockPos blockpos = pos.offset(EnumFacing.EAST);
-        EnumFacing playerFacing = enumfacing.getOpposite();
-        if (playerFacing == EnumFacing.NORTH)
-            blockpos = pos.offset(EnumFacing.EAST);
-        else if (playerFacing == EnumFacing.EAST)
-            blockpos = pos.offset(EnumFacing.SOUTH);
-        else if (playerFacing == EnumFacing.SOUTH)
-            blockpos = pos.offset(EnumFacing.WEST);
-        else if (playerFacing == EnumFacing.WEST)
-            blockpos = pos.offset(EnumFacing.NORTH);
+            // Pick the direction to place the other block
+            // Pick "to the right" based on the facing direction
+            BlockPos blockpos = pos.offset(EnumFacing.EAST);
+            EnumFacing playerFacing = enumfacing.getOpposite();
+            if (playerFacing == EnumFacing.NORTH)
+                blockpos = pos.offset(EnumFacing.EAST);
+            else if (playerFacing == EnumFacing.EAST)
+                blockpos = pos.offset(EnumFacing.SOUTH);
+            else if (playerFacing == EnumFacing.SOUTH)
+                blockpos = pos.offset(EnumFacing.WEST);
+            else if (playerFacing == EnumFacing.WEST)
+                blockpos = pos.offset(EnumFacing.NORTH);
 
-        // Get the current block and entity for this
-        IBlockState iblockstate = worldIn.getBlockState(blockpos);
-        TileEntity placedCoffin = worldIn.getTileEntity(pos);
+            // Get the current block and entity for this
+            IBlockState iblockstate = worldIn.getBlockState(blockpos);
+            TileEntity placedCoffin = worldIn.getTileEntity(pos);
 
-        // If this was the first block placement, place a second one
-        if (placedCoffin instanceof TileEntityCoffinChest) {
-            if (((TileEntityCoffinChest) placedCoffin).isFirst) {
+            // If this was the first block placement, place a second one
+            if (placedCoffin instanceof TileEntityCoffinChest) {
+                if (((TileEntityCoffinChest) placedCoffin).isFirst) {
 
-                if (iblockstate.getBlock() == Blocks.AIR) // this)
-                {
-                    // Create a new tile entity for us
-                    TileEntityCoffinChest tileEntityCoffinChest = new TileEntityCoffinChest();
-                    tileEntityCoffinChest.isFirst = false; // Make sure we don't add more, and also don't draw
+                    if (iblockstate.getBlock() == Blocks.AIR) // this)
+                    {
+                        TileEntity te1 = worldIn.getTileEntity(blockpos);
+                        // Place the block, find the new tileEntity, change it to isFirst = false
+                        worldIn.setBlockState(blockpos, ModBlocks.COFFIN_CHEST.getDefaultState(), 3);
+                        TileEntity te = worldIn.getTileEntity(blockpos);
+                        if (te != null) {
+                            ((TileEntityCoffinChest) te).isFirst = false;
 
-                    // Make sure the two blocks have reference to each-other
-                    tileEntityCoffinChest.setAdjacentPart((TileEntityCoffinChest)placedCoffin);
-                    ((TileEntityCoffinChest) placedCoffin).setAdjacentPart(tileEntityCoffinChest);
+                            // Make sure the two blocks have reference to each-other
+                            ((TileEntityCoffinChest) te).setAdjacentPart((TileEntityCoffinChest) placedCoffin);
+                            ((TileEntityCoffinChest) placedCoffin).setAdjacentPart(((TileEntityCoffinChest) te));
 
-                    // Place the block and then the tile entity
-                    worldIn.setBlockState(blockpos, ModBlocks.COFFIN_CHEST.getDefaultState(), 3);
-                    worldIn.setTileEntity(blockpos, tileEntityCoffinChest);
+                            worldIn.setTileEntity(blockpos, te);
+                            TileEntity te2 = worldIn.getTileEntity(blockpos);
+                            System.out.println(te2);
+                        }
+                    }
                 }
             }
-        }
 
-        if (stack.hasDisplayName()){
-            TileEntity tileEntity = worldIn.getTileEntity(pos);
+            if (stack.hasDisplayName()) {
+                TileEntity tileEntity = worldIn.getTileEntity(pos);
 
-            if (tileEntity instanceof TileEntityCoffinChest){
-                ((TileEntityCoffinChest)tileEntity).setCustomName(stack.getDisplayName());
+                if (tileEntity instanceof TileEntityCoffinChest) {
+                    ((TileEntityCoffinChest) tileEntity).setCustomName(stack.getDisplayName());
+                }
             }
-        }
+        //}
     }
 
     @Nullable
@@ -244,34 +248,6 @@ public class BlockCoffinChest extends BlockContainer implements IHasModel {
     public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
     {
 
-        //this.checkForSurroundingChests(worldIn, pos, state);
-
-        for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL)
-        {
-            BlockPos blockpos = pos.offset(enumfacing);
-            IBlockState iblockstate = worldIn.getBlockState(blockpos);
-            TileEntity placedCoffin = worldIn.getTileEntity(pos);
-
-            // If this was the first block placement, place a second one
-            if (placedCoffin instanceof TileEntityCoffinChest){
-                if (((TileEntityCoffinChest)placedCoffin).isFirst) {
-
-                    if (iblockstate.getBlock() == Blocks.AIR) // this)
-                    {
-                        TileEntityCoffinChest tileEntityCoffinChest = new TileEntityCoffinChest();
-                        tileEntityCoffinChest.isFirst = false;
-
-
-                        //worldIn.setBlockState(blockpos, ModBlocks.COFFIN_CHEST.getDefaultState(), 3);
-                        //worldIn.setTileEntity(blockpos, tileEntityCoffinChest);
-
-
-                        //this.checkForSurroundingChests(worldIn, blockpos, iblockstate);
-                        break; // Exit the EnumFacing for loop
-                    }
-                }
-            }
-        }
     }
 
     public IBlockState checkForSurroundingChests(World worldIn, BlockPos pos, IBlockState state)

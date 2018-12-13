@@ -17,6 +17,7 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 
 public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITickable {
     private NonNullList<ItemStack> chestContents = NonNullList.<ItemStack>withSize(4, ItemStack.EMPTY);
@@ -27,6 +28,9 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
 
     public TileEntityCoffinChest adjacentPart;
     public boolean isFirst = true;
+    public int adjacentX = 0;
+    public int adjacentY = 0;
+    public int adjacentZ = 0;
 
     public TileEntityCoffinChest getAdjacentPart(){
         return adjacentPart;
@@ -80,11 +84,16 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
                     compound.getInteger("AdjacentX"),
                     compound.getInteger("AdjacentY"),
                     compound.getInteger("AdjacentZ"));
-    }
+            this.adjacentX = pos.getX();
+            this.adjacentY = pos.getY();
+            this.adjacentZ = pos.getZ();
+            /*TileEntity otherCoffinTile = this.getWorld().getTileEntity(pos);
+            if (otherCoffinTile != null) {
+                this.setAdjacentPart((TileEntityCoffinChest)otherCoffinTile);
+            }*/
+        }
 
-        TileEntityCoffinChest otherCoffinTile = (TileEntityCoffinChest)this.getWorld().getTileEntity(pos);
-        if (otherCoffinTile != null)
-            this.setAdjacentPart(otherCoffinTile);
+
 
         if (compound.hasKey("CustomName", 8)) this.customName = compound.getString("CustomName");
         //}else
@@ -138,12 +147,26 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
             return this.getAdjacentPart().chestContents;
     }
 
+    private void findAssociatedTileEntity(){
+        if (getAdjacentPart() == null && adjacentX != 0 && adjacentY != 0 && adjacentZ != 0){
+            World world = this.getWorld();
+            if (world != null){
+                BlockPos pos = new BlockPos(adjacentX, adjacentY, adjacentZ);
+                TileEntity otherCoffinTile = this.getWorld().getTileEntity(pos);
+                if (otherCoffinTile != null) {
+                    this.setAdjacentPart((TileEntityCoffinChest)otherCoffinTile);
+                }
+            }
+        }
+    }
+
     @Override
     public void update()
     {
+        findAssociatedTileEntity();
+
         // Only run the other objects code
         if (!this.isFirst){
-            this.getAdjacentPart().update();
             return;
         }
 
@@ -211,12 +234,14 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
     @Override
     public void openInventory(EntityPlayer player)
     {
+        System.out.println(this.isFirst);
+        System.out.println(this.getAdjacentPart());
         if (this.isFirst) {
             ++this.numPlayersUsing;
             this.world.addBlockEvent(pos, this.getBlockType(), 1, this.numPlayersUsing);
-            this.world.notifyNeighborsOfStateChange(pos, this.getBlockType(), false);
+            //this.world.notifyNeighborsOfStateChange(pos, this.getBlockType(), false);
         }else
-            this.getAdjacentPart().openInventory(player);
+            if (this.getAdjacentPart() != null) this.getAdjacentPart().openInventory(player);
     }
 
     @Override
@@ -227,6 +252,6 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
             this.world.addBlockEvent(pos, this.getBlockType(), 1, this.numPlayersUsing);
             this.world.notifyNeighborsOfStateChange(pos, this.getBlockType(), false);
         }else
-            this.getAdjacentPart().closeInventory(player);
+            if (this.getAdjacentPart() != null) this.getAdjacentPart().closeInventory(player);
     }
 }
