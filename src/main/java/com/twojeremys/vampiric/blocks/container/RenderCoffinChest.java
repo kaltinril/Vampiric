@@ -1,6 +1,5 @@
 package com.twojeremys.vampiric.blocks.container;
 
-import com.twojeremys.vampiric.blocks.BlockCoffinChest;
 import com.twojeremys.vampiric.blocks.animation.ModelCoffinChest;
 import com.twojeremys.vampiric.blocks.tileentity.TileEntityCoffinChest;
 import com.twojeremys.vampiric.util.Reference;
@@ -19,7 +18,7 @@ public class RenderCoffinChest extends TileEntitySpecialRenderer<TileEntityCoffi
     @Override
     public void render(TileEntityCoffinChest te, double x, double y, double z, float partialTicks, int destroyStage, float alpha)
     {
-
+        // We only want to render 1 chest, so just render the first one
         if (te.isFirst) {
             GlStateManager.enableDepth();
             GlStateManager.depthFunc(515);
@@ -42,21 +41,30 @@ public class RenderCoffinChest extends TileEntitySpecialRenderer<TileEntityCoffi
             GlStateManager.scale(1.0F, -1.0F, -1.0F);
             GlStateManager.translate(0.5F, 0.5F, 0.5F);
 
+            // Decide if we need to rotate the block based on it's FACING direction
             Block block = te.getBlockType();
             int i = te.getBlockMetadata();
 
-            // Set J to 0 for default NORTH
-            int j = 0; // NORTH
+            int j = 0; // Set J to 0 for default NORTH
+            if (i == 2) j = 180; // SOUTH
+            if (i == 4) j = 90;// EAST
+            if (i == 5) j = -90; // WEST
 
+            // Move the render of the second block so it lines up exactly ontop of the other one
+            /*
+            if (i == 2 && !te.isFirst) // South
+                GlStateManager.translate(1.0F, 0.0F, 0.0F);
 
-            if (i == 2) // SOUTH
-                j = 180;
+            if (i == 5 && !te.isFirst) // West
+                GlStateManager.translate(0.0F, 0.0F, -1.0F);
 
-            if (i == 4) // EAST
-                j = 90;
+            if (i == 3 && !te.isFirst) // North
+                GlStateManager.translate(-1.0F, 0.0F, 0.0F);
 
-            if (i == 5) // WEST
-                j = -90;
+            if (i == 4 && !te.isFirst) // East
+                GlStateManager.translate(0.0F, 0.0F, 1.0F);
+
+            */
 
             GlStateManager.rotate((float) j, 0.0F, 1.0F, 0.0F);
             GlStateManager.translate(-0.5F, -0.5F, -0.5F);

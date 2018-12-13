@@ -8,7 +8,6 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SPacketUpdateTileEntity;
@@ -20,7 +19,6 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import org.lwjgl.Sys;
 
 public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITickable {
     private NonNullList<ItemStack> chestContents = NonNullList.<ItemStack>withSize(4, ItemStack.EMPTY);
@@ -29,6 +27,7 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
     public float lidAngle;
     public float prevLidAngle;
 
+    // Variables used to keep track of the two blocks and associate them together
     public TileEntityCoffinChest adjacentPart;
     public boolean isFirst = true;
     public int adjacentX = 0;
@@ -75,14 +74,13 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
     @Override
     public void readFromNBT(NBTTagCompound compound)
     {
+        // DEBUG prints TODO: Remove
         System.out.println("readFromNBT");
         if (world != null) System.out.println("World is remove? " + world.isRemote);
         System.out.println(compound);
-        //if (this.isFirst) {
 
         super.readFromNBT(compound);
         this.chestContents = NonNullList.<ItemStack>withSize(this.getSizeInventory(), ItemStack.EMPTY);
-
         if (!this.checkLootAndRead(compound)) ItemStackHelper.loadAllItems(compound, chestContents);
 
         if (compound.hasKey("IsFirst"))
@@ -97,23 +95,15 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
             this.adjacentY = pos.getY();
             this.adjacentZ = pos.getZ();
 
+            // DEBUG prints TODO: Remove
             System.out.println("Key found!");
-
-            /*TileEntity otherCoffinTile = this.getWorld().getTileEntity(pos);
-            if (otherCoffinTile != null) {
-                this.setAdjacentPart((TileEntityCoffinChest)otherCoffinTile);
-            }*/
         }
 
-
+        // DEBUG prints TODO: Remove
         System.out.println(adjacentX + " : " + adjacentY + " : " + adjacentZ);
-
-
         if (compound.hasKey("CustomName", 8)) this.customName = compound.getString("CustomName");
-        //}else
-            //this.getAdjacentPart().readFromNBT(compound);
 
-        this.markDirty();
+        this.markDirty(); // Make sure this gets updated
     }
 
     @Override
@@ -123,10 +113,7 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
         System.out.println("World is remove? " + world.isRemote);
         System.out.println(compound);
 
-        //if (this.isFirst) {
-
-
-            if(!this.checkLootAndWrite(compound)) ItemStackHelper.saveAllItems(compound, chestContents);
+        if(!this.checkLootAndWrite(compound)) ItemStackHelper.saveAllItems(compound, chestContents);
 
         compound.setBoolean("IsFirst", (boolean)this.isFirst);
 
@@ -135,18 +122,19 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
             compound.setInteger("AdjacentY", (Integer) this.getAdjacentPart().getPos().getY());
             compound.setInteger("AdjacentZ", (Integer) this.getAdjacentPart().getPos().getZ());
 
-
             System.out.println(this.getAdjacentPart().getPos().getX() + " : " + this.getAdjacentPart().getPos().getY() + " : " + this.getAdjacentPart().getPos().getZ());
         }
 
-            if(compound.hasKey("CustomName", 8)) compound.setString("CustomName", this.customName);
+        if(compound.hasKey("CustomName", 8)) compound.setString("CustomName", this.customName);
 
-            return super.writeToNBT(compound);
-        //}else
-            //return this.getAdjacentPart().writeToNBT(compound);
+        return super.writeToNBT(compound);
     }
 
 
+    /**
+     * These next three methods (getUpdatePacket, getUpdateTag, and onDataPacket)
+     *  are required to syncronize the NBT data between the server and the client
+     */
     @Override
     public SPacketUpdateTileEntity getUpdatePacket() {
         return new SPacketUpdateTileEntity(getPos(), getBlockMetadata(), writeToNBT(new NBTTagCompound()));
@@ -189,6 +177,11 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
             return this.getAdjacentPart().chestContents;
     }
 
+    /**
+     * findAssociatedTileEntity
+     *  This uses the saved XYZ values for the chest/block that is "Adjacent" (Next to this one)
+     *  It tries to find the TileEntity at that location to associate it
+     */
     private void findAssociatedTileEntity(){
         if (getAdjacentPart() == null && adjacentX != 0 && adjacentY != 0 && adjacentZ != 0){
             World world = this.getWorld();
@@ -208,17 +201,21 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
     {
         findAssociatedTileEntity();
 
-        // Only run the other objects code
+        // Only run the other objects code for animating the lid and incrementing users of the chest
         if (!this.isFirst){
             return;
         }
 
-        if (!this.world.isRemote && this.numPlayersUsing != 0 && (this.ticksSinceSync + pos.getX() + pos.getY() + pos.getZ()) % 200 == 0)
+        int posX = this.pos.getX();
+        int posY = this.pos.getY();
+        int posZ = this.pos.getZ();
+
+        if (!this.world.isRemote && this.numPlayersUsing != 0 && (this.ticksSinceSync + posX + posY + posZ) % 200 == 0)
         {
             this.numPlayersUsing = 0;
             float f = 5.0F;
 
-            for (EntityPlayer entityplayer : this.world.getEntitiesWithinAABB(EntityPlayer.class, new AxisAlignedBB((double)((float)pos.getX() - 5.0F), (double)((float)pos.getY() - 5.0F), (double)((float)pos.getZ() - 5.0F), (double)((float)(pos.getX() + 1) + 5.0F), (double)((float)(pos.getY() + 1) + 5.0F), (double)((float)(pos.getZ() + 1) + 5.0F))))
+            for (EntityPlayer entityplayer : this.world.getEntitiesWithinAABB(EntityPlayer.class, new AxisAlignedBB((double)((float)posX - f), (double)((float)posY - f), (double)((float)posZ - f), (double)((float)(posX + 1) + f), (double)((float)(posY + 1) + f), (double)((float)(posZ + 1) + f))))
             {
                 if (entityplayer.openContainer instanceof ContainerCoffinChest)
                 {
@@ -235,9 +232,9 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
 
         if (this.numPlayersUsing > 0 && this.lidAngle == 0.0F)
         {
-            double d1 = (double)pos.getX() + 0.5D;
-            double d2 = (double)pos.getZ() + 0.5D;
-            this.world.playSound((EntityPlayer)null, d1, (double)pos.getY() + 0.5D, d2, SoundEvents.BLOCK_CHEST_OPEN, SoundCategory.BLOCKS, 0.5F, this.world.rand.nextFloat() * 0.1F + 0.9F);
+            double d1 = (double)posX + 0.5D;
+            double d2 = (double)posZ + 0.5D;
+            this.world.playSound((EntityPlayer)null, d1, (double)posY + 0.5D, d2, SoundEvents.BLOCK_CHEST_OPEN, SoundCategory.BLOCKS, 0.5F, this.world.rand.nextFloat() * 0.1F + 0.9F);
         }
 
         if (this.numPlayersUsing == 0 && this.lidAngle > 0.0F || this.numPlayersUsing > 0 && this.lidAngle < 1.0F)
@@ -262,9 +259,9 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
 
             if (this.lidAngle < 0.5F && f2 >= 0.5F)
             {
-                double d3 = (double)pos.getX() + 0.5D;
-                double d0 = (double)pos.getZ() + 0.5D;
-                this.world.playSound((EntityPlayer)null, d3, (double)pos.getY() + 0.5D, d0, SoundEvents.BLOCK_CHEST_CLOSE, SoundCategory.BLOCKS, 0.5F, this.world.rand.nextFloat() * 0.1F + 0.9F);
+                double d3 = (double)posX + 0.5D;
+                double d0 = (double)posZ + 0.5D;
+                this.world.playSound((EntityPlayer)null, d3, (double)posY + 0.5D, d0, SoundEvents.BLOCK_CHEST_CLOSE, SoundCategory.BLOCKS, 0.5F, this.world.rand.nextFloat() * 0.1F + 0.9F);
             }
 
             if (this.lidAngle < 0.0F)
@@ -296,5 +293,12 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
             this.world.notifyNeighborsOfStateChange(pos, this.getBlockType(), false);
         }else
             if (this.getAdjacentPart() != null) this.getAdjacentPart().closeInventory(player);
+    }
+
+    // This sets the area that if this area is on the screen, we will still render the object.
+    // Using the same values that CHEST is using.
+    @Override
+    public AxisAlignedBB getRenderBoundingBox() {
+        return new net.minecraft.util.math.AxisAlignedBB(pos.add(-1, 0, -1), pos.add(2, 2, 2));
     }
 }

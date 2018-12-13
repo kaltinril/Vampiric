@@ -100,62 +100,81 @@ public class BlockCoffinChest extends BlockContainer implements IHasModel {
     @Override
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
 
-        //if (!worldIn.isRemote) {
-            // Set this blocks direction to face, picking the opposite of the player direction
-            EnumFacing enumfacing = EnumFacing.getHorizontal(MathHelper.floor((double) (placer.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3).getOpposite();
-            state = state.withProperty(FACING, enumfacing);
-            worldIn.setBlockState(pos, state, 3);
+        // Set this blocks direction to face, picking the opposite of the player direction
+        EnumFacing enumfacing = EnumFacing.getHorizontal(MathHelper.floor((double) (placer.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3).getOpposite();
+        state = state.withProperty(FACING, enumfacing);
+        worldIn.setBlockState(pos, state, 3);
 
-            // Pick the direction to place the other block
-            // Pick "to the right" based on the facing direction
-            BlockPos blockpos = pos.offset(EnumFacing.EAST);
-            EnumFacing playerFacing = enumfacing.getOpposite();
-            if (playerFacing == EnumFacing.NORTH)
-                blockpos = pos.offset(EnumFacing.EAST);
-            else if (playerFacing == EnumFacing.EAST)
-                blockpos = pos.offset(EnumFacing.SOUTH);
-            else if (playerFacing == EnumFacing.SOUTH)
-                blockpos = pos.offset(EnumFacing.WEST);
-            else if (playerFacing == EnumFacing.WEST)
-                blockpos = pos.offset(EnumFacing.NORTH);
+        // Pick the direction to place the other block
+        // Pick "to the right" based on the facing direction
+        BlockPos blockpos = pos.offset(EnumFacing.EAST);
+        EnumFacing playerFacing = enumfacing.getOpposite();
+        if (playerFacing == EnumFacing.NORTH)
+            blockpos = pos.offset(EnumFacing.EAST);
+        else if (playerFacing == EnumFacing.EAST)
+            blockpos = pos.offset(EnumFacing.SOUTH);
+        else if (playerFacing == EnumFacing.SOUTH)
+            blockpos = pos.offset(EnumFacing.WEST);
+        else if (playerFacing == EnumFacing.WEST)
+            blockpos = pos.offset(EnumFacing.NORTH);
 
-            // Get the current block and entity for this
-            IBlockState iblockstate = worldIn.getBlockState(blockpos);
-            TileEntity placedCoffin = worldIn.getTileEntity(pos);
+        // Get the current block and entity for this
+        IBlockState iblockstate = worldIn.getBlockState(blockpos);
+        TileEntity placedCoffin = worldIn.getTileEntity(pos);
 
-            // If this was the first block placement, place a second one
-            if (placedCoffin instanceof TileEntityCoffinChest) {
-                if (((TileEntityCoffinChest) placedCoffin).isFirst) {
+        // If this was the first block placement, place a second one
+        if (placedCoffin instanceof TileEntityCoffinChest) {
+            if (((TileEntityCoffinChest) placedCoffin).isFirst) {
 
-                    if (iblockstate.getBlock() == Blocks.AIR) // this)
-                    {
-                        TileEntity te1 = worldIn.getTileEntity(blockpos);
-                        // Place the block, find the new tileEntity, change it to isFirst = false
-                        worldIn.setBlockState(blockpos, ModBlocks.COFFIN_CHEST.getDefaultState(), 3);
-                        TileEntity te = worldIn.getTileEntity(blockpos);
-                        if (te != null) {
-                            ((TileEntityCoffinChest) te).isFirst = false;
+                if (iblockstate.getBlock() == Blocks.AIR)
+                {
+                    TileEntity te1 = worldIn.getTileEntity(blockpos);
+                    // Place the block, find the new tileEntity, change it to isFirst = false
+                    worldIn.setBlockState(blockpos, ModBlocks.COFFIN_CHEST.getDefaultState().withProperty(FACING, enumfacing), 3);
+                    TileEntity te = worldIn.getTileEntity(blockpos);
+                    if (te != null) {
+                        ((TileEntityCoffinChest) te).isFirst = false;
 
-                            // Make sure the two blocks have reference to each-other
-                            ((TileEntityCoffinChest) te).setAdjacentPart((TileEntityCoffinChest) placedCoffin);
-                            ((TileEntityCoffinChest) placedCoffin).setAdjacentPart(((TileEntityCoffinChest) te));
+                        // Make sure the two blocks have reference to each-other
+                        ((TileEntityCoffinChest) te).setAdjacentPart((TileEntityCoffinChest) placedCoffin);
+                        ((TileEntityCoffinChest) placedCoffin).setAdjacentPart(((TileEntityCoffinChest) te));
 
-                            worldIn.setTileEntity(blockpos, te);
-                            TileEntity te2 = worldIn.getTileEntity(blockpos);
-                            System.out.println(te2);
-                        }
+                        worldIn.setTileEntity(blockpos, te);
                     }
                 }
             }
+        }
 
-            if (stack.hasDisplayName()) {
-                TileEntity tileEntity = worldIn.getTileEntity(pos);
+        if (stack.hasDisplayName()) {
+            TileEntity tileEntity = worldIn.getTileEntity(pos);
 
-                if (tileEntity instanceof TileEntityCoffinChest) {
-                    ((TileEntityCoffinChest) tileEntity).setCustomName(stack.getDisplayName());
-                }
+            if (tileEntity instanceof TileEntityCoffinChest) {
+                ((TileEntityCoffinChest) tileEntity).setCustomName(stack.getDisplayName());
             }
-        //}
+        }
+    }
+
+    // TODO: Figure out how to check the "2nd" block on the right to make sure it doesn't go into another block
+    @Override
+    public boolean canPlaceBlockAt(World worldIn, BlockPos pos) {
+        BlockPos blockpos = pos.west();
+        BlockPos blockpos1 = pos.east();
+        BlockPos blockpos2 = pos.north();
+        BlockPos blockpos3 = pos.south();
+
+        if (worldIn.getBlockState(blockpos).getBlock() != Blocks.AIR)
+            return false;
+
+        if (worldIn.getBlockState(blockpos1).getBlock() != Blocks.AIR)
+            return false;
+
+        if (worldIn.getBlockState(blockpos2).getBlock() != Blocks.AIR)
+            return false;
+
+        if (worldIn.getBlockState(blockpos3).getBlock() != Blocks.AIR)
+            return false;
+
+        return true;
     }
 
     @Nullable

@@ -39,7 +39,7 @@ public class ModelCoffinChest extends ModelBase {
         // Storage (bottom)
         this.storage = new ModelRenderer(this, 0, 17);
         this.storage.setRotationPoint(1.0F, 4.0F, 1.0F);
-        this.storage.addBox(0.0F, 0.0F, 0.0F, 30, 14, 14, 0.0F);
+        this.storage.addBox(0.0F, 0.0F, 0.0F, 30, 12, 14, 0.0F);
 
         // Lid
         this.lid = new ModelRenderer(this, 0, 0);
