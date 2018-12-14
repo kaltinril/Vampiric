@@ -1,12 +1,13 @@
 package com.twojeremys.vampiric.init;
 
 import com.twojeremys.vampiric.items.ItemBase;
+import com.twojeremys.vampiric.items.ItemTomatoSeeds;
 import com.twojeremys.vampiric.items.armor.ArmorBase;
 import com.twojeremys.vampiric.items.food.GarlicPlant;
+import com.twojeremys.vampiric.items.food.ItemFoodTomato;
 import com.twojeremys.vampiric.items.tools.*;
 import com.twojeremys.vampiric.util.Reference;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.*;
@@ -31,9 +32,14 @@ public class ModItems {
     public static final Item SILVER_INGOT = new ItemBase("silver_ingot");
     public static final Item GARLIC_PASTE = new ItemBase("garlic_paste").setCreativeTab(CreativeTabs.FOOD);
 
+
     // Food
     // https://minecraft.gamepedia.com/Hunger
     public static final Item GARLIC = new GarlicPlant("garlic", 1, 0.6f, false);
+    public static final Item TOMATO = new ItemFoodTomato("tomato", 1, 0.6f, false);
+
+    // Seeds
+    public static final Item TOMATO_SEEDS = new ItemTomatoSeeds("tomato_seeds");
 
     // Tools - Generic
     public static final ItemSword WOODEN_STAKE = new ToolStake("wooden_stake", MATERIAL_STAKE);

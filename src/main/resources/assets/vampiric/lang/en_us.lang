@@ -8,9 +8,13 @@ tile.silver_ore.name=Silver Ore
 
 // Food
 item.garlic.name=Garlic
+item.tomato.name=Tomato
 
 // Plants
 tile.garlic.name=Garlic
+
+// Seeds
+item.tomato_seeds.name=Tomato Seeds
 
 // Tools and Weapons
 item.wooden_stake.name=Wooden Stake
