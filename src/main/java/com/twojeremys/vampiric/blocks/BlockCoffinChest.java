@@ -14,7 +14,9 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -154,27 +156,26 @@ public class BlockCoffinChest extends BlockContainer implements IHasModel {
         }
     }
 
-    // TODO: Figure out how to check the "2nd" block on the right to make sure it doesn't go into another block
+    private EnumFacing getPlayerFacingDirection(EntityLivingBase player){
+        // Set this blocks direction to face, picking the opposite of the player direction
+        return EnumFacing.getHorizontal(MathHelper.floor((double) (player.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3);
+    }
+
     @Override
     public boolean canPlaceBlockAt(World worldIn, BlockPos pos) {
-        BlockPos blockpos = pos.west();
-        BlockPos blockpos1 = pos.east();
-        BlockPos blockpos2 = pos.north();
-        BlockPos blockpos3 = pos.south();
+        EnumFacing playerFacing = getPlayerFacingDirection(Minecraft.getMinecraft().player);
+        BlockPos blockPOS = pos.east();
 
-        if (worldIn.getBlockState(blockpos).getBlock() != Blocks.AIR)
-            return false;
+        if (playerFacing == EnumFacing.NORTH)
+            blockPOS = pos.east();
+        else if (playerFacing == EnumFacing.EAST)
+            blockPOS = pos.south();
+        else if (playerFacing == EnumFacing.SOUTH)
+            blockPOS = pos.west();
+        else if (playerFacing == EnumFacing.WEST)
+            blockPOS = pos.north();
 
-        if (worldIn.getBlockState(blockpos1).getBlock() != Blocks.AIR)
-            return false;
-
-        if (worldIn.getBlockState(blockpos2).getBlock() != Blocks.AIR)
-            return false;
-
-        if (worldIn.getBlockState(blockpos3).getBlock() != Blocks.AIR)
-            return false;
-
-        return true;
+        return worldIn.getBlockState(blockPOS).getBlock() == Blocks.AIR;
     }
 
     @Nullable
