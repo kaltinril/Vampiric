@@ -128,10 +128,12 @@ public class BlockCoffinChest extends BlockContainer implements IHasModel {
         if (placedCoffin instanceof TileEntityCoffinChest) {
             if (((TileEntityCoffinChest) placedCoffin).isFirst) {
 
-                if (iblockstate.getBlock() == Blocks.AIR)
+                if (iblockstate.getBlock().isReplaceable(worldIn, blockpos))
                 {
                     TileEntity te1 = worldIn.getTileEntity(blockpos);
                     // Place the block, find the new tileEntity, change it to isFirst = false
+
+                    worldIn.setBlockToAir(blockpos);
                     worldIn.setBlockState(blockpos, ModBlocks.COFFIN_CHEST.getDefaultState().withProperty(FACING, enumfacing), 3);
                     TileEntity te = worldIn.getTileEntity(blockpos);
                     if (te != null) {
@@ -175,7 +177,7 @@ public class BlockCoffinChest extends BlockContainer implements IHasModel {
         else if (playerFacing == EnumFacing.WEST)
             blockPOS = pos.north();
 
-        return worldIn.getBlockState(blockPOS).getBlock() == Blocks.AIR;
+        return worldIn.getBlockState(blockPOS).getBlock().isReplaceable(worldIn, blockPOS);
     }
 
     @Nullable
