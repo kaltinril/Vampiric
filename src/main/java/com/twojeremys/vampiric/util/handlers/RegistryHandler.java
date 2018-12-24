@@ -10,7 +10,6 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
@@ -27,10 +26,6 @@ public class RegistryHandler {
     public static void onBlockRegister(RegistryEvent.Register<Block> event){
         event.getRegistry().registerAll(ModBlocks.BLOCKS.toArray(new Block[0]));
 
-        TileEntityHandler.registerTileEntities();
-
-        // Bind the mode and the render together
-        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCoffinChest.class, new RenderCoffinChest());
     }
 
     @SubscribeEvent

@@ -142,15 +142,27 @@ public class TileEntityCoffinChest extends TileEntityLockableLoot implements ITi
 
     @Override
     public NBTTagCompound getUpdateTag() {
-        super.getUpdateTag();
+        NBTTagCompound nbt = super.getUpdateTag();
 
-        return writeToNBT(new NBTTagCompound());
+        return writeToNBT(nbt);
     }
 
 
     @Override
     public void onDataPacket(NetworkManager net, SPacketUpdateTileEntity pkt) {
         readFromNBT(pkt.getNbtCompound());
+    }
+
+    @Override
+    public void handleUpdateTag(NBTTagCompound tag) {
+        this.readFromNBT(tag);
+    }
+
+    @Override
+    public NBTTagCompound getTileData() {
+        NBTTagCompound nbt = new NBTTagCompound();
+        this.writeToNBT(nbt);
+        return nbt;
     }
 
     @Override

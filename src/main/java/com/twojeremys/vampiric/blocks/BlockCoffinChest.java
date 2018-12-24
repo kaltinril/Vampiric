@@ -4,9 +4,9 @@ import com.twojeremys.vampiric.Main;
 import com.twojeremys.vampiric.blocks.tileentity.TileEntityCoffinChest;
 import com.twojeremys.vampiric.init.ModBlocks;
 import com.twojeremys.vampiric.init.ModItems;
+import com.twojeremys.vampiric.items.ItemCoffinChest;
 import com.twojeremys.vampiric.util.IHasModel;
 import com.twojeremys.vampiric.util.Reference;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;
@@ -14,15 +14,11 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.Minecraft;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumBlockRenderType;
@@ -56,7 +52,7 @@ public class BlockCoffinChest extends BlockContainer implements IHasModel {
         this.fullBlock = false;
 
         ModBlocks.BLOCKS.add(this);
-        ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
+        ModItems.ITEMS.add(new ItemCoffinChest(this).setRegistryName(this.getRegistryName()));
     }
 
     @Override
@@ -158,28 +154,6 @@ public class BlockCoffinChest extends BlockContainer implements IHasModel {
         }
     }
 
-    private EnumFacing getPlayerFacingDirection(EntityLivingBase player){
-        // Set this blocks direction to face, picking the opposite of the player direction
-        return EnumFacing.getHorizontal(MathHelper.floor((double) (player.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3);
-    }
-
-    @Override
-    public boolean canPlaceBlockAt(World worldIn, BlockPos pos) {
-        EnumFacing playerFacing = getPlayerFacingDirection(Minecraft.getMinecraft().player);
-        BlockPos blockPOS = pos.east();
-
-        if (playerFacing == EnumFacing.NORTH)
-            blockPOS = pos.east();
-        else if (playerFacing == EnumFacing.EAST)
-            blockPOS = pos.south();
-        else if (playerFacing == EnumFacing.SOUTH)
-            blockPOS = pos.west();
-        else if (playerFacing == EnumFacing.WEST)
-            blockPOS = pos.north();
-
-        return worldIn.getBlockState(blockPOS).getBlock().isReplaceable(worldIn, blockPOS);
-    }
-
     @Nullable
     @Override
     public TileEntity createNewTileEntity(World worldIn, int meta) {
@@ -270,97 +244,6 @@ public class BlockCoffinChest extends BlockContainer implements IHasModel {
     public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
     {
 
-    }
-
-    public IBlockState checkForSurroundingChests(World worldIn, BlockPos pos, IBlockState state)
-    {
-        if (worldIn.isRemote)
-        {
-            return state;
-        }
-        else
-        {
-            IBlockState iblockstate = worldIn.getBlockState(pos.north());
-            IBlockState iblockstate1 = worldIn.getBlockState(pos.south());
-            IBlockState iblockstate2 = worldIn.getBlockState(pos.west());
-            IBlockState iblockstate3 = worldIn.getBlockState(pos.east());
-            EnumFacing enumfacing = (EnumFacing)state.getValue(FACING);
-
-            if (iblockstate.getBlock() != this && iblockstate1.getBlock() != this)
-            {
-                boolean flag = iblockstate.isFullBlock();
-                boolean flag1 = iblockstate1.isFullBlock();
-
-                if (iblockstate2.getBlock() == this || iblockstate3.getBlock() == this)
-                {
-                    BlockPos blockpos1 = iblockstate2.getBlock() == this ? pos.west() : pos.east();
-                    IBlockState iblockstate7 = worldIn.getBlockState(blockpos1.north());
-                    IBlockState iblockstate6 = worldIn.getBlockState(blockpos1.south());
-                    enumfacing = EnumFacing.SOUTH;
-                    EnumFacing enumfacing2;
-
-                    if (iblockstate2.getBlock() == this)
-                    {
-                        enumfacing2 = (EnumFacing)iblockstate2.getValue(FACING);
-                    }
-                    else
-                    {
-                        enumfacing2 = (EnumFacing)iblockstate3.getValue(FACING);
-                    }
-
-                    if (enumfacing2 == EnumFacing.NORTH)
-                    {
-                        enumfacing = EnumFacing.NORTH;
-                    }
-
-                    if ((flag || iblockstate7.isFullBlock()) && !flag1 && !iblockstate6.isFullBlock())
-                    {
-                        enumfacing = EnumFacing.SOUTH;
-                    }
-
-                    if ((flag1 || iblockstate6.isFullBlock()) && !flag && !iblockstate7.isFullBlock())
-                    {
-                        enumfacing = EnumFacing.NORTH;
-                    }
-                }
-            }
-            else
-            {
-                BlockPos blockpos = iblockstate.getBlock() == this ? pos.north() : pos.south();
-                IBlockState iblockstate4 = worldIn.getBlockState(blockpos.west());
-                IBlockState iblockstate5 = worldIn.getBlockState(blockpos.east());
-                enumfacing = EnumFacing.EAST;
-                EnumFacing enumfacing1;
-
-                if (iblockstate.getBlock() == this)
-                {
-                    enumfacing1 = (EnumFacing)iblockstate.getValue(FACING);
-                }
-                else
-                {
-                    enumfacing1 = (EnumFacing)iblockstate1.getValue(FACING);
-                }
-
-                if (enumfacing1 == EnumFacing.WEST)
-                {
-                    enumfacing = EnumFacing.WEST;
-                }
-
-                if ((iblockstate2.isFullBlock() || iblockstate4.isFullBlock()) && !iblockstate3.isFullBlock() && !iblockstate5.isFullBlock())
-                {
-                    enumfacing = EnumFacing.EAST;
-                }
-
-                if ((iblockstate3.isFullBlock() || iblockstate5.isFullBlock()) && !iblockstate2.isFullBlock() && !iblockstate4.isFullBlock())
-                {
-                    enumfacing = EnumFacing.WEST;
-                }
-            }
-
-            state = state.withProperty(FACING, enumfacing);
-            worldIn.setBlockState(pos, state, 3);
-            return state;
-        }
     }
 
     /**
