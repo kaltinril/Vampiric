@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "vampiric:blocks/silver_ore"
+    "all": "vampiric:block/silver_ore"
   }
 }
