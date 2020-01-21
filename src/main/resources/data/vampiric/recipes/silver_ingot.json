@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "vampiric:silver_ore"
+  },
+  "result": "vampiric:silver_ingot",
+  "experience": 1.0,
+  "cookingtime": 200
+}

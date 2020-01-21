@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02968ef3-e803-45b1-85ac-094219ce0187" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/vampiric/recipes/silver_ingot.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/blockstates/silver_ore.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/blockstates/silver_ore.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/silver_ore.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/silver_ore.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +39,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\data\forge\tags\blocks\ores" />
+      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\data\vampiric\tags\ore" />
       <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\data\loot_tables\blocks" />
       <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\data\blocks\loot_tables" />
       <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\data" />
@@ -124,21 +125,21 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="997" y="349" key="#runClient/0.0.2560.1400@0.0.2560.1400" timestamp="1579499186771" />
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1579506162573">
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1579603348189">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1579506162573" />
-    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1579506162573">
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1579603348189" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1579603348189">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1579506162573" />
-    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1579506162573">
+    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1579603348189" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1579603348189">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1579506162573" />
-    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1579506162573">
+    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1579603348189" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1579603348189">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1579506162573" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1579603348189" />
   </component>
 </project>
