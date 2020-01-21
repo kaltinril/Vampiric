@@ -1,5 +1,5 @@
 {
   "variants": {
-    "normal": {"model": "vampiric:silver_ore" }
+    "": {"model": "vampiric:silver_ore" }
   }
 }

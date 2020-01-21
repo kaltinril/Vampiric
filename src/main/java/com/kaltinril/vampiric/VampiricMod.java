@@ -92,10 +92,11 @@ public class VampiricMod
             LOGGER.info("Items Registered.");
             event.getRegistry().registerAll
                 (
-                    // Items
-                    ItemList.silver_ingot = new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_ingot")),
-                    // Block Items
-                    ItemList.silver_block = new BlockItem(BlockList.silver_block, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.silver_block.getRegistryName())
+                        // Items
+                        ItemList.silver_ingot = new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_ingot")),
+                        // Block Items
+                        ItemList.silver_block = new BlockItem(BlockList.silver_block, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.silver_block.getRegistryName()),
+                        ItemList.silver_ore = new BlockItem(BlockList.silver_ore, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.silver_ore.getRegistryName())
                 );
         }
 
@@ -105,12 +106,18 @@ public class VampiricMod
             LOGGER.info("Blocks registered.");
             event.getRegistry().registerAll
                 (
-                    BlockList.silver_block = new Block(Block.Properties.create(Material.IRON)
-                            .hardnessAndResistance(4.0f, 30.0f)
-                            .harvestLevel(1)
-                            .harvestTool(ToolType.PICKAXE)
-                            .sound(SoundType.METAL))
-                        .setRegistryName(location("silver_block"))
+                        BlockList.silver_block = new Block(Block.Properties.create(Material.IRON)
+                                .hardnessAndResistance(4.0f, 30.0f)
+                                .harvestLevel(1)
+                                .harvestTool(ToolType.PICKAXE)
+                                .sound(SoundType.METAL))
+                                .setRegistryName(location("silver_block")),
+                        BlockList.silver_ore = new Block(Block.Properties.create(Material.ROCK)
+                                .hardnessAndResistance(4.0f, 15.0f)
+                                .harvestLevel(2)
+                                .harvestTool(ToolType.PICKAXE)
+                                .sound(SoundType.STONE))
+                                .setRegistryName(location("silver_ore"))
                 );
         }
     }

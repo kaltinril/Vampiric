@@ -1,30 +1,30 @@
 {
-  "item.silver_ingot": "Silver Ingot",
-  "item.garlic_paste": "Garlic Paste",
+  "item.vampiric.silver_ingot": "Silver Ingot",
+  "item.vampiric.garlic_paste": "Garlic Paste",
 
   "block.vampiric.silver_block": "Block of Silver",
-  "block.silver_ore": "Silver Ore",
+  "block.vampiric.silver_ore": "Silver Ore",
 
-  "item.garlic": "Garlic",
+  "item.vampiric.garlic": "Garlic",
 
-  "block.garlic": "Garlic",
+  "block.vampiric.garlic": "Garlic",
 
-  "item.wooden_stake": "Wooden Stake",
-  "item.garlic_arrow": "Garlic Arrow",
-  "tipped_arrow.effect.garlic_essence": "Arrow of Garlic Essence",
-  "item.silver_sword": "Silver Sword",
-  "item.silver_pickaxe": "Silver Pickaxe",
-  "item.silver_axe": "Silver Axe",
-  "item.silver_hoe": "Silver Hoe",
-  "item.silver_shovel": "Silver Shovel",
+  "item.vampiric.wooden_stake": "Wooden Stake",
+  "item.vampiric.garlic_arrow": "Garlic Arrow",
+  "tipped_arrow.vampiric.effect.garlic_essence": "Arrow of Garlic Essence",
+  "item.vampiric.silver_sword": "Silver Sword",
+  "item.vampiric.silver_pickaxe": "Silver Pickaxe",
+  "item.vampiric.silver_axe": "Silver Axe",
+  "item.vampiric.silver_hoe": "Silver Hoe",
+  "item.vampiric.silver_shovel": "Silver Shovel",
 
-  "item.silver_helmet": "Silver Helmet",
-  "item.silver_chestplate": "Silver Chestplate",
-  "item.silver_leggings": "Silver Leggings",
-  "item.silver_boots": "Silver Boots",
+  "item.vampiric.silver_helmet": "Silver Helmet",
+  "item.vampiric.silver_chestplate": "Silver Chestplate",
+  "item.vampiric.silver_leggings": "Silver Leggings",
+  "item.vampiric.silver_boots": "Silver Boots",
 
-  "effect.garlic_essence": "Garlic Essence",
-  "potion.effect.garlic_essence": "Potion of Garlic Essence",
-  "splash_potion.effect.garlic_essence": "Splash Potion of Garlic Essence",
-  "lingering_potion.effect.garlic_essence": "Lingering Potion of Garlic Essence"
+  "effect.vampiric.garlic_essence": "Garlic Essence",
+  "potion.effect.vampiric.garlic_essence": "Potion of Garlic Essence",
+  "splash_potion.vampiric.effect.garlic_essence": "Splash Potion of Garlic Essence",
+  "lingering_potion.vampiric.effect.garlic_essence": "Lingering Potion of Garlic Essence"
 }
