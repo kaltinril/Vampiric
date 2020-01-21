@@ -6,8 +6,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/VampiricMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/VampiricMod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/lists/BlockList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/lists/BlockList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/lists/ItemList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/lists/ItemList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/blockstates/silver_ore.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/blockstates/silver_ore.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/lang/en_us.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
