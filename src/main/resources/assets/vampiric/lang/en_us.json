@@ -1,0 +1,30 @@
+{
+  "item.silver_ingot": "Silver Ingot",
+  "item.garlic_paste": "Garlic Paste",
+
+  "block.vampiric.silver_block": "Block of Silver",
+  "block.silver_ore": "Silver Ore",
+
+  "item.garlic": "Garlic",
+
+  "block.garlic": "Garlic",
+
+  "item.wooden_stake": "Wooden Stake",
+  "item.garlic_arrow": "Garlic Arrow",
+  "tipped_arrow.effect.garlic_essence": "Arrow of Garlic Essence",
+  "item.silver_sword": "Silver Sword",
+  "item.silver_pickaxe": "Silver Pickaxe",
+  "item.silver_axe": "Silver Axe",
+  "item.silver_hoe": "Silver Hoe",
+  "item.silver_shovel": "Silver Shovel",
+
+  "item.silver_helmet": "Silver Helmet",
+  "item.silver_chestplate": "Silver Chestplate",
+  "item.silver_leggings": "Silver Leggings",
+  "item.silver_boots": "Silver Boots",
+
+  "effect.garlic_essence": "Garlic Essence",
+  "potion.effect.garlic_essence": "Potion of Garlic Essence",
+  "splash_potion.effect.garlic_essence": "Splash Potion of Garlic Essence",
+  "lingering_potion.effect.garlic_essence": "Lingering Potion of Garlic Essence"
+}
