@@ -10,4 +10,21 @@ public class ItemList {
     public static final Item silver_block = null;
     public static final Item silver_ore = null;
     public static final Item silver_ingot = null;
+    public static final Item garlic = null;
+    public static final Item garlic_paste = null;
+    public static final Item garlic_plant = null;
+
+    // Weapons
+    public static final Item silver_axe = null;
+    public static final Item silver_hoe = null;
+    public static final Item silver_shovel = null;
+    public static final Item silver_sword = null;
+
+
+    // Armor
+    public static final Item silver_chestplate = null;
+    public static final Item silver_helmet = null;
+    public static final Item silver_leggings = null;
+    public static final Item silver_boots = null;
+
 }

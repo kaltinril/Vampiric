@@ -2,13 +2,12 @@ package com.kaltinril.vampiric;
 
 import com.kaltinril.vampiric.lists.BlockList;
 import com.kaltinril.vampiric.lists.ItemList;
+import com.kaltinril.vampiric.lists.ItemTierList;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.item.*;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.ToolType;
@@ -25,6 +24,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.tools.Tool;
 import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -94,6 +94,20 @@ public class VampiricMod
                 (
                         // Items
                         new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_ingot")),
+                        new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("garlic")),
+                        new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("garlic_paste")),
+                        new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("garlic_plant")),
+                        // Tools and Weapons
+                        new AxeItem(ItemTierList.SILVER, 6.0F, -3.0F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_axe")),
+                        //new Item(new Item.Properties().addToolType(ToolType.AXE, 0).group(ItemGroup.MISC)).setRegistryName(location("silver_axe")),
+                        new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_hoe")),
+                        new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_shovel")),
+                        new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_sword")),
+                        // Armor
+                        new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_chestplate")),
+                        new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_helmet")),
+                        new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_leggings")),
+                        new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_boots")),
                         // Block Items
                         new BlockItem(BlockList.silver_block, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.silver_block.getRegistryName()),
                         new BlockItem(BlockList.silver_ore, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.silver_ore.getRegistryName())
