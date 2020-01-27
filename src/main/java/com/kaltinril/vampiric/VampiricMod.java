@@ -1,7 +1,6 @@
 package com.kaltinril.vampiric;
 
 import com.kaltinril.vampiric.lists.BlockList;
-import com.kaltinril.vampiric.lists.ItemList;
 import com.kaltinril.vampiric.lists.ItemTierList;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -24,8 +23,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.tools.Tool;
-import java.util.Locale;
 import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -36,6 +33,10 @@ public class VampiricMod
 
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
+
+    public static class Foods {
+        public static final Food garlic = (new Food.Builder()).hunger(1).saturation(0.6F).build();
+    }
 
     public VampiricMod() {
         // Register the setup method for modloading
@@ -94,10 +95,10 @@ public class VampiricMod
             event.getRegistry().registerAll
                 (
                         // Items
-                        new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_ingot")),
-                        new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("garlic")),
-                        new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("garlic_paste")),
-                        new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("garlic_plant")),
+                        new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName(location("silver_ingot")),
+                        new Item(new Item.Properties().group(ItemGroup.FOOD).food(Foods.garlic)).setRegistryName(location("garlic")),
+                        new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName(location("garlic_paste")),
+                        //new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("garlic_plant")),
                         // Tools and Weapons
                         new AxeItem(ItemTierList.SILVER, 6.5F, -3.0F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_axe")),
                         new PickaxeItem(ItemTierList.SILVER, 2, -2.8f, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_pickaxe")),
@@ -121,6 +122,8 @@ public class VampiricMod
             LOGGER.info("Blocks registered.");
             event.getRegistry().registerAll
                 (
+                        //new CropsBlock(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().zeroHardnessAndResistance().sound(SoundType.CROP)));
+
                         new Block(Block.Properties.create(Material.IRON)
                                 .hardnessAndResistance(4.0f, 30.0f)
                                 .harvestLevel(1)
