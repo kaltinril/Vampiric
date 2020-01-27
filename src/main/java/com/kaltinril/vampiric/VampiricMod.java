@@ -102,7 +102,8 @@ public class VampiricMod
                         new AxeItem(ItemTierList.SILVER, 6.0F, -3.0F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_axe")),
                         //new Item(new Item.Properties().addToolType(ToolType.AXE, 0).group(ItemGroup.MISC)).setRegistryName(location("silver_axe")),
                         new PickaxeItem(ItemTierList.SILVER, 2, -2.8f, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_pickaxe")),
-                        new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_hoe")),
+                        //new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_hoe")),
+                        new HoeItem(ItemTierList.SILVER, -2.5F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_hoe")),
                         new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_shovel")),
                         new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_sword")),
                         // Armor
