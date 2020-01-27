@@ -99,11 +99,11 @@ public class VampiricMod
                         new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("garlic_paste")),
                         new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("garlic_plant")),
                         // Tools and Weapons
-                        new AxeItem(ItemTierList.SILVER, 6.0F, -3.0F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_axe")),
+                        new AxeItem(ItemTierList.SILVER, 6.5F, -3.0F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_axe")),
                         new PickaxeItem(ItemTierList.SILVER, 2, -2.8f, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_pickaxe")),
                         new HoeItem(ItemTierList.SILVER, -2.5F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_hoe")),
                         new ShovelItem(ItemTierList.SILVER, 2F, -2.8F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("silver_shovel"),
-                        new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_sword")),
+                        new SwordItem(ItemTierList.SILVER, 3, -2.4F, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName("silver_sword"),
                         // Armor
                         new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_chestplate")),
                         new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_helmet")),
@@ -137,6 +137,7 @@ public class VampiricMod
         }
     }
 
+    // This appears to not be needed, not sure why harry talks added it.
     private static ResourceLocation location(String name){
         return new ResourceLocation(modid, name);
     }
