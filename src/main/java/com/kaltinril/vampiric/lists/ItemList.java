@@ -16,6 +16,7 @@ public class ItemList {
 
     // Weapons
     public static final Item silver_axe = null;
+    public static final Item silver_pickaxe = null;
     public static final Item silver_hoe = null;
     public static final Item silver_shovel = null;
     public static final Item silver_sword = null;
