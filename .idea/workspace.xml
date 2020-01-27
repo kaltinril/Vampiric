@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02968ef3-e803-45b1-85ac-094219ce0187" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/lists/FoodList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/VampiricMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/VampiricMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/core/block/BlockCrop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/core/block/BlockCrop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/lists/BlockList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/lists/BlockList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/blockstates/garlic_plant.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/blockstates/garlic_plant.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/garlic_plant0.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/garlic_plant0.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/garlic_plant1.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/garlic_plant1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/garlic_plant2.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/garlic_plant2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/garlic_plant3.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/garlic_plant3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/garlic_plant4.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/garlic_plant4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/garlic_plant5.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/garlic_plant5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/garlic_plant6.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/garlic_plant6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/garlic_plant7.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/garlic_plant7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/silver_block.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/block/silver_block.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,11 +45,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/block" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\assets\vampiric\textures\block" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\data\forge\tags\blocks\ores" />
       <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\data\vampiric\tags\ore" />

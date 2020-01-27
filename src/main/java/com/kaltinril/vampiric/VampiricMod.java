@@ -1,9 +1,11 @@
 package com.kaltinril.vampiric;
 
+import com.kaltinril.vampiric.core.block.BlockCrop;
 import com.kaltinril.vampiric.lists.BlockList;
 import com.kaltinril.vampiric.lists.ItemTierList;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.CropsBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.*;
@@ -98,7 +100,6 @@ public class VampiricMod
                         new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName(location("silver_ingot")),
                         new Item(new Item.Properties().group(ItemGroup.FOOD).food(Foods.garlic)).setRegistryName(location("garlic")),
                         new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName(location("garlic_paste")),
-                        //new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("garlic_plant")),
                         // Tools and Weapons
                         new AxeItem(ItemTierList.SILVER, 6.5F, -3.0F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_axe")),
                         new PickaxeItem(ItemTierList.SILVER, 2, -2.8f, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_pickaxe")),
@@ -112,7 +113,8 @@ public class VampiricMod
                         new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_boots")),
                         // Block Items
                         new BlockItem(BlockList.silver_block, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.silver_block.getRegistryName()),
-                        new BlockItem(BlockList.silver_ore, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.silver_ore.getRegistryName())
+                        new BlockItem(BlockList.silver_ore, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.silver_ore.getRegistryName()),
+                        new BlockItem(BlockList.garlic_plant, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("garlic_plant")
                 );
         }
 
@@ -122,14 +124,17 @@ public class VampiricMod
             LOGGER.info("Blocks registered.");
             event.getRegistry().registerAll
                 (
-                        //new CropsBlock(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().zeroHardnessAndResistance().sound(SoundType.CROP)));
-
+                        //new ;
+                        // Crops
+                        new BlockCrop(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().sound(SoundType.CROP).hardnessAndResistance(0.0F), "garlic_plant"),
+                        // Blocks
                         new Block(Block.Properties.create(Material.IRON)
                                 .hardnessAndResistance(4.0f, 30.0f)
                                 .harvestLevel(1)
                                 .harvestTool(ToolType.PICKAXE)
                                 .sound(SoundType.METAL))
                                 .setRegistryName(location("silver_block")),
+                        // Ore
                         new Block(Block.Properties.create(Material.ROCK)
                                 .hardnessAndResistance(4.0f, 15.0f)
                                 .harvestLevel(2)

@@ -1,6 +1,6 @@
 {
   "parent": "block/crop",
   "textures": {
-    "crop": "vampiric:blocks/garlic_plant5"
+    "crop": "vampiric:block/garlic_plant5"
   }
 }
