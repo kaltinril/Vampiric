@@ -101,7 +101,6 @@ public class VampiricMod
                 (
                         // Items
                         new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName(location("silver_ingot")),
-                        new Item(new Item.Properties().group(ItemGroup.FOOD).food(Foods.garlic)).setRegistryName(location("garlic")),
                         new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName(location("garlic_paste")),
                         // Tools and Weapons
                         new AxeItem(ItemTierList.SILVER, 6.5F, -3.0F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_axe")),
@@ -117,7 +116,7 @@ public class VampiricMod
                         // Block Items
                         new BlockItem(BlockList.silver_block, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.silver_block.getRegistryName()),
                         new BlockItem(BlockList.silver_ore, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.silver_ore.getRegistryName()),
-                        new BlockItem(BlockList.garlic_plant, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("garlic_plant")
+                        new BlockItem(BlockList.garlic_plant, new Item.Properties().group(ItemGroup.MISC).food(Foods.garlic)).setRegistryName("garlic_plant")
                 );
         }
 
