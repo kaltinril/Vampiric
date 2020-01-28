@@ -2,33 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02968ef3-e803-45b1-85ac-094219ce0187" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/vampiric/recipes/garlic_arrow.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/vampiric/recipes/silver_axe.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/vampiric/recipes/silver_block.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/vampiric/recipes/silver_boots.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/vampiric/recipes/silver_chestplate.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/vampiric/recipes/silver_helmet.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/vampiric/recipes/silver_hoe.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/vampiric/recipes/silver_ingot_from_silver_block.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/vampiric/recipes/silver_leggings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/vampiric/recipes/silver_pickaxe.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/vampiric/recipes/silver_shovel.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/vampiric/recipes/silver_sword.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/vampiric/recipes/wooden_stake.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/garlic_arrow.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/garlic_paste.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silve_block.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_axe.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_boots.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_chestplate.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_helmet.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_hoe.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_leggings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_pickaxe.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_shovel.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/silver_sword.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/recipes/wooden_stake.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/VampiricMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/VampiricMod.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

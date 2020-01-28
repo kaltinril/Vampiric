@@ -108,6 +108,7 @@ public class VampiricMod
                         new HoeItem(ItemTierList.SILVER, -2.5F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_hoe")),
                         new ShovelItem(ItemTierList.SILVER, 2F, -2.8F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("silver_shovel"),
                         new SwordItem(ItemTierList.SILVER, 3, -2.4F, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName("silver_sword"),
+                        new SwordItem(ItemTier.WOOD, 2, -2.0F, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName("wooden_stake"),
                         // Armor
                         new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_chestplate")),
                         new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_helmet")),
