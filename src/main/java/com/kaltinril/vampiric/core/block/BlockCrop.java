@@ -32,7 +32,7 @@ public class BlockCrop extends CropsBlock {
     }
 
     protected IItemProvider getSeedsItem() {
-        return ItemList.garlic;
+        return ItemList.garlic_plant;
     }
 
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {

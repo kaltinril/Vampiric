@@ -10,7 +10,6 @@ public class ItemList {
     public static final Item silver_block = null;
     public static final Item silver_ore = null;
     public static final Item silver_ingot = null;
-    public static final Item garlic = null;
     public static final Item garlic_paste = null;
     public static final Item garlic_plant = null;
 
