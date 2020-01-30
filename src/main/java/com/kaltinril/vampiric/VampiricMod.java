@@ -11,7 +11,12 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.*;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
+import net.minecraft.potion.Potion;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
@@ -63,9 +68,10 @@ public class VampiricMod
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
+    @OnlyIn(Dist.CLIENT)
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
-        RenderTypeLookup.setRenderLayer(BlockList.garlic_plant, RenderType.func_228643_e_());
+        RenderTypeLookup.setRenderLayer(BlockList.garlic_plant, RenderType.func_228643_e_()); // .cutout()); / func_228643_e_
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
     }
 
@@ -93,6 +99,19 @@ public class VampiricMod
     // Event bus for receiving Registry Events)
     @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
+
+        @SubscribeEvent
+        public static void registerPotions(final RegistryEvent.Register<Potion> event){
+            event.getRegistry().registerAll
+                (
+                        // Potion takes a list of EffectInstances
+                        new Potion(new EffectInstance(Effects.NIGHT_VISION, 3600)).setRegistryName(location("garlic_essence"))
+
+                );
+
+            LOGGER.info("Potions Registered.");
+        }
+
         @SubscribeEvent
         public static void registerItems(final RegistryEvent.Register<Item> event) {
             // register a new block here
