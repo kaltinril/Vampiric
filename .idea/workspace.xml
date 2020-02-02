@@ -2,11 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02968ef3-e803-45b1-85ac-094219ce0187" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/lists/PotionList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/lists/ArmorMaterialList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/VampiricMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/VampiricMod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/mods.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/mods.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/garlic.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/garlic.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/garlic_arrow.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/garlic_arrow.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/garlic_paste.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/garlic_paste.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_axe.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_axe.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_boots.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_boots.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_chestplate.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_chestplate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_helmet.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_helmet.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_hoe.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_hoe.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_ingot.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_ingot.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_leggings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_leggings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_pickaxe.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_pickaxe.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_shovel.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_shovel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_sword.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_sword.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/wooden_stake.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/wooden_stake.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/items/garlic.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/item/garlic.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/items/garlic_arrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/item/garlic_arrow.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/items/garlic_paste.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/item/garlic_paste.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/items/silver_axe.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/item/silver_axe.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/items/silver_boots.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/item/silver_boots.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/items/silver_chestplate.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/item/silver_chestplate.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/items/silver_helmet.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/item/silver_helmet.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/items/silver_hoe.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/item/silver_hoe.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/items/silver_ingot.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/item/silver_ingot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/items/silver_leggings.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/item/silver_leggings.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/items/silver_pickaxe.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/item/silver_pickaxe.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/items/silver_shovel.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/item/silver_shovel.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/items/silver_sword.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/item/silver_sword.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/items/wooden_stake.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/item/wooden_stake.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,10 +162,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="734" y="356" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1579504491806" />
-    <state x="1085" y="410" key="#com.intellij.ide.util.MemberChooser" timestamp="1579845220256">
+    <state x="1085" y="410" key="#com.intellij.ide.util.MemberChooser" timestamp="1580630927376">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1085" y="410" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1579845220256" />
+    <state x="1085" y="410" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1580630927376" />
     <state x="997" y="349" key="#runClient" timestamp="1579499186771">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

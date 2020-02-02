@@ -1,6 +1,7 @@
 package com.kaltinril.vampiric;
 
 import com.kaltinril.vampiric.core.block.BlockCrop;
+import com.kaltinril.vampiric.lists.ArmorMaterialList;
 import com.kaltinril.vampiric.lists.BlockList;
 import com.kaltinril.vampiric.lists.ItemTierList;
 import net.minecraft.block.Block;
@@ -10,6 +11,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
@@ -129,10 +131,10 @@ public class VampiricMod
                         new SwordItem(ItemTierList.SILVER, 3, -2.4F, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName("silver_sword"),
                         new SwordItem(ItemTier.WOOD, 2, -2.0F, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName("wooden_stake"),
                         // Armor
-                        new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_chestplate")),
-                        new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_helmet")),
-                        new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_leggings")),
-                        new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_boots")),
+                        new ArmorItem(ArmorMaterialList.SILVER, EquipmentSlotType.CHEST, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(location("silver_chestplate")),
+                        new ArmorItem(ArmorMaterialList.SILVER, EquipmentSlotType.HEAD, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(location("silver_helmet")),
+                        new ArmorItem(ArmorMaterialList.SILVER, EquipmentSlotType.LEGS, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(location("silver_leggings")),
+                        new ArmorItem(ArmorMaterialList.SILVER, EquipmentSlotType.FEET, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(location("silver_boots")),
                         // Block Items
                         new BlockItem(BlockList.silver_block, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.silver_block.getRegistryName()),
                         new BlockItem(BlockList.silver_ore, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.silver_ore.getRegistryName()),

@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "vampiric:items/wooden_stake"
+    "layer0": "vampiric:item/wooden_stake"
   }
 }
