@@ -1,15 +1,25 @@
 package com.kaltinril.vampiric;
 
+import com.kaltinril.vampiric.core.block.BlockCrop;
+import com.kaltinril.vampiric.lists.ArmorMaterialList;
 import com.kaltinril.vampiric.lists.BlockList;
-import com.kaltinril.vampiric.lists.ItemList;
+import com.kaltinril.vampiric.lists.ItemTierList;
+import com.kaltinril.vampiric.lists.PotionList;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.CropsBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.*;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
+import net.minecraft.potion.Potion;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
@@ -34,7 +44,11 @@ public class VampiricMod
     public static final String modid = "vampiric";
 
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
+
+    public static class Foods {
+        public static final Food garlic = (new Food.Builder()).hunger(1).saturation(0.6F).build();
+    }
 
     public VampiricMod() {
         // Register the setup method for modloading
@@ -53,12 +67,16 @@ public class VampiricMod
     private void setup(final FMLCommonSetupEvent event)
     {
         // some preinit code
+        PotionList.addRecipes();
+
         LOGGER.info("HELLO FROM Pre Initialize");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
+    @OnlyIn(Dist.CLIENT)
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
+        RenderTypeLookup.setRenderLayer(BlockList.garlic_plant, RenderType.func_228643_e_()); // .cutout()); / func_228643_e_
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
     }
 
@@ -86,6 +104,7 @@ public class VampiricMod
     // Event bus for receiving Registry Events)
     @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
+
         @SubscribeEvent
         public static void registerItems(final RegistryEvent.Register<Item> event) {
             // register a new block here
@@ -93,10 +112,24 @@ public class VampiricMod
             event.getRegistry().registerAll
                 (
                         // Items
-                        new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName(location("silver_ingot")),
+                        new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName(location("silver_ingot")),
+                        new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName(location("garlic_paste")),
+                        // Tools and Weapons
+                        new AxeItem(ItemTierList.SILVER, 6.5F, -3.0F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_axe")),
+                        new PickaxeItem(ItemTierList.SILVER, 2, -2.8f, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_pickaxe")),
+                        new HoeItem(ItemTierList.SILVER, -2.5F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_hoe")),
+                        new ShovelItem(ItemTierList.SILVER, 2F, -2.8F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("silver_shovel"),
+                        new SwordItem(ItemTierList.SILVER, 3, -2.4F, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName("silver_sword"),
+                        new SwordItem(ItemTier.WOOD, 2, -2.0F, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName("wooden_stake"),
+                        // Armor
+                        new ArmorItem(ArmorMaterialList.SILVER, EquipmentSlotType.CHEST, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(location("silver_chestplate")),
+                        new ArmorItem(ArmorMaterialList.SILVER, EquipmentSlotType.HEAD, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(location("silver_helmet")),
+                        new ArmorItem(ArmorMaterialList.SILVER, EquipmentSlotType.LEGS, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(location("silver_leggings")),
+                        new ArmorItem(ArmorMaterialList.SILVER, EquipmentSlotType.FEET, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(location("silver_boots")),
                         // Block Items
                         new BlockItem(BlockList.silver_block, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.silver_block.getRegistryName()),
-                        new BlockItem(BlockList.silver_ore, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.silver_ore.getRegistryName())
+                        new BlockItem(BlockList.silver_ore, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.silver_ore.getRegistryName()),
+                        new BlockItem(BlockList.garlic_plant, new Item.Properties().group(ItemGroup.MISC).food(Foods.garlic)).setRegistryName("garlic_plant")
                 );
         }
 
@@ -106,12 +139,17 @@ public class VampiricMod
             LOGGER.info("Blocks registered.");
             event.getRegistry().registerAll
                 (
+                        //new ;
+                        // Crops
+                        new BlockCrop(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().sound(SoundType.CROP).hardnessAndResistance(0.0F), "garlic_plant"),
+                        // Blocks
                         new Block(Block.Properties.create(Material.IRON)
                                 .hardnessAndResistance(4.0f, 30.0f)
                                 .harvestLevel(1)
                                 .harvestTool(ToolType.PICKAXE)
                                 .sound(SoundType.METAL))
                                 .setRegistryName(location("silver_block")),
+                        // Ore
                         new Block(Block.Properties.create(Material.ROCK)
                                 .hardnessAndResistance(4.0f, 15.0f)
                                 .harvestLevel(2)
@@ -122,6 +160,7 @@ public class VampiricMod
         }
     }
 
+    // This appears to not be needed, not sure why harry talks added it.
     private static ResourceLocation location(String name){
         return new ResourceLocation(modid, name);
     }

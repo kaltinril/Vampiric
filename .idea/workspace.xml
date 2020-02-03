@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02968ef3-e803-45b1-85ac-094219ce0187" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/vampiric/recipes/silver_ingot.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/VampiricMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/VampiricMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/core/potion/ModEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/core/potion/ModEffect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/lists/EffectList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/lists/EffectList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,24 +28,37 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Wdd3qo1PiWhUZ6aPUlotUwIYdc" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/item" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\assets\vampiric\textures\item" />
+      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\data\vampiric\recipes" />
+      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\data\vampiric\loot_tables\blocks" />
+      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\assets\vampiric\textures\block" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kaltinril.vampiric.lists" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\assets\vampiric\textures\mob_effect" />
       <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\data\forge\tags\blocks\ores" />
       <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\data\vampiric\tags\ore" />
       <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\data\loot_tables\blocks" />
       <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\data\blocks\loot_tables" />
-      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\data" />
     </key>
   </component>
   <component name="RunManager" selected="Application.runClient">
@@ -116,11 +131,22 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="872" y="359" key="#Images" timestamp="1580702307404">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="872" y="359" key="#Images/0.0.2560.1400@0.0.2560.1400" timestamp="1580702307404" />
     <state x="734" y="356" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579504491806">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="734" y="356" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1579504491806" />
+    <state x="1085" y="410" key="#com.intellij.ide.util.MemberChooser" timestamp="1580630927376">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1085" y="410" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1580630927376" />
     <state x="997" y="349" key="#runClient" timestamp="1579499186771">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -141,5 +167,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1579603348189" />
+    <state x="1089" y="618" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579852475677">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1089" y="618" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400@0.0.2560.1400" timestamp="1579852475677" />
   </component>
 </project>

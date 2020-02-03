@@ -1,0 +1,66 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "vampiric:garlic_plant",
+                  "properties": {
+                    "age": "7"
+                  }
+                }
+              ],
+              "name": "vampiric:garlic_plant"
+            },
+            {
+              "type": "minecraft:item",
+              "name": "vampiric:garlic_plant"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:apply_bonus",
+              "enchantment": "minecraft:fortune",
+              "formula": "minecraft:binomial_with_bonus_count",
+              "parameters": {
+                "extra": 1,
+                "probability": 0.3714286
+              }
+            }
+          ],
+          "name": "vampiric:garlic_plant"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "vampiric:garlic_plant",
+          "properties": {
+            "age": "7"
+          }
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "function": "minecraft:explosion_decay"
+    }
+  ]
+}

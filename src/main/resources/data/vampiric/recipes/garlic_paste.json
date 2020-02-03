@@ -3,10 +3,10 @@
 
   "ingredients":
   [
-    {"item": "vampiric:garlic"},
-    {"item": "vampiric:garlic"},
-    {"item": "vampiric:garlic"},
-    {"item": "vampiric:garlic"},
+    {"item": "vampiric:garlic_plant"},
+    {"item": "vampiric:garlic_plant"},
+    {"item": "vampiric:garlic_plant"},
+    {"item": "vampiric:garlic_plant"},
     {"item": "minecraft:water_bucket"}
   ],
 

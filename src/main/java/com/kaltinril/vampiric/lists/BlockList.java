@@ -10,4 +10,5 @@ public class BlockList {
     public static final Block silver_block = null;
     public static final Block silver_ore = null;
 
+    public static final Block garlic_plant = null;
 }
