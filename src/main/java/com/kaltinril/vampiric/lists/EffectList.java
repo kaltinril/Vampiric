@@ -22,7 +22,7 @@ public class EffectList {
         @SubscribeEvent
         public static void registerEffect(final RegistryEvent.Register<Effect> event) {
             final Effect[] effects = {
-                    new ModEffect(EffectType.HARMFUL, 0xf2e9d2).setRegistryName("garlic_essence") // whiteish
+                    new ModEffect(EffectType.HARMFUL, 0xf2e9d2, 1.0f).setRegistryName("garlic_essence") // whiteish
             };
 
             event.getRegistry().registerAll(effects);

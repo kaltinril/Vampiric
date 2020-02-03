@@ -44,7 +44,7 @@ public class VampiricMod
     public static final String modid = "vampiric";
 
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public static class Foods {
         public static final Food garlic = (new Food.Builder()).hunger(1).saturation(0.6F).build();
