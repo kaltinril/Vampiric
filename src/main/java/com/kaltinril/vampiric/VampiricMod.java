@@ -4,6 +4,7 @@ import com.kaltinril.vampiric.core.block.BlockCrop;
 import com.kaltinril.vampiric.lists.ArmorMaterialList;
 import com.kaltinril.vampiric.lists.BlockList;
 import com.kaltinril.vampiric.lists.ItemTierList;
+import com.kaltinril.vampiric.lists.PotionList;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.CropsBlock;
@@ -66,6 +67,8 @@ public class VampiricMod
     private void setup(final FMLCommonSetupEvent event)
     {
         // some preinit code
+        PotionList.addRecipes();
+
         LOGGER.info("HELLO FROM Pre Initialize");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
@@ -101,18 +104,6 @@ public class VampiricMod
     // Event bus for receiving Registry Events)
     @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
-
-        @SubscribeEvent
-        public static void registerPotions(final RegistryEvent.Register<Potion> event){
-            event.getRegistry().registerAll
-                (
-                        // Potion takes a list of EffectInstances
-                        new Potion(new EffectInstance(Effects.NIGHT_VISION, 3600)).setRegistryName(location("garlic_essence"))
-
-                );
-
-            LOGGER.info("Potions Registered.");
-        }
 
         @SubscribeEvent
         public static void registerItems(final RegistryEvent.Register<Item> event) {
