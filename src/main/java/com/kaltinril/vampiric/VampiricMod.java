@@ -1,6 +1,7 @@
 package com.kaltinril.vampiric;
 
 import com.kaltinril.vampiric.core.block.BlockCrop;
+import com.kaltinril.vampiric.core.world.biome.GenerationUtil;
 import com.kaltinril.vampiric.lists.ArmorMaterialList;
 import com.kaltinril.vampiric.lists.BlockList;
 import com.kaltinril.vampiric.lists.ItemTierList;
@@ -67,7 +68,8 @@ public class VampiricMod
     private void setup(final FMLCommonSetupEvent event)
     {
         // some preinit code
-        PotionList.addRecipes();
+        GenerationUtil.addOres();   // Add all mod ores
+        PotionList.addRecipes();    // Add all mod Potions
 
         LOGGER.info("HELLO FROM Pre Initialize");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
