@@ -9,7 +9,6 @@
 
   "item.vampiric.wooden_stake": "Wooden Stake",
   "item.vampiric.garlic_arrow": "Garlic Arrow",
-  "tipped_arrow.vampiric.effect.garlic_essence": "Arrow of Garlic Essence",
   "item.vampiric.silver_sword": "Silver Sword",
   "item.vampiric.silver_pickaxe": "Silver Pickaxe",
   "item.vampiric.silver_axe": "Silver Axe",
@@ -22,7 +21,8 @@
   "item.vampiric.silver_boots": "Silver Boots",
 
   "effect.vampiric.garlic_essence": "Garlic Essence",
-  "potion.effect.vampiric.garlic_essence": "Potion of Garlic Essence",
-  "splash_potion.vampiric.effect.garlic_essence": "Splash Potion of Garlic Essence",
-  "lingering_potion.vampiric.effect.garlic_essence": "Lingering Potion of Garlic Essence"
+  "item.minecraft.potion.effect.garlic_essence": "Potion of Garlic Essence",
+  "item.minecraft.splash_potion.effect.garlic_essence": "Splash Potion of Garlic Essence",
+  "item.minecraft.lingering_potion.effect.garlic_essence": "Lingering Potion of Garlic Essence",
+  "item.minecraft.tipped_arrow.effect.garlic_essence": "Arrow of Garlic Essence"
 }
