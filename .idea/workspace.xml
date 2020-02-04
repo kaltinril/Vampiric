@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02968ef3-e803-45b1-85ac-094219ce0187" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/core/world/biome/GenerationUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/VampiricMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/VampiricMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/lists/PotionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/lists/PotionList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +16,37 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Vampirc_1_15_1" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Vampirc_1_15_1" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Vampirc_1_15_1" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build setup" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -39,7 +71,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/item" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RecentsManager">
@@ -60,7 +92,7 @@
       <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\data\blocks\loot_tables" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.runClient">
+  <component name="RunManager" selected="Application.runServer">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -146,26 +178,62 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1085" y="410" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1580630927376" />
+    <state x="1128" y="590" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1580783898567">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1128" y="590" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1580783898567" />
+    <state x="860" y="356" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor" timestamp="1580783893549">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="860" y="356" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1580783893549" />
     <state x="997" y="349" key="#runClient" timestamp="1579499186771">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="997" y="349" key="#runClient/0.0.2560.1400@0.0.2560.1400" timestamp="1579499186771" />
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1579603348189">
+    <state x="997" y="349" key="#runServer" timestamp="1580781297323">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1579603348189" />
-    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1579603348189">
+    <state x="997" y="349" key="#runServer/0.0.2560.1400@0.0.2560.1400" timestamp="1580781297323" />
+    <state x="1009" y="519" key="FileChooserDialogImpl" timestamp="1580783891768">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1579603348189" />
-    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1579603348189">
+    <state x="1009" y="519" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1580783891768" />
+    <state width="2517" height="492" key="GridCell.Tab.0.bottom" timestamp="1580783473763">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1579603348189" />
-    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1579603348189">
+    <state width="2517" height="492" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1580783473763" />
+    <state width="2517" height="492" key="GridCell.Tab.0.center" timestamp="1580783473763">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1579603348189" />
+    <state width="2517" height="492" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1580783473763" />
+    <state width="2517" height="492" key="GridCell.Tab.0.left" timestamp="1580783473763">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1580783473763" />
+    <state width="2517" height="492" key="GridCell.Tab.0.right" timestamp="1580783473763">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1580783473763" />
+    <state width="2517" height="492" key="GridCell.Tab.1.bottom" timestamp="1580783473763">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1580783473763" />
+    <state width="2517" height="492" key="GridCell.Tab.1.center" timestamp="1580783473763">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1580783473763" />
+    <state width="2517" height="492" key="GridCell.Tab.1.left" timestamp="1580783473763">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1580783473763" />
+    <state width="2517" height="492" key="GridCell.Tab.1.right" timestamp="1580783473763">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1580783473763" />
+    <state x="781" y="343" key="SettingsEditor" timestamp="1580781141585">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="781" y="343" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1580781141585" />
     <state x="1089" y="618" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579852475677">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

@@ -43,7 +43,8 @@ public class PotionList {
     // Using PotionBrewing which is private, requires using reflection to "use" and "inject" our recipes
     private static void addMix(Potion base, Item ingredient, Potion result){
         if (brewing == null){
-            brewing = ObfuscationReflectionHelper.findMethod(PotionBrewing.class, "addMix", Potion.class, Item.class, Potion.class);
+            brewing = ObfuscationReflectionHelper.findMethod(PotionBrewing.class, "func_193357_a", Potion.class, Item.class, Potion.class); //func_193357_a = addMix
+
             brewing.setAccessible(true); // Allow us to use it's methods
 
             try {
