@@ -33,6 +33,7 @@ import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.loading.FMLEnvironment;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -58,8 +59,9 @@ public class VampiricMod
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         // Register the processIMC method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
+
         // Register the doClientStuff method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+        //FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -75,8 +77,9 @@ public class VampiricMod
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
+    @SubscribeEvent
     @OnlyIn(Dist.CLIENT)
-    private void doClientStuff(final FMLClientSetupEvent event) {
+    public static void clientSetup(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
         RenderTypeLookup.setRenderLayer(BlockList.garlic_plant, RenderType.func_228643_e_()); // .cutout()); / func_228643_e_
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
@@ -112,27 +115,27 @@ public class VampiricMod
             // register a new block here
             LOGGER.info("Items Registered.");
             event.getRegistry().registerAll
-                (
-                        // Items
-                        new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName(location("silver_ingot")),
-                        new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName(location("garlic_paste")),
-                        // Tools and Weapons
-                        new AxeItem(ItemTierList.SILVER, 6.5F, -3.0F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_axe")),
-                        new PickaxeItem(ItemTierList.SILVER, 2, -2.8f, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_pickaxe")),
-                        new HoeItem(ItemTierList.SILVER, -2.5F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_hoe")),
-                        new ShovelItem(ItemTierList.SILVER, 2F, -2.8F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("silver_shovel"),
-                        new SwordItem(ItemTierList.SILVER, 3, -2.4F, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName("silver_sword"),
-                        new SwordItem(ItemTier.WOOD, 2, -2.0F, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName("wooden_stake"),
-                        // Armor
-                        new ArmorItem(ArmorMaterialList.SILVER, EquipmentSlotType.CHEST, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(location("silver_chestplate")),
-                        new ArmorItem(ArmorMaterialList.SILVER, EquipmentSlotType.HEAD, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(location("silver_helmet")),
-                        new ArmorItem(ArmorMaterialList.SILVER, EquipmentSlotType.LEGS, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(location("silver_leggings")),
-                        new ArmorItem(ArmorMaterialList.SILVER, EquipmentSlotType.FEET, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(location("silver_boots")),
-                        // Block Items
-                        new BlockItem(BlockList.silver_block, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.silver_block.getRegistryName()),
-                        new BlockItem(BlockList.silver_ore, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.silver_ore.getRegistryName()),
-                        new BlockItem(BlockList.garlic_plant, new Item.Properties().group(ItemGroup.MISC).food(Foods.garlic)).setRegistryName("garlic_plant")
-                );
+                    (
+                            // Items
+                            new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName(location("silver_ingot")),
+                            new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName(location("garlic_paste")),
+                            // Tools and Weapons
+                            new AxeItem(ItemTierList.SILVER, 6.5F, -3.0F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_axe")),
+                            new PickaxeItem(ItemTierList.SILVER, 2, -2.8f, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_pickaxe")),
+                            new HoeItem(ItemTierList.SILVER, -2.5F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_hoe")),
+                            new ShovelItem(ItemTierList.SILVER, 2F, -2.8F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("silver_shovel"),
+                            new SwordItem(ItemTierList.SILVER, 3, -2.4F, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName("silver_sword"),
+                            new SwordItem(ItemTier.WOOD, 2, -2.0F, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName("wooden_stake"),
+                            // Armor
+                            new ArmorItem(ArmorMaterialList.SILVER, EquipmentSlotType.CHEST, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(location("silver_chestplate")),
+                            new ArmorItem(ArmorMaterialList.SILVER, EquipmentSlotType.HEAD, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(location("silver_helmet")),
+                            new ArmorItem(ArmorMaterialList.SILVER, EquipmentSlotType.LEGS, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(location("silver_leggings")),
+                            new ArmorItem(ArmorMaterialList.SILVER, EquipmentSlotType.FEET, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(location("silver_boots")),
+                            // Block Items
+                            new BlockItem(BlockList.silver_block, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.silver_block.getRegistryName()),
+                            new BlockItem(BlockList.silver_ore, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.silver_ore.getRegistryName()),
+                            new BlockItem(BlockList.garlic_plant, new Item.Properties().group(ItemGroup.MISC).food(Foods.garlic)).setRegistryName("garlic_plant")
+                    );
         }
 
         @SubscribeEvent
@@ -140,25 +143,25 @@ public class VampiricMod
             // register a new block here
             LOGGER.info("Blocks registered.");
             event.getRegistry().registerAll
-                (
-                        //new ;
-                        // Crops
-                        new BlockCrop(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().sound(SoundType.CROP).hardnessAndResistance(0.0F), "garlic_plant"),
-                        // Blocks
-                        new Block(Block.Properties.create(Material.IRON)
-                                .hardnessAndResistance(4.0f, 30.0f)
-                                .harvestLevel(1)
-                                .harvestTool(ToolType.PICKAXE)
-                                .sound(SoundType.METAL))
-                                .setRegistryName(location("silver_block")),
-                        // Ore
-                        new Block(Block.Properties.create(Material.ROCK)
-                                .hardnessAndResistance(4.0f, 15.0f)
-                                .harvestLevel(2)
-                                .harvestTool(ToolType.PICKAXE)
-                                .sound(SoundType.STONE))
-                                .setRegistryName(location("silver_ore"))
-                );
+                    (
+                            //new ;
+                            // Crops
+                            new BlockCrop(Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().sound(SoundType.CROP).hardnessAndResistance(0.0F), "garlic_plant"),
+                            // Blocks
+                            new Block(Block.Properties.create(Material.IRON)
+                                    .hardnessAndResistance(4.0f, 30.0f)
+                                    .harvestLevel(1)
+                                    .harvestTool(ToolType.PICKAXE)
+                                    .sound(SoundType.METAL))
+                                    .setRegistryName(location("silver_block")),
+                            // Ore
+                            new Block(Block.Properties.create(Material.ROCK)
+                                    .hardnessAndResistance(4.0f, 15.0f)
+                                    .harvestLevel(2)
+                                    .harvestTool(ToolType.PICKAXE)
+                                    .sound(SoundType.STONE))
+                                    .setRegistryName(location("silver_ore"))
+                    );
         }
     }
 
