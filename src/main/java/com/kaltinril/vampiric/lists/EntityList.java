@@ -14,7 +14,7 @@ import net.minecraftforge.event.RegistryEvent;
 import org.apache.logging.log4j.Logger;
 
 public class EntityList {
-    public static EntityType<VampireBat> vampire_bat; //import org.apache.logging.log4j.Logger;
+    public static EntityType<VampireBat> vampire_bat;
 
     public static Item vampire_bat_egg;
 

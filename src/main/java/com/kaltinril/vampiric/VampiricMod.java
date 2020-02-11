@@ -1,6 +1,7 @@
 package com.kaltinril.vampiric;
 
 import com.kaltinril.vampiric.client.renderer.RenderRegistry;
+import com.kaltinril.vampiric.client.renderer.VampireBatRenderer;
 import com.kaltinril.vampiric.core.block.BlockCrop;
 import com.kaltinril.vampiric.core.world.biome.GenerationUtil;
 import com.kaltinril.vampiric.lists.*;
@@ -25,6 +26,7 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -83,7 +85,8 @@ public class VampiricMod
         // do something that can only be done on the client
         RenderTypeLookup.setRenderLayer(BlockList.garlic_plant, RenderType.func_228643_e_()); // .cutout()); / func_228643_e_
 
-        RenderRegistry.registerEntityRenderers();
+        RenderingRegistry.registerEntityRenderingHandler(EntityList.vampire_bat, VampireBatRenderer::new);
+        //RenderRegistry.registerEntityRenderers();
 
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
     }
