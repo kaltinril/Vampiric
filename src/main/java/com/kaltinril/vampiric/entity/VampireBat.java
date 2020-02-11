@@ -1,13 +1,10 @@
 package com.kaltinril.vampiric.entity;
 
-import com.kaltinril.vampiric.VampiricMod;
 import com.kaltinril.vampiric.lists.EntityList;
-import com.kaltinril.vampiric.lists.ItemList;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.goal.*;
-import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.world.World;
 

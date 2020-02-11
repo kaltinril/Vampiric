@@ -62,7 +62,7 @@ public class VampiricMod
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
 
         // Register the doClientStuff method for modloading
-        //FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -78,9 +78,9 @@ public class VampiricMod
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
-    @SubscribeEvent
+    //@SubscribeEvent
     //@OnlyIn(Dist.CLIENT)
-    public static void clientSetup(final FMLClientSetupEvent event) {
+    public void clientSetup(final FMLClientSetupEvent event) {
         LOGGER.info("Starting Client Code.");
         // do something that can only be done on the client
         RenderTypeLookup.setRenderLayer(BlockList.garlic_plant, RenderType.func_228643_e_()); // .cutout()); / func_228643_e_

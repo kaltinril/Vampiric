@@ -8,7 +8,6 @@ import com.google.common.collect.ImmutableList;
 import com.kaltinril.vampiric.entity.VampireBat;
 import net.minecraft.client.renderer.entity.model.SegmentedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
-import net.minecraft.entity.passive.BatEntity;
 import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
