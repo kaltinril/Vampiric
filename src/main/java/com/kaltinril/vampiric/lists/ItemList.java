@@ -27,4 +27,6 @@ public class ItemList {
     public static final Item silver_leggings = null;
     public static final Item silver_boots = null;
 
+    // Entity Eggs
+    public static final Item vampire_bat_egg = null;
 }

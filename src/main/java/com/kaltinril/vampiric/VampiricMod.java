@@ -1,11 +1,9 @@
 package com.kaltinril.vampiric;
 
+import com.kaltinril.vampiric.client.renderer.RenderRegistry;
 import com.kaltinril.vampiric.core.block.BlockCrop;
 import com.kaltinril.vampiric.core.world.biome.GenerationUtil;
-import com.kaltinril.vampiric.lists.ArmorMaterialList;
-import com.kaltinril.vampiric.lists.BlockList;
-import com.kaltinril.vampiric.lists.ItemTierList;
-import com.kaltinril.vampiric.lists.PotionList;
+import com.kaltinril.vampiric.lists.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.CropsBlock;
@@ -13,6 +11,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.entity.EntityType;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.potion.EffectInstance;
@@ -78,10 +77,14 @@ public class VampiricMod
     }
 
     @SubscribeEvent
-    @OnlyIn(Dist.CLIENT)
+    //@OnlyIn(Dist.CLIENT)
     public static void clientSetup(final FMLClientSetupEvent event) {
+        LOGGER.info("Starting Client Code.");
         // do something that can only be done on the client
         RenderTypeLookup.setRenderLayer(BlockList.garlic_plant, RenderType.func_228643_e_()); // .cutout()); / func_228643_e_
+
+        RenderRegistry.registerEntityRenderers();
+
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
     }
 
@@ -136,6 +139,8 @@ public class VampiricMod
                             new BlockItem(BlockList.silver_ore, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.silver_ore.getRegistryName()),
                             new BlockItem(BlockList.garlic_plant, new Item.Properties().group(ItemGroup.MISC).food(Foods.garlic)).setRegistryName("garlic_plant")
                     );
+
+            EntityList.registerEntitySpawnEggs(event);
         }
 
         @SubscribeEvent
@@ -163,10 +168,21 @@ public class VampiricMod
                                     .setRegistryName(location("silver_ore"))
                     );
         }
+
+        @SubscribeEvent
+        public static void registerEntities(final RegistryEvent.Register<EntityType<?>> event) {
+            // register a new block here
+            LOGGER.info("Entities registered.");
+
+            EntityList.registerAll(event, LOGGER);
+
+            //EntityList.registerEntityWorldSpawns();
+        }
+
     }
 
     // This appears to not be needed, not sure why harry talks added it.
-    private static ResourceLocation location(String name){
+    public static ResourceLocation location(String name){
         return new ResourceLocation(modid, name);
     }
 }
