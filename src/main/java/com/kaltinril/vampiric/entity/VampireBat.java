@@ -1,6 +1,5 @@
 package com.kaltinril.vampiric.entity;
 
-import com.kaltinril.vampiric.lists.EntityList;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -12,13 +11,13 @@ import net.minecraft.world.World;
 public class VampireBat extends CreatureEntity {
 
     @SuppressWarnings("unchecked")
-    public VampireBat(EntityType<? extends CreatureEntity> type, World world) {
-        // I think we should pass in the type just like mineraft does it
-        super((EntityType<? extends CreatureEntity>) EntityList.vampire_bat, world);
+    public VampireBat(final EntityType<? extends VampireBat> entityType, final World world) {
+        super(entityType, world);
     }
 
     @Override
     protected void registerGoals(){
+        super.registerGoals(); // Not sure if this is really needed since CreatureEntity inherts this from MobEntity which has a blank registerGoals method.
         this.goalSelector.addGoal(0, new SwimGoal(this));
         this.goalSelector.addGoal(1, new RandomWalkingGoal(this, 2.5d));
         this.goalSelector.addGoal(2, new WaterAvoidingRandomWalkingGoal(this, 1.0D, 0.0F));
@@ -32,7 +31,7 @@ public class VampireBat extends CreatureEntity {
         super.registerAttributes();
         this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(9.0d); // Max health is a bit more than a regular bat which is 6
         this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue((double)1.0d);
-        this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(1.0D); // Only does 1 damage
-        this.getAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(64.0D); //
+        //this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(1.0D); // Only does 1 damage
+        //this.getAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(64.0D); //
     }
 }
