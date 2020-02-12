@@ -11,25 +11,32 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
 import net.minecraftforge.event.RegistryEvent;
 
+import net.minecraftforge.registries.ObjectHolder;
 import org.apache.logging.log4j.Logger;
 
+@ObjectHolder(VampiricMod.modid)
 public class EntityList {
-    public static EntityType<VampireBat> vampire_bat;
+     //public static EntityType<VampireBat> vampire_bat;
+    // Changing the above to this line below will allow the eggs to spawn the entity but is "bad form" to do this
+    public static EntityType<VampireBat> vampire_bat = (EntityType<VampireBat>) EntityType.Builder.create(VampireBat::new, EntityClassification.MONSTER).size(0.5F, 0.9F).build(VampiricMod.modid + ":vampire_bat").setRegistryName(VampiricMod.location("vampire_bat"));
 
     public static Item vampire_bat_egg;
 
     @SuppressWarnings("unchecked")
     public static void registerAll(RegistryEvent.Register<EntityType<?>> event, Logger logger){
+        logger.info("Entity Registration begin.");
         event.getRegistry().registerAll
                 (
-                        vampire_bat = (EntityType<VampireBat>) EntityType.Builder.create(VampireBat::new, EntityClassification.CREATURE).size(0.9F, 1.3F).build(VampiricMod.modid + ":vampire_bat").setRegistryName(VampiricMod.location("vampire_bat"))
+                        vampire_bat// = (EntityType<VampireBat>) EntityType.Builder.create(VampireBat::new, EntityClassification.MONSTER).size(0.5F, 0.9F).build(VampiricMod.modid + ":vampire_bat").setRegistryName(VampiricMod.location("vampire_bat"))
                 );
+        logger.info("Entity Registration end.");
+
         registerEntityWorldSpawns();
+        logger.info("Spawn Configuration Complete.");
     }
 
     public static void registerEntitySpawnEggs(final RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(
-                //registerEntitySpawnEgg(vampire_bat, 0x654321, 0xa9a9a9, "vampire_bat_egg")
                 vampire_bat_egg = registerEntitySpawnEgg(vampire_bat, 0x654321, 0xa9a9a9, "vampire_bat_egg")
         );
     }
@@ -45,11 +52,10 @@ public class EntityList {
         registerEntityWorldSpawn(vampire_bat, Biomes.PLAINS, Biomes.BEACH, Biomes.JUNGLE);
     }
 
-    // TODO: Add my own classification of type Vampire, Werewolf, and Mummy (Maybe more generic for each)
     public static void registerEntityWorldSpawn(EntityType<?> entity, Biome... biomes) {
         for (Biome biome : biomes) {
             if (biome != null) {
-                biome.getSpawns(entity.getClassification()).add(new Biome.SpawnListEntry(entity, 10, 1, 10));
+                biome.getSpawns(entity.getClassification()).add(new Biome.SpawnListEntry(entity, 100, 4, 4));
             }
         }
     }
