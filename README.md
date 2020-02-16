@@ -13,7 +13,11 @@ For information on what items, blocks, and entities exist, please read the [WIKI
 
 ## I. How to use this mod
 
-This mod has no publicly built jar file yet.  So you will need to follow the "How to edit or compile this mod" section instead.  However, once built, you simply place the mod.jar file into your minecraft mods folder.
+Download the latest build from [Curse Forge](https://www.curseforge.com/minecraft/mc-mods/vampiric).
+
+If you want the newest snapshot, you will need to follow the "How to edit or compile this mod" section instead.  
+
+Standard forge rules apply.  Place the vampiric-0.1.jar file into your minecraft mods folder.
 
 ## II. How to edit or compile this mod
 
