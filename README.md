@@ -1,6 +1,8 @@
 # [Vampiric]
 
-A forge minecraft mod
+A forge minecraft mod.
+
+For information on what items, blocks, and entities exist, please read the [WIKI](https://github.com/kaltinril/Vampiric/wiki).
 
 ## I. How to use this mod
 
