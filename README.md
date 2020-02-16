@@ -1,4 +1,4 @@
-# **Vampiric**
+# [Vampiric]
 
 A forge minecraft mod
 
