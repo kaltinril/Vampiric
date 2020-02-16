@@ -88,7 +88,4 @@ Item    | Info
 **Error** | ???
 **Description** | Any error during initial first gradle build
 **Cause** | Unknown specific error
-**Resolution** | Try resetting Gradle (which doesn't impact your code)<br>
-1. Remove all downloaded gradle information for this project: ```gradlew clean``` <br>
-1. Refresh all dependencies: ```gradlew --refresh-dependencies```
-1. Error during Gradle: Try starting over with gradlew --clean 
+**Resolution** | Try resetting Gradle (which doesn't impact your code)<br> 1. Remove all downloaded gradle information for this project: ```gradlew clean``` <br> 1. Refresh all dependencies: ```gradlew --refresh-dependencies```<br> 1. Build the project: ```gradlew build``` <br> 1. Test the client: ```gradlew runClient```
