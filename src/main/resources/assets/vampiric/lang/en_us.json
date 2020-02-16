@@ -28,5 +28,7 @@
   "item.minecraft.potion.effect.garlic_essence_long": "Potion of Garlic Essence",
   "item.minecraft.splash_potion.effect.garlic_essence_long": "Splash Potion of Garlic Essence",
   "item.minecraft.lingering_potion.effect.garlic_essence_long": "Lingering Potion of Garlic Essence",
-  "item.minecraft.tipped_arrow.effect.garlic_essence_long": "Arrow of Garlic Essence"
+  "item.minecraft.tipped_arrow.effect.garlic_essence_long": "Arrow of Garlic Essence",
+
+  "item.vampiric.vampire_bat_egg": "Vampire Bat Spawn Egg"
 }

@@ -1,11 +1,10 @@
 package com.kaltinril.vampiric;
 
+import com.kaltinril.vampiric.client.renderer.RenderRegistry;
+import com.kaltinril.vampiric.client.renderer.VampireBatRenderer;
 import com.kaltinril.vampiric.core.block.BlockCrop;
 import com.kaltinril.vampiric.core.world.biome.GenerationUtil;
-import com.kaltinril.vampiric.lists.ArmorMaterialList;
-import com.kaltinril.vampiric.lists.BlockList;
-import com.kaltinril.vampiric.lists.ItemTierList;
-import com.kaltinril.vampiric.lists.PotionList;
+import com.kaltinril.vampiric.lists.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.CropsBlock;
@@ -13,6 +12,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.entity.EntityType;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.potion.EffectInstance;
@@ -26,6 +26,7 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -61,7 +62,7 @@ public class VampiricMod
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
 
         // Register the doClientStuff method for modloading
-        //FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -77,11 +78,16 @@ public class VampiricMod
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
-    @SubscribeEvent
-    @OnlyIn(Dist.CLIENT)
-    public static void clientSetup(final FMLClientSetupEvent event) {
+    //@SubscribeEvent
+    //@OnlyIn(Dist.CLIENT)
+    public void clientSetup(final FMLClientSetupEvent event) {
+        LOGGER.info("Starting Client Code.");
         // do something that can only be done on the client
         RenderTypeLookup.setRenderLayer(BlockList.garlic_plant, RenderType.func_228643_e_()); // .cutout()); / func_228643_e_
+
+        RenderingRegistry.registerEntityRenderingHandler(EntityList.vampire_bat, VampireBatRenderer::new);
+        //RenderRegistry.registerEntityRenderers();
+
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
     }
 
@@ -136,6 +142,8 @@ public class VampiricMod
                             new BlockItem(BlockList.silver_ore, new Item.Properties().group(ItemGroup.MISC)).setRegistryName(BlockList.silver_ore.getRegistryName()),
                             new BlockItem(BlockList.garlic_plant, new Item.Properties().group(ItemGroup.MISC).food(Foods.garlic)).setRegistryName("garlic_plant")
                     );
+
+            EntityList.registerEntitySpawnEggs(event);
         }
 
         @SubscribeEvent
@@ -163,10 +171,21 @@ public class VampiricMod
                                     .setRegistryName(location("silver_ore"))
                     );
         }
+
+        @SubscribeEvent
+        public static void registerEntities(final RegistryEvent.Register<EntityType<?>> event) {
+            // register a new block here
+            LOGGER.info("Entities registered.");
+
+            EntityList.registerAll(event, LOGGER);
+
+            //EntityList.registerEntityWorldSpawns();
+        }
+
     }
 
     // This appears to not be needed, not sure why harry talks added it.
-    private static ResourceLocation location(String name){
+    public static ResourceLocation location(String name){
         return new ResourceLocation(modid, name);
     }
 }

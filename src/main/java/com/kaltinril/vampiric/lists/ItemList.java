@@ -26,5 +26,4 @@ public class ItemList {
     public static final Item silver_helmet = null;
     public static final Item silver_leggings = null;
     public static final Item silver_boots = null;
-
 }
