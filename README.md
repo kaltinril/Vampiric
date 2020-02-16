@@ -2,6 +2,13 @@
 
 A forge minecraft mod.
 
+This mod has 3 main categories:
+1. Vampires
+1. Werewolves
+1. Mummies
+
+Each category adds items specific to that ```EntityType```.  There are some items that are shared between all three.
+
 For information on what items, blocks, and entities exist, please read the [WIKI](https://github.com/kaltinril/Vampiric/wiki).
 
 ## I. How to use this mod
@@ -67,7 +74,19 @@ This section will build the Run Configuration settings for runClient, runServer,
 
 ## III. Updating Forge Version
 
+1. Open the build.gradle file
+1. Under ```dependencies```, change the ```minecraft``` line: ```minecraft 'net.minecraftforge:forge:1.15.2-31.0.16'```
+   1. Pick which latest build you want by going to the [Forge Website](https://files.minecraftforge.net/)
+1. After changing this value, IntelliJ will notice the change and ask you if you want to ```Import Changes```.  You do, click it.
+1. You may need to fix code now if there was a substantial enough jump in version.
+
 ## IV. Updateing MCP (Mappings) Version.
+
+1. Open the build.gradle file
+1. At the top Under ```minecraft```, change the ```mappings``` line: ```mappings channel: 'snapshot', version: '20190719-1.14.3'```
+   1. Pick which latest mapping you want by going to the [MCPBot Website](http://export.mcpbot.bspk.rs/)
+1. After changing this value, IntelliJ will notice the change and ask you if you want to ```Import Changes```.  You do, click it.
+1. You may need to change Class, Method (Function), and Variable names after this update.  Fix any errors by looking up the correct mappings for any items.  
 
 ## V. Errors and Resolutions:
 
