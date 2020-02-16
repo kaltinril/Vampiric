@@ -30,14 +30,18 @@ This document is assuming a windows user.  If you are a mac or linux user you wi
 
 1. Download [IntelliJ Idea Community Edition](https://www.jetbrains.com/idea/)
 1. Install IntelliJ
+1. Open IntelliJ
 1. Configure Settings to use Java JDK8:
    1. Go to `File > Settings > Build, Execution, Deployment > Build Tools >  Mavern > Importing > JDK for Importer`
    1. Select  your JDK 8 install
-1. 
 
-### 4. Clone Repository
+### 4. Clone This Repository
 
-1. Right-click on a 
+1. From the main Code Tab click on the ```Clone or Download``` button
+1. Copy the URL
+1. Open a ```Git Bash``` window
+1. Change directory to where you want to clone (Download) the mod to: cd c:\git\minecraft\
+1. Clone the repo: ```git clone https://github.com/kaltinril/Vampiric.git```
 
 ### 5. Import project using Gradle import in IntelliJ
 
