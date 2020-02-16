@@ -10,10 +10,10 @@ displayName="Vampric" #mandatory
 # updateJSONURL="http://myurl.me/" #optional
 displayURL="https://www.youtube.com/user/Kaltinril" #optional
 logoFile="vampiric.png" #optional # A file name (in the root of the mod JAR) containing a logo for display
-credits="Thanks to .. TODO: List the youtube channels" #optional
+credits="Thanks for assistance from Cadiboo.  Youtube channels: Hary Talks, TurtyWurty, Champion Ash5357, Jorrit Tyberghein, TechnoVision, AlanBeckerMinecraft, wuppygaming, "
 authors="Kaltinril" #optional
 description='''
-A mod that adds mythical creatures related to the vampire and wearwolf meta.
+A mod that adds Classic Monsters like the mythical creatures vampire, werewold, and mummy.
 '''
 
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
