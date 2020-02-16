@@ -1,34 +1,59 @@
-# Vampiric
+# **Vampiric**
 
 A forge minecraft mod
 
-## How to edit or compile this mod
+## I. How to use this mod
+
+This mod has no publicly built jar file yet.  So you will need to follow the "How to edit or compile this mod" section instead.  However, once built, you simply place the mod.jar file into your minecraft mods folder.
+
+## II. How to edit or compile this mod
+
+This document is assuming a windows user.  If you are a mac or linux user you will need to find the equivlant instructions for that OS.  Additionally this is assuming you are using IntelliJ Idea.  If you are using Eclipse or some other tool, you are on your own.
 
 ### 1. Install GIT
 
-### 2. Install IntelliJ Idea
+1. Download [GIT](https://git-scm.com/)
+1. Install GIT
+1. Open Git Bash: Right-click in an empty Explorer window and chose ```git bash here```
+1. Set your ```global Username```: git config --global user.name "FIRST_NAME LAST_NAME"
+1. Set your ```global Email```: git config --global user.email "MY_NAME@example.com" <br>
+  (_**NOTE:** You want this to match your github email_)
 
-### 3. Install Java JDK 8 (1.8.* )
+### 2. Install Java JDK 8 (1.8.* )
+
+1. Download [64 bit Java JDK 8](https://www.oracle.com/java/technologies/javase-jdk8-downloads.html)
+1. Run the downloaded installer and except defaults.
+
+### 3. Install IntelliJ Idea
+
+1. Download [IntelliJ Idea Community Edition](https://www.jetbrains.com/idea/)
+1. Install IntelliJ
+1. Configure Settings to use Java JDK8:
+   1. Go to `File > Settings > Build, Execution, Deployment > Build Tools >  Mavern > Importing > JDK for Importer`
+   1. Select  your JDK 8 install
+1. 
 
 ### 4. Clone Repository
+
+1. Right-click on a 
 
 ### 5. Import project using Gradle import in IntelliJ
 
 1. Open **IntelliJ**
-2. Click **Import Project**
-3. Select your **build.gradle** file and click **OK**.
-4. Wait.... 
+1. Click **Import Project**
+1. Select your **build.gradle** file and click **OK**.
+1. Wait.... 
 
 ### 6. Create Intellij runs
 
 1. Open a command prompt: (start menu > type: CMD > press enter)
-2. Change directory to the project: cd c:\path\to\cloned\repo\
-3. Run the command: gradlew genIntellijRuns
+1. Change directory to the project: cd c:\path\to\cloned\repo\
+1. Run the command: gradlew genIntellijRuns
 
 ### 7. Run Client
 
 
-## Errors and Resolutions:
+## III. Errors and Resolutions:
 
 ### Import Error
 
