@@ -66,7 +66,7 @@ This section will build the Run Configuration settings for runClient, runServer,
 1. Build and start client: ```gradlew runClient```
 1. Wait...
 
-### 7. Run Server
+### 8. Run Server
 
 1. Use the command window from #6 above (This assumes you are in the repo project directory)
 1. Build and start client: ```gradlew runServer```
