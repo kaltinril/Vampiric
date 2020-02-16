@@ -52,6 +52,9 @@ public class VampireBat extends MonsterEntity {
         this.targetSelector.addGoal(5, new NearestAttackableTargetGoal<>(this, HorseEntity.class, true));
     }
 
+
+    // NOTE from Discord User: you can register an unregistered attribute by adding this line in your registerAttributes() method:
+    //   this.getAttributes().registerAttribute(SharedMonsterAttributes.ATTRIBUTE_TO_REGISTER);
     @Override
     protected void registerAttributes() {
         super.registerAttributes();

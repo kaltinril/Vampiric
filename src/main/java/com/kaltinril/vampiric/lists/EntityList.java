@@ -16,6 +16,11 @@ import org.apache.logging.log4j.Logger;
 
 @ObjectHolder(VampiricMod.modid)
 public class EntityList {
+
+    // Cadiboo created a workaround for forge registration order issue with item, Entity, and EntityType
+    // Should use that instead of using the
+    // https://github.com/Cadiboo/Example-Mod/blob/1.15.2/src/main/java/io/github/cadiboo/examplemod/entity/WildBoarEntity.java
+    // https://github.com/Cadiboo/Example-Mod/blob/1.15.2/src/main/java/io/github/cadiboo/examplemod/init/ModEntityTypes.java
      //public static EntityType<VampireBat> vampire_bat;
     // Changing the above to this line below will allow the eggs to spawn the entity but is "bad form" to do this
     public static EntityType<VampireBat> vampire_bat = (EntityType<VampireBat>) EntityType.Builder.create(VampireBat::new, EntityClassification.MONSTER).size(0.5F, 0.9F).build(VampiricMod.modid + ":vampire_bat").setRegistryName(VampiricMod.location("vampire_bat"));
@@ -52,6 +57,10 @@ public class EntityList {
         registerEntityWorldSpawn(vampire_bat, Biomes.PLAINS, Biomes.BEACH, Biomes.JUNGLE);
     }
 
+    // Cadiboo created a workaround for forge registration order issue with item, Entity, and EntityType
+    // Should use that instead of using the
+    // https://github.com/Cadiboo/Example-Mod/blob/1.15.2/src/main/java/io/github/cadiboo/examplemod/entity/WildBoarEntity.java
+    // https://github.com/Cadiboo/Example-Mod/blob/1.15.2/src/main/java/io/github/cadiboo/examplemod/init/ModEntityTypes.java
     public static void registerEntityWorldSpawn(EntityType<?> entity, Biome... biomes) {
         for (Biome biome : biomes) {
             if (biome != null) {
