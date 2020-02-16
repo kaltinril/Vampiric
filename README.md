@@ -31,16 +31,13 @@ This document is assuming a windows user.  If you are a mac or linux user you wi
 1. Download [IntelliJ Idea Community Edition](https://www.jetbrains.com/idea/)
 1. Install IntelliJ
 1. Open IntelliJ
-1. Configure Settings to use Java JDK8:
-   1. Go to `File > Settings > Build, Execution, Deployment > Build Tools >  Mavern > Importing > JDK for Importer`
-   1. Select  your JDK 8 install
 
 ### 4. Clone This Repository
 
 1. From the main Code Tab click on the ```Clone or Download``` button
 1. Copy the URL
 1. Open a ```Git Bash``` window
-1. Change directory to where you want to clone (Download) the mod to: cd c:\git\minecraft\
+1. Change directory to where you want: ```cd c:\git\minecraft\```
 1. Clone the repo: ```git clone https://github.com/kaltinril/Vampiric.git```
 
 ### 5. Import project using Gradle import in IntelliJ
@@ -51,26 +48,47 @@ This document is assuming a windows user.  If you are a mac or linux user you wi
 1. Wait.... 
 
 ### 6. Create Intellij runs
-
-1. Open a command prompt: (start menu > type: CMD > press enter)
-1. Change directory to the project: cd c:\path\to\cloned\repo\
-1. Run the command: gradlew genIntellijRuns
+This section will build the Run Configuration settings for runClient, runServer, and 
+1. Open a command prompt: ```start menu > type: CMD > press enter```
+1. Change directory to the project: ```cd c:\path\to\cloned\repo\```
+1. Create the run settings: ```gradlew genIntellijRuns```
 
 ### 7. Run Client
 
+1. Use the command window from #6 above (This assumes you are in the repo project directory)
+1. Build and start client: ```gradlew runClient```
+1. Wait...
 
-## III. Errors and Resolutions:
+### 7. Run Server
+
+1. Use the command window from #6 above (This assumes you are in the repo project directory)
+1. Build and start client: ```gradlew runServer```
+1. Wait...
+
+## III. Updating Forge Version
+
+## IV. Updateing MCP (Mappings) Version.
+
+## V. Errors and Resolutions:
 
 ### Import Error
 
 Item    | Info 
 ------- | -----
-**Message** | Cannot determine classpath for resource
 **Error** | Cannot determine classpath for resource `'java/sql/SQLException.class'` from location `'jrt:/java.sql/java/sql/SQLException.class'.`<br> The project uses Gradle 2.14 which is incompatible with IDEA running on Java 10 or newer. <br> See details at https://github.com/gradle/gradle/issues/8431 <br>Possible solution: <br> - Upgrade Gradle wrapper to 4.8.1 version and re-import the project
 **Description** | While importing the build.gradle or opening the project and clicking Import Changes this error appears.
-**Cause** | The wrong version of Java is selected for the Settings
-**Resolution** | 1. Go to `File > Settings > Build, Execution, Deployment > Build Tools >  Mavern > Importing > JDK for Importer` <br> 2. Select  your JDK 8 install
+**Cause** | These instructions cover 1.15 and may not work for 1.14 or 1.12
+**Resolution** | Unknown, did not try to resolve
 
 
 ### Gradle Build Errors
+
+Item    | Info 
+------- | -----
+**Error** | ???
+**Description** | Any error during initial first gradle build
+**Cause** | Unknown specific error
+**Resolution** | Try resetting Gradle (which doesn't impact your code)<br>
+1. Remove all downloaded gradle information for this project: ```gradlew clean``` <br>
+1. Refresh all dependencies: ```gradlew --refresh-dependencies```
 1. Error during Gradle: Try starting over with gradlew --clean 
