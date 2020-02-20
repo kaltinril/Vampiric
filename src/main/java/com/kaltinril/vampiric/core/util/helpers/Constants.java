@@ -23,7 +23,7 @@ public class Constants {
         // declaring private variable for getting values
         private String colorValue;
 
-        public String getAction()
+        public String getColorValue()
         {
             return this.colorValue;
         }

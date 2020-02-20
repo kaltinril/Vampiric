@@ -24,7 +24,7 @@ public class WoodenHolyCross extends Item {
         if (KeyboardHelper.isHoldingShift()){
             tooltip.add(new StringTextComponent("Hold in sheild slot to repel vampires!"));
         }else {
-            tooltip.add(new StringTextComponent("Hold" + TextColor.YELLOW + " [SHIFT] " + TextColor.GREY + "for more information."));
+            tooltip.add(new StringTextComponent("Hold" + TextColor.YELLOW.getColorValue() + " [SHIFT] " + TextColor.GREY.getColorValue()  + "for more information."));
         }
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }
