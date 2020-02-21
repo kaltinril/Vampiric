@@ -24,7 +24,7 @@ import javax.annotation.Nullable;
 
 // Make an UndeadEntity ?  Somehow need to classify it as a vampire for the garlic potion
 
-// TODO: Look at PhantomEntity for FlyingEntity 
+// TODO: Look at PhantomEntity for FlyingEntity
 public class VampireBat extends MonsterEntity {
 
     @SuppressWarnings("unchecked")
