@@ -3,6 +3,7 @@ package com.kaltinril.vampiric;
 import com.kaltinril.vampiric.client.renderer.RenderRegistry;
 import com.kaltinril.vampiric.client.renderer.VampireBatRenderer;
 import com.kaltinril.vampiric.core.block.BlockCrop;
+import com.kaltinril.vampiric.core.item.WoodenHolyCross;
 import com.kaltinril.vampiric.core.world.biome.GenerationUtil;
 import com.kaltinril.vampiric.lists.*;
 import net.minecraft.block.Block;
@@ -125,6 +126,7 @@ public class VampiricMod
                             // Items
                             new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName(location("silver_ingot")),
                             new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName(location("garlic_paste")),
+                            new WoodenHolyCross(new Item.Properties().maxStackSize(1).group(ItemGroup.MATERIALS)).setRegistryName(location("wooden_holy_cross")),
                             // Tools and Weapons
                             new AxeItem(ItemTierList.SILVER, 6.5F, -3.0F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_axe")),
                             new PickaxeItem(ItemTierList.SILVER, 2, -2.8f, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_pickaxe")),

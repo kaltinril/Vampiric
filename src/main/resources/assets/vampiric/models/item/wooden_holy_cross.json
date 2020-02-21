@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "vampiric:item/garlic_arrow"
+    "layer0": "vampiric:item/wooden_holy_cross"
   }
 }

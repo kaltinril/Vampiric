@@ -23,6 +23,8 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 
 // Make an UndeadEntity ?  Somehow need to classify it as a vampire for the garlic potion
+
+// TODO: Look at PhantomEntity for FlyingEntity
 public class VampireBat extends MonsterEntity {
 
     @SuppressWarnings("unchecked")
@@ -33,12 +35,12 @@ public class VampireBat extends MonsterEntity {
     @Override
     protected void registerGoals(){
         super.registerGoals();
+        // TODO: create a new goal called "fearItemGoal" based on opposite direction as the TemptGoal class.  Everything should work the same except it should run AWAY from the mob, not toward.
         this.goalSelector.addGoal(0, new RestrictSunGoal(this));
         this.goalSelector.addGoal(1, new FleeSunGoal(this, 1.0D));
-        this.goalSelector.addGoal(2, new WaterAvoidingRandomWalkingGoal(this, 1.0D, 0.0F));
-        this.goalSelector.addGoal(3, new RandomWalkingGoal(this, 0.5d));
+        //this.goalSelector.addGoal(2, new WaterAvoidingRandomWalkingGoal(this, 1.0D, 0.0F));
+        this.goalSelector.addGoal(2, new WaterAvoidingRandomFlyingGoal(this, 1.0D));
         this.goalSelector.addGoal(8, new LookAtGoal(this, PlayerEntity.class, 8.0F));
-        this.goalSelector.addGoal(8, new LookRandomlyGoal(this));
         this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.0D, false));
         this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
 
