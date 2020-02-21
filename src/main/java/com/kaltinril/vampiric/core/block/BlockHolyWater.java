@@ -27,8 +27,12 @@ public class BlockHolyWater extends FlowingFluidBlock {
             // TODO: Change MonsterEntity to VampireEntity or "UnHolyEntity"
             if(entityIn instanceof MonsterEntity){
                 // TODO: Possible use a potion effect by creating new one called holy_water or holy_burn
-                ((MonsterEntity) entityIn).setFire(4);
-                //.addPotionEffect(new EffectInstance(EffectList.garlic_essence, 160, 2)); // Leaving this here to show how to use set a potion
+                // Had to change this back to a postion effect from setFire(4); because of Entity.java:handleWaterMovement() which calls extinguish on every tick.
+
+                // Only add it if the potion isn't already applied
+                if (!((MonsterEntity) entityIn).isPotionActive(EffectList.garlic_essence)) {
+                    ((MonsterEntity) entityIn).addPotionEffect(new EffectInstance(EffectList.garlic_essence, 160, 2)); // Leaving this here to show how to use set a potion
+                }
             }
         }
     }

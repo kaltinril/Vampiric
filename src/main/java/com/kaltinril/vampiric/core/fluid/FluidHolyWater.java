@@ -1,6 +1,7 @@
 package com.kaltinril.vampiric.core.fluid;
 
 import com.kaltinril.vampiric.VampiricMod;
+import com.kaltinril.vampiric.core.util.helpers.Constants;
 import com.kaltinril.vampiric.lists.BlockList;
 import com.kaltinril.vampiric.lists.ItemList;
 import com.kaltinril.vampiric.lists.FluidList;
@@ -89,6 +90,7 @@ public abstract class FluidHolyWater extends FlowingFluid {
     protected FluidAttributes createAttributes() {
         return FluidAttributes.builder(new ResourceLocation(VampiricMod.modid, "block/holy_water_still"), new ResourceLocation(VampiricMod.modid, "block/holy_water_flow"))
                 .translationKey("block.vampiric.holy_water")
+                .color(Constants.Color.DARK_AQUA.getIntValue())
                 .build(this);
     }
 
