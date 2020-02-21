@@ -30,7 +30,7 @@ public class WoodenHolyCross extends Item {
     }
 
     @Override
-    public int getUseDuration(ItemStack stack) {
-        return 64;
+    public int getBurnTime(ItemStack itemStack) {
+        return 200;
     }
 }
