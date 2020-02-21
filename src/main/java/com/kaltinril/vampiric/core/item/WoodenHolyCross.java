@@ -22,10 +22,15 @@ public class WoodenHolyCross extends Item {
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
         if (KeyboardHelper.isHoldingShift()){
-            tooltip.add(new StringTextComponent("Hold in sheild slot to repel vampires!"));
+            tooltip.add(new StringTextComponent("Put in shield slot to repel vampires!  They must be in front of you, they can still attack from behind!"));
         }else {
             tooltip.add(new StringTextComponent("Hold" + TextColor.YELLOW.getColorValue() + " [SHIFT] " + TextColor.GREY.getColorValue()  + "for more information."));
         }
         super.addInformation(stack, worldIn, tooltip, flagIn);
+    }
+
+    @Override
+    public int getUseDuration(ItemStack stack) {
+        return 64;
     }
 }
