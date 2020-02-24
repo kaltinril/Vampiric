@@ -1,15 +1,10 @@
 package com.kaltinril.vampiric.entity;
 
 import net.minecraft.block.BlockState;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.monster.MonsterEntity;
-import net.minecraft.entity.passive.CowEntity;
-import net.minecraft.entity.passive.IronGolemEntity;
-import net.minecraft.entity.passive.PigEntity;
-import net.minecraft.entity.passive.SheepEntity;
+import net.minecraft.entity.passive.*;
 import net.minecraft.entity.passive.horse.HorseEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -47,11 +42,11 @@ public class VampireBat extends MonsterEntity {
         // TODO: Understand why bats get stuck on a goal, and don't fleesungoal once daylight hits?
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, PlayerEntity.class, true));
 
-        // Vampire bats drink from cattle
-        this.targetSelector.addGoal(5, new NearestAttackableTargetGoal<>(this, CowEntity.class, true));
-        this.targetSelector.addGoal(5, new NearestAttackableTargetGoal<>(this, PigEntity.class, true));
-        this.targetSelector.addGoal(5, new NearestAttackableTargetGoal<>(this, SheepEntity.class, true));
-        this.targetSelector.addGoal(5, new NearestAttackableTargetGoal<>(this, HorseEntity.class, true));
+        // Vampire bats drink from cattle (Essentially any animal)
+        this.targetSelector.addGoal(5, new NearestAttackableTargetGoal<>(this, AnimalEntity.class, true));
+        //this.targetSelector.addGoal(5, new NearestAttackableTargetGoal<>(this, PigEntity.class, true));
+        //this.targetSelector.addGoal(5, new NearestAttackableTargetGoal<>(this, SheepEntity.class, true));
+        //this.targetSelector.addGoal(5, new NearestAttackableTargetGoal<>(this, HorseEntity.class, true));
     }
 
 
@@ -64,6 +59,13 @@ public class VampireBat extends MonsterEntity {
         this.getAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.45D);
         this.getAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(1.5d); // Possibly drain blood instead of dealing damage? or give possible rabies?
         this.getAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(32.0d); //
+    }
+
+    // Probably not appropriate for a normal vampire bat, but for a Vampire mob, yes, however, need a mob to test this ons
+    // TODO: Remove this one we implement other entities
+    // TODO: Create my own creature types called VAMPIRE, WEREWOLF, MUMMY
+    public CreatureAttribute getCreatureAttribute() {
+        return CreatureAttribute.UNDEAD;
     }
 
     // Vampires burn in the sunlight

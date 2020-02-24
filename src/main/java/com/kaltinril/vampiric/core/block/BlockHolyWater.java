@@ -7,6 +7,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.potion.EffectInstance;
@@ -25,13 +26,13 @@ public class BlockHolyWater extends FlowingFluidBlock {
         super.onEntityCollision(state, worldIn, pos, entityIn);
         if (this.getFluid().isIn(FluidList.Tags.HOLY_WATER)){
             // TODO: Change MonsterEntity to VampireEntity or "UnHolyEntity"
-            if(entityIn instanceof MonsterEntity){
+            if(entityIn instanceof MonsterEntity && ((MonsterEntity) entityIn).getCreatureAttribute() == CreatureAttribute.UNDEAD){
                 // TODO: Possible use a potion effect by creating new one called holy_water or holy_burn
                 // Had to change this back to a postion effect from setFire(4); because of Entity.java:handleWaterMovement() which calls extinguish on every tick.
 
                 // Only add it if the potion isn't already applied
-                if (!((MonsterEntity) entityIn).isPotionActive(EffectList.garlic_essence)) {
-                    ((MonsterEntity) entityIn).addPotionEffect(new EffectInstance(EffectList.garlic_essence, 160, 2)); // Leaving this here to show how to use set a potion
+                if (!((MonsterEntity) entityIn).isPotionActive(EffectList.holy_burn)) {
+                    ((MonsterEntity) entityIn).addPotionEffect(new EffectInstance(EffectList.holy_burn, 160, 2)); // Leaving this here to show how to use set a potion
                 }
             }
         }
