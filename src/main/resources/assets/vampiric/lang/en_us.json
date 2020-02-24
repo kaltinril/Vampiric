@@ -2,11 +2,13 @@
   "item.vampiric.silver_ingot": "Silver Ingot",
   "item.vampiric.garlic_paste": "Garlic Paste",
   "item.vampiric.wooden_holy_cross": "Wooden Holy Cross",
+  "item.vampiric.holy_water_bucket": "Bucket of Holy Water",
 
   "block.vampiric.silver_block": "Block of Silver",
   "block.vampiric.silver_ore": "Silver Ore",
 
   "block.vampiric.garlic_plant": "Garlic",
+  "block.vampiric.holy_water": "Holy Water",
 
   "item.vampiric.wooden_stake": "Wooden Stake",
   "item.vampiric.silver_sword": "Silver Sword",
@@ -29,6 +31,20 @@
   "item.minecraft.splash_potion.effect.garlic_essence_long": "Splash Potion of Garlic Essence",
   "item.minecraft.lingering_potion.effect.garlic_essence_long": "Lingering Potion of Garlic Essence",
   "item.minecraft.tipped_arrow.effect.garlic_essence_long": "Arrow of Garlic Essence",
+
+  "effect.vampiric.holy_burn": "Holy Burn",
+  "item.minecraft.potion.effect.holy_water": "Potion of Holy Water",
+  "item.minecraft.splash_potion.effect.holy_water": "Splash Potion of Holy Water",
+  "item.minecraft.lingering_potion.effect.holy_water": "Lingering Potion of Holy Water",
+  "item.minecraft.tipped_arrow.effect.holy_water": "Arrow of Holy Water",
+  "item.minecraft.potion.effect.holy_water_long": "Potion of Holy Water",
+  "item.minecraft.splash_potion.effect.holy_water_long": "Splash Potion of Holy Water",
+  "item.minecraft.lingering_potion.effect.holy_water_long": "Lingering Potion of Holy Water",
+  "item.minecraft.tipped_arrow.effect.holy_water_long": "Arrow of Holy Water",
+  "item.minecraft.potion.effect.holy_water_lvl2": "Potion of Holy Water",
+  "item.minecraft.splash_potion.effect.holy_water_lvl2": "Splash Potion of Holy Water",
+  "item.minecraft.lingering_potion.effect.holy_water_lvl2": "Lingering Potion of Holy Water",
+  "item.minecraft.tipped_arrow.effect.holy_water_lvl2": "Arrow of Holy Water",
 
   "item.vampiric.vampire_bat_egg": "Vampire Bat Spawn Egg"
 }

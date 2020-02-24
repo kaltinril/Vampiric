@@ -1,6 +1,7 @@
 package com.kaltinril.vampiric.lists;
 
 import com.kaltinril.vampiric.VampiricMod;
+import net.minecraft.item.BucketItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -15,6 +16,7 @@ public class ItemList {
     // Items
     public static final Item garlic_paste = null;
     public static final Item garlic_plant = null;
+    public static final BucketItem holy_water_bucket = null;
 
     // Weapons
     public static final Item wooden_stake = null;  // Does double-damage to vampires

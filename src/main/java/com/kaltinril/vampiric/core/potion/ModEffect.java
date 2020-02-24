@@ -5,8 +5,12 @@ import com.kaltinril.vampiric.lists.EffectList;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.potion.Effect;
+import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.EffectType;
+import net.minecraft.potion.Effects;
 import net.minecraft.util.DamageSource;
 import javax.annotation.Nullable;
 
@@ -31,13 +35,29 @@ public class ModEffect extends Effect {
                     entityLivingBaseIn.attackEntityFrom(DamageSource.MAGIC, effectAmount);
                 }
             }
-            else
-            {
+            else {
                 // Remove it if it's not the correct monster
                 entityLivingBaseIn.removePotionEffect(this);
             }
             // TODO: Add more elseif statements for each new potion
-        }else {
+        } else if(this == EffectList.holy_burn){
+            if (entityLivingBaseIn.isEntityUndead() && entityLivingBaseIn.getClassification(true) == EntityClassification.MONSTER){
+                entityLivingBaseIn.attackEntityFrom(DamageSource.MAGIC, effectAmount);
+            }
+            else if (entityLivingBaseIn instanceof ServerPlayerEntity) {
+                // Holy Water cures all harmful potion effects
+                // entityLivingBaseIn.clearActivePotions(); // This removes beneficial effects as well, we don't want that.
+                for (EffectInstance effect: entityLivingBaseIn.getActivePotionEffects()){
+                    if (effect.getPotion().getEffectType() == EffectType.HARMFUL){
+                        entityLivingBaseIn.removePotionEffect(effect.getPotion());
+                    }
+                }
+            }
+            else {
+                entityLivingBaseIn.removePotionEffect(this);  // Remove it if it's not the correct monster
+            }
+        }
+        else {
             super.performEffect(entityLivingBaseIn, amplifier);
         }
     }
@@ -63,7 +83,22 @@ public class ModEffect extends Effect {
                 // Remove it if it's not the correct monster
                 entityLivingBaseIn.removePotionEffect(this);
             }
-        }else {
+        } else if (this == EffectList.holy_burn) {
+            // Don't hurt undead if they are not monsters (like passive etc)
+            if (entityLivingBaseIn.isEntityUndead() && entityLivingBaseIn.getClassification(true) == EntityClassification.MONSTER) {
+                int j = (int) (health * (double) (6 << amplifier) + 0.5D);
+
+                if (source == null) {
+                    entityLivingBaseIn.attackEntityFrom(DamageSource.MAGIC, (float) j);
+                } else {
+                    entityLivingBaseIn.attackEntityFrom(DamageSource.causeIndirectMagicDamage(source, indirectSource), (float) j);
+                }
+            }
+            else {
+                entityLivingBaseIn.removePotionEffect(this);
+            }
+        }
+        else {
             super.performEffect(entityLivingBaseIn, amplifier);
         }
     }
@@ -72,14 +107,22 @@ public class ModEffect extends Effect {
     // Otherwise the PotionEffect class won't call this potions performEffect method.
     @Override
     public boolean isReady(int duration, int amplifier) {
-        int j = 25 >> amplifier;
-
-        if (j > 0)
-        {
-            return duration % j == 0;
+        int j = 100 >> amplifier;
+        if (this == EffectList.garlic_essence) {
+            if (j > 0) {
+                return duration % j == 0;
+            } else {
+                return true;
+            }
+        } else if (this == EffectList.holy_burn) {
+            j = 75 >> amplifier;
+            if (j > 0) {
+                return duration % j == 0;
+            } else {
+                return true;
+            }
         }
-        else
-        {
+        else {
             return true;
         }
     }

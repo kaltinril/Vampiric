@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+
+  "pattern":
+  [
+    " c ",
+    "cwc",
+    " c "
+  ],
+
+  "key": {
+    "w": {
+      "item": "minecraft:water_bucket"
+    },
+    "c": {
+      "item": "vampiric:wooden_holy_cross"
+    }
+  },
+  "result": {
+    "item": "vampiric:holy_water_bucket",
+    "count": 1
+  }
+}

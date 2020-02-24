@@ -1,14 +1,13 @@
 package com.kaltinril.vampiric;
 
-import com.kaltinril.vampiric.client.renderer.RenderRegistry;
 import com.kaltinril.vampiric.client.renderer.VampireBatRenderer;
 import com.kaltinril.vampiric.core.block.BlockCrop;
+import com.kaltinril.vampiric.core.block.BlockHolyWater;
 import com.kaltinril.vampiric.core.item.WoodenHolyCross;
 import com.kaltinril.vampiric.core.world.biome.GenerationUtil;
 import com.kaltinril.vampiric.lists.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.CropsBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.RenderType;
@@ -16,12 +15,7 @@ import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.entity.EntityType;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
-import net.minecraft.potion.Potion;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
@@ -35,7 +29,6 @@ import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.loading.FMLEnvironment;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -127,6 +120,7 @@ public class VampiricMod
                             new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName(location("silver_ingot")),
                             new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName(location("garlic_paste")),
                             new WoodenHolyCross(new Item.Properties().maxStackSize(1).group(ItemGroup.MATERIALS)).setRegistryName(location("wooden_holy_cross")),
+                            new BucketItem(() -> FluidList.holy_water, new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)).setRegistryName(location("holy_water_bucket")),
                             // Tools and Weapons
                             new AxeItem(ItemTierList.SILVER, 6.5F, -3.0F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_axe")),
                             new PickaxeItem(ItemTierList.SILVER, 2, -2.8f, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_pickaxe")),
@@ -170,7 +164,8 @@ public class VampiricMod
                                     .harvestLevel(2)
                                     .harvestTool(ToolType.PICKAXE)
                                     .sound(SoundType.STONE))
-                                    .setRegistryName(location("silver_ore"))
+                                    .setRegistryName(location("silver_ore")),
+                            new BlockHolyWater()
                     );
         }
 

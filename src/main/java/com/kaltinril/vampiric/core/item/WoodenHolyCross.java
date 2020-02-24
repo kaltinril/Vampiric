@@ -1,7 +1,7 @@
 package com.kaltinril.vampiric.core.item;
 
 import com.kaltinril.vampiric.client.util.helpers.KeyboardHelper;
-import com.kaltinril.vampiric.core.util.helpers.Constants.TextColor;
+import com.kaltinril.vampiric.core.util.helpers.Constants.Color;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -24,7 +24,7 @@ public class WoodenHolyCross extends Item {
         if (KeyboardHelper.isHoldingShift()){
             tooltip.add(new StringTextComponent("Put in shield slot to repel vampires!  They must be in front of you, they can still attack from behind!"));
         }else {
-            tooltip.add(new StringTextComponent("Hold" + TextColor.YELLOW.getColorValue() + " [SHIFT] " + TextColor.GREY.getColorValue()  + "for more information."));
+            tooltip.add(new StringTextComponent("Hold" + Color.YELLOW.getStringValue() + " [SHIFT] " + Color.GRAY.getStringValue()  + "for more information."));
         }
         super.addInformation(stack, worldIn, tooltip, flagIn);
     }
