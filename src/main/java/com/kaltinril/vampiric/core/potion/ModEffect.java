@@ -5,7 +5,10 @@ import com.kaltinril.vampiric.lists.EffectList;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.potion.Effect;
+import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.EffectType;
 import net.minecraft.potion.Effects;
 import net.minecraft.util.DamageSource;
@@ -32,17 +35,27 @@ public class ModEffect extends Effect {
                     entityLivingBaseIn.attackEntityFrom(DamageSource.MAGIC, effectAmount);
                 }
             }
-            else
-            {
+            else {
                 // Remove it if it's not the correct monster
                 entityLivingBaseIn.removePotionEffect(this);
             }
             // TODO: Add more elseif statements for each new potion
         } else if(this == EffectList.holy_burn){
-            if (entityLivingBaseIn.isEntityUndead() && entityLivingBaseIn.getClassification(true) == EntityClassification.MONSTER)
+            if (entityLivingBaseIn.isEntityUndead() && entityLivingBaseIn.getClassification(true) == EntityClassification.MONSTER){
                 entityLivingBaseIn.attackEntityFrom(DamageSource.MAGIC, effectAmount);
-            else
+            }
+            else if (entityLivingBaseIn instanceof ServerPlayerEntity) {
+                // Holy Water cures all harmful potion effects
+                // entityLivingBaseIn.clearActivePotions(); // This removes beneficial effects as well, we don't want that.
+                for (EffectInstance effect: entityLivingBaseIn.getActivePotionEffects()){
+                    if (effect.getPotion().getEffectType() == EffectType.HARMFUL){
+                        entityLivingBaseIn.removePotionEffect(effect.getPotion());
+                    }
+                }
+            }
+            else {
                 entityLivingBaseIn.removePotionEffect(this);  // Remove it if it's not the correct monster
+            }
         }
         else {
             super.performEffect(entityLivingBaseIn, amplifier);

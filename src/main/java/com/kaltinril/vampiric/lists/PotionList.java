@@ -20,6 +20,9 @@ public class PotionList {
     public static final Potion garlic_essence = null;
     //public static final Potion garlic_essence_short = null;
     public static final Potion garlic_essence_long = null;
+    public static final Potion holy_water = null;
+    public static final Potion holy_water_lvl2 = null;
+    public static final Potion holy_water_long = null;
 
     // Using PotionBrewing which is private, requires using reflection to "use" and "inject" our recipes
     // Hopefully a better way to do this in the future
@@ -32,8 +35,10 @@ public class PotionList {
         public static void registerEffect(final RegistryEvent.Register<Potion> event) {
             final Potion[] potions = {
                     new Potion(new EffectInstance(EffectList.garlic_essence, 30*20*2)).setRegistryName("garlic_essence"),
-                    //new Potion(new EffectInstance(EffectList.garlic_essence, 30*20*1)).setRegistryName("garlic_essence_short"),
-                    new Potion(new EffectInstance(EffectList.garlic_essence, 30*20*4)).setRegistryName("garlic_essence_long")
+                    new Potion(new EffectInstance(EffectList.garlic_essence, 30*20*4)).setRegistryName("garlic_essence_long"),
+                    new Potion(new EffectInstance(EffectList.holy_burn, 30*20*2)).setRegistryName("holy_water"),
+                    new Potion(new EffectInstance(EffectList.holy_burn, 30*20*4)).setRegistryName("holy_water_long"),
+                    new Potion(new EffectInstance(EffectList.holy_burn, 30*20*2, 1)).setRegistryName("holy_water_lvl2"),
             };
 
             event.getRegistry().registerAll(potions);
@@ -58,5 +63,7 @@ public class PotionList {
     public static void addRecipes(){
         addMix(Potions.MUNDANE,  ItemList.garlic_paste, PotionList.garlic_essence );
         addMix(PotionList.garlic_essence, Items.REDSTONE,  PotionList.garlic_essence_long);
+        addMix(Potions.AWKWARD,  ItemList.holy_water_bucket, PotionList.holy_water );
+        addMix(PotionList.holy_water, Items.REDSTONE,  PotionList.holy_water_long);
     }
 }
