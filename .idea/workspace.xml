@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02968ef3-e803-45b1-85ac-094219ce0187" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item/silver_holy_cross.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/item/silver_holy_cross.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/vampiric/recipes/silver_holy_cross.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/core/potion/ModEffect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/core/potion/ModEffect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/lists/PotionList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/lists/PotionList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/VampiricMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/VampiricMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/lists/ItemList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/lists/ItemList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/vampiric/lang/en_us.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/vampiric/lang/en_us.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,27 +121,27 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/assets/vampiric/textures/mob_effect" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/assets/vampiric/models/item" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\assets\vampiric\textures\mob_effect" />
-      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\data\vampiric\recipes" />
-      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\data\minecraft\tags\fluids" />
-      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\assets\vampiric\textures\block" />
-      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\assets\vampiric\textures\item" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.kaltinril.vampiric.lists" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources" />
       <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\assets\vampiric" />
       <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\assets\vampiric\textures\mob_effect" />
       <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\data\forge\tags\blocks\ores" />
       <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\data\vampiric\tags\ore" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kaltinril.vampiric.lists" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\assets\vampiric\models\item" />
+      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\data\vampiric\recipes" />
+      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\assets\vampiric\textures\item" />
+      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\assets\vampiric\textures\mob_effect" />
+      <recent name="C:\Users\thisisme1\Documents\Minecraft Mods\Vampirc_1_15_1\src\main\resources\data\minecraft\tags\fluids" />
     </key>
   </component>
   <component name="RunManager" selected="Application.runClient">
@@ -235,10 +238,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="860" y="356" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1580783893549" />
-    <state x="997" y="349" key="#runClient" timestamp="1582523366815">
+    <state x="997" y="349" key="#runClient" timestamp="1582617228045">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="997" y="349" key="#runClient/0.0.2560.1400@0.0.2560.1400" timestamp="1582523366815" />
+    <state x="997" y="349" key="#runClient/0.0.2560.1400@0.0.2560.1400" timestamp="1582617228045" />
     <state x="997" y="349" key="#runServer" timestamp="1580781297323">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -247,22 +250,22 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1009" y="519" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1580783891768" />
-    <state width="2517" height="398" key="GridCell.Tab.0.bottom" timestamp="1582523373941">
+    <state width="2517" height="398" key="GridCell.Tab.0.bottom" timestamp="1582617234221">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="398" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1582523373941" />
-    <state width="2517" height="398" key="GridCell.Tab.0.center" timestamp="1582523373941">
+    <state width="2517" height="398" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1582617234221" />
+    <state width="2517" height="398" key="GridCell.Tab.0.center" timestamp="1582617234221">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="398" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1582523373941" />
-    <state width="2517" height="398" key="GridCell.Tab.0.left" timestamp="1582523373940">
+    <state width="2517" height="398" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1582617234221" />
+    <state width="2517" height="398" key="GridCell.Tab.0.left" timestamp="1582617234221">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="398" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1582523373940" />
-    <state width="2517" height="398" key="GridCell.Tab.0.right" timestamp="1582523373941">
+    <state width="2517" height="398" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1582617234221" />
+    <state width="2517" height="398" key="GridCell.Tab.0.right" timestamp="1582617234221">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="398" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1582523373941" />
+    <state width="2517" height="398" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1582617234221" />
     <state width="2517" height="492" key="GridCell.Tab.1.bottom" timestamp="1581406733003">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

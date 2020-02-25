@@ -121,6 +121,7 @@ public class VampiricMod
                             new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName(location("garlic_paste")),
                             new WoodenHolyCross(new Item.Properties().maxStackSize(1).group(ItemGroup.MATERIALS)).setRegistryName(location("wooden_holy_cross")),
                             new BucketItem(() -> FluidList.holy_water, new Item.Properties().group(ItemGroup.MISC).maxStackSize(1)).setRegistryName(location("holy_water_bucket")),
+                            new Item(new Item.Properties().maxStackSize(1).group(ItemGroup.COMBAT)).setRegistryName(location("silver_holy_cross")),
                             // Tools and Weapons
                             new AxeItem(ItemTierList.SILVER, 6.5F, -3.0F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_axe")),
                             new PickaxeItem(ItemTierList.SILVER, 2, -2.8f, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName(location("silver_pickaxe")),
@@ -128,6 +129,7 @@ public class VampiricMod
                             new ShovelItem(ItemTierList.SILVER, 2F, -2.8F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("silver_shovel"),
                             new SwordItem(ItemTierList.SILVER, 3, -2.4F, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName("silver_sword"),
                             new SwordItem(ItemTier.WOOD, 2, -2.0F, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName("wooden_stake"),
+
                             // Armor
                             new ArmorItem(ArmorMaterialList.SILVER, EquipmentSlotType.CHEST, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(location("silver_chestplate")),
                             new ArmorItem(ArmorMaterialList.SILVER, EquipmentSlotType.HEAD, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(location("silver_helmet")),
