@@ -31,12 +31,13 @@ public class ItemList {
     public static final Item silver_ore = null;
     public static final Item silver_ingot = null;
 
-    // Weapons
+    // Weapons & Tools
     public static final Item silver_axe = null;
     public static final Item silver_pickaxe = null;
     public static final Item silver_hoe = null;
     public static final Item silver_shovel = null;
     public static final Item silver_sword = null;
+    public static final Item silver_holy_cross = null;
 
     // Armor
     public static final Item silver_chestplate = null;
