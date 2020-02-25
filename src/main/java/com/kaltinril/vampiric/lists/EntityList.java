@@ -2,8 +2,10 @@ package com.kaltinril.vampiric.lists;
 
 import com.kaltinril.vampiric.VampiricMod;
 import com.kaltinril.vampiric.entity.VampireBat;
+import com.kaltinril.vampiric.entity.projectile.SilverArrowEntity;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.SpawnEggItem;
@@ -24,6 +26,7 @@ public class EntityList {
      //public static EntityType<VampireBat> vampire_bat;
     // Changing the above to this line below will allow the eggs to spawn the entity but is "bad form" to do this
     public static EntityType<VampireBat> vampire_bat = (EntityType<VampireBat>) EntityType.Builder.create(VampireBat::new, EntityClassification.MONSTER).size(0.5F, 0.9F).build(VampiricMod.modid + ":vampire_bat").setRegistryName(VampiricMod.location("vampire_bat"));
+    public static EntityType<AbstractArrowEntity> silver_arrow_entity = null;
 
     public static Item vampire_bat_egg;
 
@@ -33,6 +36,7 @@ public class EntityList {
         event.getRegistry().registerAll
                 (
                         vampire_bat// = (EntityType<VampireBat>) EntityType.Builder.create(VampireBat::new, EntityClassification.MONSTER).size(0.5F, 0.9F).build(VampiricMod.modid + ":vampire_bat").setRegistryName(VampiricMod.location("vampire_bat"))
+                        , silver_arrow_entity = (EntityType<SilverArrowEntity>) EntityType.Builder.create(SilverArrowEntity::new, EntityClassification.MISC).size(0.5F, 0.5F).build(VampiricMod.modid + ":silver_arrow_entity").setRegistryName(VampiricMod.location("silver_arrow_entity"))
                 );
         logger.info("Entity Registration end.");
 

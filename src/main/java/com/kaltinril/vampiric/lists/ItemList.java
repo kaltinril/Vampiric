@@ -38,6 +38,7 @@ public class ItemList {
     public static final Item silver_shovel = null;
     public static final Item silver_sword = null;
     public static final Item silver_holy_cross = null;
+    public static final Item silver_arrow = null;
 
     // Armor
     public static final Item silver_chestplate = null;

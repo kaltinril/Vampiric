@@ -3,6 +3,7 @@ package com.kaltinril.vampiric;
 import com.kaltinril.vampiric.client.renderer.VampireBatRenderer;
 import com.kaltinril.vampiric.core.block.BlockCrop;
 import com.kaltinril.vampiric.core.block.BlockHolyWater;
+import com.kaltinril.vampiric.core.item.SilverArrowItem;
 import com.kaltinril.vampiric.core.item.WoodenHolyCross;
 import com.kaltinril.vampiric.core.world.biome.GenerationUtil;
 import com.kaltinril.vampiric.lists.*;
@@ -129,6 +130,8 @@ public class VampiricMod
                             new ShovelItem(ItemTierList.SILVER, 2F, -2.8F, (new Item.Properties()).group(ItemGroup.TOOLS)).setRegistryName("silver_shovel"),
                             new SwordItem(ItemTierList.SILVER, 3, -2.4F, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName("silver_sword"),
                             new SwordItem(ItemTier.WOOD, 2, -2.0F, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName("wooden_stake"),
+
+                            new SilverArrowItem(new Item.Properties().group(ItemGroup.COMBAT)).setRegistryName("silver_arrow"),
 
                             // Armor
                             new ArmorItem(ArmorMaterialList.SILVER, EquipmentSlotType.CHEST, (new Item.Properties()).group(ItemGroup.COMBAT)).setRegistryName(location("silver_chestplate")),
