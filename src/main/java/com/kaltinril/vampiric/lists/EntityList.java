@@ -9,10 +9,14 @@ import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.SpawnEggItem;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biomes;
 import net.minecraftforge.event.RegistryEvent;
 
+import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.ObjectHolder;
 import org.apache.logging.log4j.Logger;
 
@@ -26,8 +30,17 @@ public class EntityList {
      //public static EntityType<VampireBat> vampire_bat;
     // Changing the above to this line below will allow the eggs to spawn the entity but is "bad form" to do this
     public static EntityType<VampireBat> vampire_bat = (EntityType<VampireBat>) EntityType.Builder.create(VampireBat::new, EntityClassification.MONSTER).size(0.5F, 0.9F).build(VampiricMod.modid + ":vampire_bat").setRegistryName(VampiricMod.location("vampire_bat"));
-    public static EntityType<AbstractArrowEntity> silver_arrow_entity = null;
+    //public static EntityType<AbstractArrowEntity> silver_arrow_entity = null;
 
+    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = new DeferredRegister<>(ForgeRegistries.ENTITIES, VampiricMod.modid);
+    public static final String SILVER_ARROW_NAME = "silver_arrow";
+    public static final RegistryObject<EntityType<SilverArrowEntity>> silver_arrow_entity = ENTITY_TYPES.register(SILVER_ARROW_NAME, () ->
+                    EntityType.Builder.<SilverArrowEntity>create(SilverArrowEntity::new, EntityClassification.CREATURE)
+                            .size(EntityType.PIG.getWidth(), EntityType.PIG.getHeight())
+                            .build(new ResourceLocation(VampiricMod.modid, SILVER_ARROW_NAME).toString())
+    );
+
+     // silver_arrow_entity =  EntityType.Builder.<SilverArrowEntity>create(SilverArrowEntity::new, EntityClassification.MISC).size(0.5F, 0.5F).build(VampiricMod.modid + ":silver_arrow_entity").setRegistryName(VampiricMod.location("silver_arrow_entity"))
     public static Item vampire_bat_egg;
 
     @SuppressWarnings("unchecked")
@@ -36,7 +49,7 @@ public class EntityList {
         event.getRegistry().registerAll
                 (
                         vampire_bat// = (EntityType<VampireBat>) EntityType.Builder.create(VampireBat::new, EntityClassification.MONSTER).size(0.5F, 0.9F).build(VampiricMod.modid + ":vampire_bat").setRegistryName(VampiricMod.location("vampire_bat"))
-                        , silver_arrow_entity = (EntityType<SilverArrowEntity>) EntityType.Builder.create(SilverArrowEntity::new, EntityClassification.MISC).size(0.5F, 0.5F).build(VampiricMod.modid + ":silver_arrow_entity").setRegistryName(VampiricMod.location("silver_arrow_entity"))
+
                 );
         logger.info("Entity Registration end.");
 

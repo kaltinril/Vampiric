@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02968ef3-e803-45b1-85ac-094219ce0187" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/core/item/SilverArrowItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/entity/projectile/SilverArrowEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/minecraft/tags/items/arrows.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/VampiricMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/VampiricMod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/lists/EntityList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/lists/EntityList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/lists/ItemList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/kaltinril/vampiric/lists/ItemList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,10 +233,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="860" y="356" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1580783893549" />
-    <state x="997" y="349" key="#runClient" timestamp="1582624623522">
+    <state x="997" y="349" key="#runClient" timestamp="1582689861215">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="997" y="349" key="#runClient/0.0.2560.1400@0.0.2560.1400" timestamp="1582624623522" />
+    <state x="997" y="349" key="#runClient/0.0.2560.1400@0.0.2560.1400" timestamp="1582689861215" />
     <state x="997" y="349" key="#runServer" timestamp="1580781297323">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -250,22 +245,22 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1009" y="519" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1580783891768" />
-    <state width="2517" height="398" key="GridCell.Tab.0.bottom" timestamp="1582624628537">
+    <state width="2517" height="398" key="GridCell.Tab.0.bottom" timestamp="1582624812457">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="398" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1582624628537" />
-    <state width="2517" height="398" key="GridCell.Tab.0.center" timestamp="1582624628537">
+    <state width="2517" height="398" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1582624812457" />
+    <state width="2517" height="398" key="GridCell.Tab.0.center" timestamp="1582624812457">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="398" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1582624628537" />
-    <state width="2517" height="398" key="GridCell.Tab.0.left" timestamp="1582624628537">
+    <state width="2517" height="398" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1582624812457" />
+    <state width="2517" height="398" key="GridCell.Tab.0.left" timestamp="1582624812456">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="398" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1582624628537" />
-    <state width="2517" height="398" key="GridCell.Tab.0.right" timestamp="1582624628537">
+    <state width="2517" height="398" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1582624812456" />
+    <state width="2517" height="398" key="GridCell.Tab.0.right" timestamp="1582624812457">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="398" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1582624628537" />
+    <state width="2517" height="398" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1582624812457" />
     <state width="2517" height="492" key="GridCell.Tab.1.bottom" timestamp="1581406733003">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
