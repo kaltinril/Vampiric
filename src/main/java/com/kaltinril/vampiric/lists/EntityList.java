@@ -32,13 +32,7 @@ public class EntityList {
     public static EntityType<VampireBat> vampire_bat = (EntityType<VampireBat>) EntityType.Builder.create(VampireBat::new, EntityClassification.MONSTER).size(0.5F, 0.9F).build(VampiricMod.modid + ":vampire_bat").setRegistryName(VampiricMod.location("vampire_bat"));
     //public static EntityType<AbstractArrowEntity> silver_arrow_entity = null;
 
-    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES = new DeferredRegister<>(ForgeRegistries.ENTITIES, VampiricMod.modid);
-    public static final String SILVER_ARROW_NAME = "silver_arrow";
-    public static final RegistryObject<EntityType<SilverArrowEntity>> silver_arrow_entity = ENTITY_TYPES.register(SILVER_ARROW_NAME, () ->
-                    EntityType.Builder.<SilverArrowEntity>create(SilverArrowEntity::new, EntityClassification.CREATURE)
-                            .size(EntityType.PIG.getWidth(), EntityType.PIG.getHeight())
-                            .build(new ResourceLocation(VampiricMod.modid, SILVER_ARROW_NAME).toString())
-    );
+
 
      // silver_arrow_entity =  EntityType.Builder.<SilverArrowEntity>create(SilverArrowEntity::new, EntityClassification.MISC).size(0.5F, 0.5F).build(VampiricMod.modid + ":silver_arrow_entity").setRegistryName(VampiricMod.location("silver_arrow_entity"))
     public static Item vampire_bat_egg;
